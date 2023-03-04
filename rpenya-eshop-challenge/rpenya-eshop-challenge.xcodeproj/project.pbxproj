@@ -30,6 +30,14 @@
 		0C3F281E29B3B750004C359C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C3F282729B3BCB8004C359C /* NetworkingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F282629B3BCB8004C359C /* NetworkingDataSource.swift */; };
 		0C3F282929B3BCDE004C359C /* DataSourceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */; };
+		0C3F283229B3BE0E004C359C /* ProductRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283129B3BE0E004C359C /* ProductRemoteEntity.swift */; };
+		0C3F283429B3BE23004C359C /* ProductsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283329B3BE23004C359C /* ProductsRemoteDataSource.swift */; };
+		0C3F283629B3BE45004C359C /* ProductsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283529B3BE45004C359C /* ProductsDataSource.swift */; };
+		0C3F283829B3BE5F004C359C /* ProductsDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283729B3BE5F004C359C /* ProductsDataRepository.swift */; };
+		0C3F283A29B3BE7F004C359C /* PromotionRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283929B3BE7F004C359C /* PromotionRemoteEntity.swift */; };
+		0C3F283C29B3BE93004C359C /* PromotionsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283B29B3BE93004C359C /* PromotionsRemoteDataSource.swift */; };
+		0C3F283E29B3BEB3004C359C /* PromotionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283D29B3BEB3004C359C /* PromotionsDataSource.swift */; };
+		0C3F284029B3BEC8004C359C /* PromotionsDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283F29B3BEC8004C359C /* PromotionsDataRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +155,14 @@
 		0C3F280F29B3B6CC004C359C /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 		0C3F282629B3BCB8004C359C /* NetworkingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingDataSource.swift; sourceTree = "<group>"; };
 		0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceErrors.swift; sourceTree = "<group>"; };
+		0C3F283129B3BE0E004C359C /* ProductRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteEntity.swift; sourceTree = "<group>"; };
+		0C3F283329B3BE23004C359C /* ProductsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRemoteDataSource.swift; sourceTree = "<group>"; };
+		0C3F283529B3BE45004C359C /* ProductsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDataSource.swift; sourceTree = "<group>"; };
+		0C3F283729B3BE5F004C359C /* ProductsDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDataRepository.swift; sourceTree = "<group>"; };
+		0C3F283929B3BE7F004C359C /* PromotionRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionRemoteEntity.swift; sourceTree = "<group>"; };
+		0C3F283B29B3BE93004C359C /* PromotionsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsRemoteDataSource.swift; sourceTree = "<group>"; };
+		0C3F283D29B3BEB3004C359C /* PromotionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsDataSource.swift; sourceTree = "<group>"; };
+		0C3F283F29B3BEC8004C359C /* PromotionsDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsDataRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +343,8 @@
 		0C3F282329B3BC3D004C359C /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				0C3F282A29B3BD5C004C359C /* DataSource */,
+				0C3F283729B3BE5F004C359C /* ProductsDataRepository.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -334,6 +352,8 @@
 		0C3F282429B3BC47004C359C /* Promotions */ = {
 			isa = PBXGroup;
 			children = (
+				0C3F282D29B3BD76004C359C /* DataSource */,
+				0C3F283F29B3BEC8004C359C /* PromotionsDataRepository.swift */,
 			);
 			path = Promotions;
 			sourceTree = "<group>";
@@ -341,10 +361,62 @@
 		0C3F282529B3BC72004C359C /* NetworkingDataSource */ = {
 			isa = PBXGroup;
 			children = (
-				0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */,
 				0C3F282629B3BCB8004C359C /* NetworkingDataSource.swift */,
+				0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */,
 			);
 			path = NetworkingDataSource;
+			sourceTree = "<group>";
+		};
+		0C3F282A29B3BD5C004C359C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F282B29B3BD65004C359C /* Remote */,
+				0C3F283529B3BE45004C359C /* ProductsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		0C3F282B29B3BD65004C359C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F282C29B3BD6B004C359C /* Model */,
+				0C3F283329B3BE23004C359C /* ProductsRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		0C3F282C29B3BD6B004C359C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F283129B3BE0E004C359C /* ProductRemoteEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C3F282D29B3BD76004C359C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F282E29B3BD7E004C359C /* Remote */,
+				0C3F283D29B3BEB3004C359C /* PromotionsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		0C3F282E29B3BD7E004C359C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F282F29B3BD84004C359C /* Model */,
+				0C3F283B29B3BE93004C359C /* PromotionsRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		0C3F282F29B3BD84004C359C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F283929B3BE7F004C359C /* PromotionRemoteEntity.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -649,7 +721,15 @@
 			files = (
 				0C3F282729B3BCB8004C359C /* NetworkingDataSource.swift in Sources */,
 				0C3F27E029B3B6B1004C359C /* Data.docc in Sources */,
+				0C3F283E29B3BEB3004C359C /* PromotionsDataSource.swift in Sources */,
+				0C3F283629B3BE45004C359C /* ProductsDataSource.swift in Sources */,
+				0C3F284029B3BEC8004C359C /* PromotionsDataRepository.swift in Sources */,
+				0C3F283C29B3BE93004C359C /* PromotionsRemoteDataSource.swift in Sources */,
+				0C3F283429B3BE23004C359C /* ProductsRemoteDataSource.swift in Sources */,
+				0C3F283229B3BE0E004C359C /* ProductRemoteEntity.swift in Sources */,
 				0C3F282929B3BCDE004C359C /* DataSourceErrors.swift in Sources */,
+				0C3F283A29B3BE7F004C359C /* PromotionRemoteEntity.swift in Sources */,
+				0C3F283829B3BE5F004C359C /* ProductsDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
