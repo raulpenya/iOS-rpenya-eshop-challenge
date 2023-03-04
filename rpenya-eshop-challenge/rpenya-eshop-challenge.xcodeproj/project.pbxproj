@@ -39,6 +39,10 @@
 		0C3F283E29B3BEB3004C359C /* PromotionsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283D29B3BEB3004C359C /* PromotionsDataSource.swift */; };
 		0C3F284029B3BEC8004C359C /* PromotionsDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F283F29B3BEC8004C359C /* PromotionsDataRepository.swift */; };
 		0C3F284329B3BFAC004C359C /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284229B3BFAC004C359C /* UseCase.swift */; };
+		0C3F284729B3C02A004C359C /* GetProductsWithPromotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284629B3C02A004C359C /* GetProductsWithPromotions.swift */; };
+		0C3F284A29B3C072004C359C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284929B3C072004C359C /* Product.swift */; };
+		0C3F284C29B3C081004C359C /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284B29B3C081004C359C /* Promotion.swift */; };
+		0C3F284E29B3C09B004C359C /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284D29B3C09B004C359C /* ProductsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +169,10 @@
 		0C3F283D29B3BEB3004C359C /* PromotionsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsDataSource.swift; sourceTree = "<group>"; };
 		0C3F283F29B3BEC8004C359C /* PromotionsDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsDataRepository.swift; sourceTree = "<group>"; };
 		0C3F284229B3BFAC004C359C /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		0C3F284629B3C02A004C359C /* GetProductsWithPromotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsWithPromotions.swift; sourceTree = "<group>"; };
+		0C3F284929B3C072004C359C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0C3F284B29B3C081004C359C /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
+		0C3F284D29B3C09B004C359C /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				0C3F284129B3BF9B004C359C /* Common */,
+				0C3F284429B3C009004C359C /* Products */,
 				0C3F280129B3B6CB004C359C /* Domain.h */,
 				0C3F280229B3B6CB004C359C /* Domain.docc */,
 				0C3F280E29B3B6CC004C359C /* DomainTests */,
@@ -428,6 +437,33 @@
 				0C3F284229B3BFAC004C359C /* UseCase.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		0C3F284429B3C009004C359C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F284829B3C03E004C359C /* Model */,
+				0C3F284529B3C017004C359C /* UseCase */,
+				0C3F284D29B3C09B004C359C /* ProductsRepository.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		0C3F284529B3C017004C359C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F284629B3C02A004C359C /* GetProductsWithPromotions.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		0C3F284829B3C03E004C359C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F284929B3C072004C359C /* Product.swift */,
+				0C3F284B29B3C081004C359C /* Promotion.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -757,7 +793,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3F280329B3B6CB004C359C /* Domain.docc in Sources */,
+				0C3F284A29B3C072004C359C /* Product.swift in Sources */,
+				0C3F284C29B3C081004C359C /* Promotion.swift in Sources */,
+				0C3F284E29B3C09B004C359C /* ProductsRepository.swift in Sources */,
 				0C3F284329B3BFAC004C359C /* UseCase.swift in Sources */,
+				0C3F284729B3C02A004C359C /* GetProductsWithPromotions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
