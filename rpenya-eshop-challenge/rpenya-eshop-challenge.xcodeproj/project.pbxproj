@@ -14,6 +14,20 @@
 		0C3F27BF29B3B56E004C359C /* rpenya_eshop_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27BE29B3B56E004C359C /* rpenya_eshop_challengeTests.swift */; };
 		0C3F27C929B3B56E004C359C /* rpenya_eshop_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27C829B3B56E004C359C /* rpenya_eshop_challengeUITests.swift */; };
 		0C3F27CB29B3B56E004C359C /* rpenya_eshop_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27CA29B3B56E004C359C /* rpenya_eshop_challengeUITestsLaunchTests.swift */; };
+		0C3F27E029B3B6B1004C359C /* Data.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27DF29B3B6B1004C359C /* Data.docc */; };
+		0C3F27E629B3B6B1004C359C /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27DC29B3B6B1004C359C /* Data.framework */; };
+		0C3F27ED29B3B6B1004C359C /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27EC29B3B6B1004C359C /* DataTests.swift */; };
+		0C3F27EE29B3B6B1004C359C /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C3F27DE29B3B6B1004C359C /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C3F27F129B3B6B1004C359C /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27DC29B3B6B1004C359C /* Data.framework */; };
+		0C3F27F229B3B6B1004C359C /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27DC29B3B6B1004C359C /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C3F280329B3B6CB004C359C /* Domain.docc in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F280229B3B6CB004C359C /* Domain.docc */; };
+		0C3F280929B3B6CC004C359C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; };
+		0C3F281029B3B6CC004C359C /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F280F29B3B6CC004C359C /* DomainTests.swift */; };
+		0C3F281129B3B6CC004C359C /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C3F280129B3B6CB004C359C /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C3F281429B3B6CC004C359C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; };
+		0C3F281529B3B6CC004C359C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C3F281D29B3B750004C359C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; };
+		0C3F281E29B3B750004C359C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +45,82 @@
 			remoteGlobalIDString = 0C3F27A929B3B56C004C359C;
 			remoteInfo = "rpenya-eshop-challenge";
 		};
+		0C3F27E729B3B6B1004C359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3F27A229B3B56C004C359C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3F27DB29B3B6B1004C359C;
+			remoteInfo = Data;
+		};
+		0C3F27E929B3B6B1004C359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3F27A229B3B56C004C359C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3F27A929B3B56C004C359C;
+			remoteInfo = "rpenya-eshop-challenge";
+		};
+		0C3F27EF29B3B6B1004C359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3F27A229B3B56C004C359C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3F27DB29B3B6B1004C359C;
+			remoteInfo = Data;
+		};
+		0C3F280A29B3B6CC004C359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3F27A229B3B56C004C359C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3F27FE29B3B6CB004C359C;
+			remoteInfo = Domain;
+		};
+		0C3F280C29B3B6CC004C359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3F27A229B3B56C004C359C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3F27A929B3B56C004C359C;
+			remoteInfo = "rpenya-eshop-challenge";
+		};
+		0C3F281229B3B6CC004C359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3F27A229B3B56C004C359C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3F27FE29B3B6CB004C359C;
+			remoteInfo = Domain;
+		};
+		0C3F281F29B3B750004C359C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C3F27A229B3B56C004C359C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C3F27FE29B3B6CB004C359C;
+			remoteInfo = Domain;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0C3F27F629B3B6B1004C359C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C3F281529B3B6CC004C359C /* Domain.framework in Embed Frameworks */,
+				0C3F27F229B3B6B1004C359C /* Data.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F282129B3B751004C359C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0C3F281E29B3B750004C359C /* Domain.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +133,16 @@
 		0C3F27C429B3B56E004C359C /* rpenya-eshop-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-eshop-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F27C829B3B56E004C359C /* rpenya_eshop_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_eshop_challengeUITests.swift; sourceTree = "<group>"; };
 		0C3F27CA29B3B56E004C359C /* rpenya_eshop_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_eshop_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0C3F27DC29B3B6B1004C359C /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3F27DE29B3B6B1004C359C /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		0C3F27DF29B3B6B1004C359C /* Data.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Data.docc; sourceTree = "<group>"; };
+		0C3F27E529B3B6B1004C359C /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3F27EC29B3B6B1004C359C /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		0C3F27FF29B3B6CB004C359C /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3F280129B3B6CB004C359C /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
+		0C3F280229B3B6CB004C359C /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
+		0C3F280829B3B6CC004C359C /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3F280F29B3B6CC004C359C /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +150,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3F281429B3B6CC004C359C /* Domain.framework in Frameworks */,
+				0C3F27F129B3B6B1004C359C /* Data.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,16 +169,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0C3F27D929B3B6B1004C359C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F281D29B3B750004C359C /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27E229B3B6B1004C359C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F27E629B3B6B1004C359C /* Data.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27FC29B3B6CB004C359C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F280529B3B6CC004C359C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F280929B3B6CC004C359C /* Domain.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0C3F27A129B3B56C004C359C = {
 			isa = PBXGroup;
 			children = (
-				0C3F27AC29B3B56C004C359C /* rpenya-eshop-challenge */,
-				0C3F27BD29B3B56E004C359C /* rpenya-eshop-challengeTests */,
-				0C3F27C729B3B56E004C359C /* rpenya-eshop-challengeUITests */,
+				0C3F27DD29B3B6B1004C359C /* Data */,
+				0C3F280029B3B6CB004C359C /* Domain */,
+				0C3F27AC29B3B56C004C359C /* Mobile */,
 				0C3F27AB29B3B56C004C359C /* Products */,
+				0C3F281C29B3B750004C359C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,19 +220,25 @@
 				0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */,
 				0C3F27BA29B3B56E004C359C /* rpenya-eshop-challengeTests.xctest */,
 				0C3F27C429B3B56E004C359C /* rpenya-eshop-challengeUITests.xctest */,
+				0C3F27DC29B3B6B1004C359C /* Data.framework */,
+				0C3F27E529B3B6B1004C359C /* DataTests.xctest */,
+				0C3F27FF29B3B6CB004C359C /* Domain.framework */,
+				0C3F280829B3B6CC004C359C /* DomainTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0C3F27AC29B3B56C004C359C /* rpenya-eshop-challenge */ = {
+		0C3F27AC29B3B56C004C359C /* Mobile */ = {
 			isa = PBXGroup;
 			children = (
 				0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */,
 				0C3F27AF29B3B56C004C359C /* ContentView.swift */,
 				0C3F27B129B3B56E004C359C /* Assets.xcassets */,
 				0C3F27B329B3B56E004C359C /* Preview Content */,
+				0C3F27BD29B3B56E004C359C /* MobileTests */,
+				0C3F27C729B3B56E004C359C /* MobileUITests */,
 			);
-			path = "rpenya-eshop-challenge";
+			path = Mobile;
 			sourceTree = "<group>";
 		};
 		0C3F27B329B3B56E004C359C /* Preview Content */ = {
@@ -110,24 +249,86 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		0C3F27BD29B3B56E004C359C /* rpenya-eshop-challengeTests */ = {
+		0C3F27BD29B3B56E004C359C /* MobileTests */ = {
 			isa = PBXGroup;
 			children = (
 				0C3F27BE29B3B56E004C359C /* rpenya_eshop_challengeTests.swift */,
 			);
-			path = "rpenya-eshop-challengeTests";
+			path = MobileTests;
 			sourceTree = "<group>";
 		};
-		0C3F27C729B3B56E004C359C /* rpenya-eshop-challengeUITests */ = {
+		0C3F27C729B3B56E004C359C /* MobileUITests */ = {
 			isa = PBXGroup;
 			children = (
 				0C3F27C829B3B56E004C359C /* rpenya_eshop_challengeUITests.swift */,
 				0C3F27CA29B3B56E004C359C /* rpenya_eshop_challengeUITestsLaunchTests.swift */,
 			);
-			path = "rpenya-eshop-challengeUITests";
+			path = MobileUITests;
+			sourceTree = "<group>";
+		};
+		0C3F27DD29B3B6B1004C359C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F27DE29B3B6B1004C359C /* Data.h */,
+				0C3F27DF29B3B6B1004C359C /* Data.docc */,
+				0C3F27EB29B3B6B1004C359C /* DataTests */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		0C3F27EB29B3B6B1004C359C /* DataTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F27EC29B3B6B1004C359C /* DataTests.swift */,
+			);
+			path = DataTests;
+			sourceTree = "<group>";
+		};
+		0C3F280029B3B6CB004C359C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F280129B3B6CB004C359C /* Domain.h */,
+				0C3F280229B3B6CB004C359C /* Domain.docc */,
+				0C3F280E29B3B6CC004C359C /* DomainTests */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0C3F280E29B3B6CC004C359C /* DomainTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F280F29B3B6CC004C359C /* DomainTests.swift */,
+			);
+			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		0C3F281C29B3B750004C359C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0C3F27D729B3B6B1004C359C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F27EE29B3B6B1004C359C /* Data.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27FA29B3B6CB004C359C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F281129B3B6CC004C359C /* Domain.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0C3F27A929B3B56C004C359C /* rpenya-eshop-challenge */ = {
@@ -137,10 +338,13 @@
 				0C3F27A629B3B56C004C359C /* Sources */,
 				0C3F27A729B3B56C004C359C /* Frameworks */,
 				0C3F27A829B3B56C004C359C /* Resources */,
+				0C3F27F629B3B6B1004C359C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0C3F27F029B3B6B1004C359C /* PBXTargetDependency */,
+				0C3F281329B3B6CC004C359C /* PBXTargetDependency */,
 			);
 			name = "rpenya-eshop-challenge";
 			productName = "rpenya-eshop-challenge";
@@ -183,6 +387,82 @@
 			productReference = 0C3F27C429B3B56E004C359C /* rpenya-eshop-challengeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0C3F27DB29B3B6B1004C359C /* Data */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3F27F329B3B6B1004C359C /* Build configuration list for PBXNativeTarget "Data" */;
+			buildPhases = (
+				0C3F27D729B3B6B1004C359C /* Headers */,
+				0C3F27D829B3B6B1004C359C /* Sources */,
+				0C3F27D929B3B6B1004C359C /* Frameworks */,
+				0C3F27DA29B3B6B1004C359C /* Resources */,
+				0C3F282129B3B751004C359C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C3F282029B3B750004C359C /* PBXTargetDependency */,
+			);
+			name = Data;
+			productName = Data;
+			productReference = 0C3F27DC29B3B6B1004C359C /* Data.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0C3F27E429B3B6B1004C359C /* DataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3F27F729B3B6B1004C359C /* Build configuration list for PBXNativeTarget "DataTests" */;
+			buildPhases = (
+				0C3F27E129B3B6B1004C359C /* Sources */,
+				0C3F27E229B3B6B1004C359C /* Frameworks */,
+				0C3F27E329B3B6B1004C359C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C3F27E829B3B6B1004C359C /* PBXTargetDependency */,
+				0C3F27EA29B3B6B1004C359C /* PBXTargetDependency */,
+			);
+			name = DataTests;
+			productName = DataTests;
+			productReference = 0C3F27E529B3B6B1004C359C /* DataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0C3F27FE29B3B6CB004C359C /* Domain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3F281629B3B6CC004C359C /* Build configuration list for PBXNativeTarget "Domain" */;
+			buildPhases = (
+				0C3F27FA29B3B6CB004C359C /* Headers */,
+				0C3F27FB29B3B6CB004C359C /* Sources */,
+				0C3F27FC29B3B6CB004C359C /* Frameworks */,
+				0C3F27FD29B3B6CB004C359C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Domain;
+			productName = Domain;
+			productReference = 0C3F27FF29B3B6CB004C359C /* Domain.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0C3F280729B3B6CC004C359C /* DomainTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C3F281929B3B6CC004C359C /* Build configuration list for PBXNativeTarget "DomainTests" */;
+			buildPhases = (
+				0C3F280429B3B6CC004C359C /* Sources */,
+				0C3F280529B3B6CC004C359C /* Frameworks */,
+				0C3F280629B3B6CC004C359C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0C3F280B29B3B6CC004C359C /* PBXTargetDependency */,
+				0C3F280D29B3B6CC004C359C /* PBXTargetDependency */,
+			);
+			name = DomainTests;
+			productName = DomainTests;
+			productReference = 0C3F280829B3B6CC004C359C /* DomainTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +484,20 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = 0C3F27A929B3B56C004C359C;
 					};
+					0C3F27DB29B3B6B1004C359C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0C3F27E429B3B6B1004C359C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0C3F27A929B3B56C004C359C;
+					};
+					0C3F27FE29B3B6CB004C359C = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					0C3F280729B3B6CC004C359C = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 0C3F27A929B3B56C004C359C;
+					};
 				};
 			};
 			buildConfigurationList = 0C3F27A529B3B56C004C359C /* Build configuration list for PBXProject "rpenya-eshop-challenge" */;
@@ -222,6 +516,10 @@
 				0C3F27A929B3B56C004C359C /* rpenya-eshop-challenge */,
 				0C3F27B929B3B56E004C359C /* rpenya-eshop-challengeTests */,
 				0C3F27C329B3B56E004C359C /* rpenya-eshop-challengeUITests */,
+				0C3F27FE29B3B6CB004C359C /* Domain */,
+				0C3F280729B3B6CC004C359C /* DomainTests */,
+				0C3F27DB29B3B6B1004C359C /* Data */,
+				0C3F27E429B3B6B1004C359C /* DataTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +542,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0C3F27C229B3B56E004C359C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27DA29B3B6B1004C359C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27E329B3B6B1004C359C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27FD29B3B6CB004C359C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F280629B3B6CC004C359C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +605,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0C3F27D829B3B6B1004C359C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F27E029B3B6B1004C359C /* Data.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27E129B3B6B1004C359C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F27ED29B3B6B1004C359C /* DataTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F27FB29B3B6CB004C359C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F280329B3B6CB004C359C /* Domain.docc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0C3F280429B3B6CC004C359C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C3F281029B3B6CC004C359C /* DomainTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +649,41 @@
 			isa = PBXTargetDependency;
 			target = 0C3F27A929B3B56C004C359C /* rpenya-eshop-challenge */;
 			targetProxy = 0C3F27C529B3B56E004C359C /* PBXContainerItemProxy */;
+		};
+		0C3F27E829B3B6B1004C359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3F27DB29B3B6B1004C359C /* Data */;
+			targetProxy = 0C3F27E729B3B6B1004C359C /* PBXContainerItemProxy */;
+		};
+		0C3F27EA29B3B6B1004C359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3F27A929B3B56C004C359C /* rpenya-eshop-challenge */;
+			targetProxy = 0C3F27E929B3B6B1004C359C /* PBXContainerItemProxy */;
+		};
+		0C3F27F029B3B6B1004C359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3F27DB29B3B6B1004C359C /* Data */;
+			targetProxy = 0C3F27EF29B3B6B1004C359C /* PBXContainerItemProxy */;
+		};
+		0C3F280B29B3B6CC004C359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3F27FE29B3B6CB004C359C /* Domain */;
+			targetProxy = 0C3F280A29B3B6CC004C359C /* PBXContainerItemProxy */;
+		};
+		0C3F280D29B3B6CC004C359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3F27A929B3B56C004C359C /* rpenya-eshop-challenge */;
+			targetProxy = 0C3F280C29B3B6CC004C359C /* PBXContainerItemProxy */;
+		};
+		0C3F281329B3B6CC004C359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3F27FE29B3B6CB004C359C /* Domain */;
+			targetProxy = 0C3F281229B3B6CC004C359C /* PBXContainerItemProxy */;
+		};
+		0C3F282029B3B750004C359C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C3F27FE29B3B6CB004C359C /* Domain */;
+			targetProxy = 0C3F281F29B3B750004C359C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -416,7 +809,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"rpenya-eshop-challenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -444,7 +837,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"rpenya-eshop-challenge/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -537,6 +930,190 @@
 			};
 			name = Release;
 		};
+		0C3F27F429B3B6B1004C359C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C3F27F529B3B6B1004C359C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Data;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0C3F27F829B3B6B1004C359C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-eshop-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-eshop-challenge";
+			};
+			name = Debug;
+		};
+		0C3F27F929B3B6B1004C359C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-eshop-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-eshop-challenge";
+			};
+			name = Release;
+		};
+		0C3F281729B3B6CC004C359C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C3F281829B3B6CC004C359C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.Domain;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0C3F281A29B3B6CC004C359C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-eshop-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-eshop-challenge";
+			};
+			name = Debug;
+		};
+		0C3F281B29B3B6CC004C359C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rpa.DomainTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rpenya-eshop-challenge.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/rpenya-eshop-challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -572,6 +1149,42 @@
 			buildConfigurations = (
 				0C3F27D529B3B56E004C359C /* Debug */,
 				0C3F27D629B3B56E004C359C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C3F27F329B3B6B1004C359C /* Build configuration list for PBXNativeTarget "Data" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3F27F429B3B6B1004C359C /* Debug */,
+				0C3F27F529B3B6B1004C359C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C3F27F729B3B6B1004C359C /* Build configuration list for PBXNativeTarget "DataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3F27F829B3B6B1004C359C /* Debug */,
+				0C3F27F929B3B6B1004C359C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C3F281629B3B6CC004C359C /* Build configuration list for PBXNativeTarget "Domain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3F281729B3B6CC004C359C /* Debug */,
+				0C3F281829B3B6CC004C359C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0C3F281929B3B6CC004C359C /* Build configuration list for PBXNativeTarget "DomainTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C3F281A29B3B6CC004C359C /* Debug */,
+				0C3F281B29B3B6CC004C359C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
