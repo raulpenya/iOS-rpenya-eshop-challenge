@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0C3F27AE29B3B56C004C359C /* rpenya_eshop_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */; };
-		0C3F27B029B3B56C004C359C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27AF29B3B56C004C359C /* ContentView.swift */; };
 		0C3F27B229B3B56E004C359C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F27B129B3B56E004C359C /* Assets.xcassets */; };
 		0C3F27B529B3B56E004C359C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F27B429B3B56E004C359C /* Preview Assets.xcassets */; };
 		0C3F27BF29B3B56E004C359C /* rpenya_eshop_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27BE29B3B56E004C359C /* rpenya_eshop_challengeTests.swift */; };
@@ -43,6 +42,18 @@
 		0C3F284A29B3C072004C359C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284929B3C072004C359C /* Product.swift */; };
 		0C3F284C29B3C081004C359C /* Promotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284B29B3C081004C359C /* Promotion.swift */; };
 		0C3F284E29B3C09B004C359C /* ProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F284D29B3C09B004C359C /* ProductsRepository.swift */; };
+		0C3F285629B3C1B9004C359C /* ProductsListAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F285529B3C1B9004C359C /* ProductsListAssembler.swift */; };
+		0C3F285829B3C1DB004C359C /* ProductViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F285729B3C1DB004C359C /* ProductViewEntity.swift */; };
+		0C3F285A29B3C1F2004C359C /* ProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F285929B3C1F2004C359C /* ProductsListViewModel.swift */; };
+		0C3F285C29B3C1FF004C359C /* ProductsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F285B29B3C1FF004C359C /* ProductsListRouter.swift */; };
+		0C3F285E29B3C20C004C359C /* ProductsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F285D29B3C20C004C359C /* ProductsListView.swift */; };
+		0C3F286229B3C243004C359C /* ShoppingBasketDetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F286129B3C243004C359C /* ShoppingBasketDetailAssembler.swift */; };
+		0C3F286429B3C258004C359C /* ShoppingBasketViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F286329B3C258004C359C /* ShoppingBasketViewEntity.swift */; };
+		0C3F286629B3C2B4004C359C /* ShoppingBasketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F286529B3C2B4004C359C /* ShoppingBasketDetailViewModel.swift */; };
+		0C3F286829B3C2CC004C359C /* ShoppingBasketDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F286729B3C2CC004C359C /* ShoppingBasketDetailRouter.swift */; };
+		0C3F286A29B3C2D7004C359C /* ShoppingBasketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F286929B3C2D7004C359C /* ShoppingBasketDetailView.swift */; };
+		0C3F286F29B3C3B4004C359C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F286D29B3C3B4004C359C /* Router.swift */; };
+		0C3F287229B3C3E4004C359C /* ErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F287129B3C3E4004C359C /* ErrorDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,7 +151,6 @@
 /* Begin PBXFileReference section */
 		0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_eshop_challengeApp.swift; sourceTree = "<group>"; };
-		0C3F27AF29B3B56C004C359C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C3F27B129B3B56E004C359C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3F27B429B3B56E004C359C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0C3F27BA29B3B56E004C359C /* rpenya-eshop-challengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rpenya-eshop-challengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,6 +183,18 @@
 		0C3F284929B3C072004C359C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0C3F284B29B3C081004C359C /* Promotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotion.swift; sourceTree = "<group>"; };
 		0C3F284D29B3C09B004C359C /* ProductsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRepository.swift; sourceTree = "<group>"; };
+		0C3F285529B3C1B9004C359C /* ProductsListAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListAssembler.swift; sourceTree = "<group>"; };
+		0C3F285729B3C1DB004C359C /* ProductViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewEntity.swift; sourceTree = "<group>"; };
+		0C3F285929B3C1F2004C359C /* ProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModel.swift; sourceTree = "<group>"; };
+		0C3F285B29B3C1FF004C359C /* ProductsListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListRouter.swift; sourceTree = "<group>"; };
+		0C3F285D29B3C20C004C359C /* ProductsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListView.swift; sourceTree = "<group>"; };
+		0C3F286129B3C243004C359C /* ShoppingBasketDetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketDetailAssembler.swift; sourceTree = "<group>"; };
+		0C3F286329B3C258004C359C /* ShoppingBasketViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewEntity.swift; sourceTree = "<group>"; };
+		0C3F286529B3C2B4004C359C /* ShoppingBasketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketDetailViewModel.swift; sourceTree = "<group>"; };
+		0C3F286729B3C2CC004C359C /* ShoppingBasketDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketDetailRouter.swift; sourceTree = "<group>"; };
+		0C3F286929B3C2D7004C359C /* ShoppingBasketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketDetailView.swift; sourceTree = "<group>"; };
+		0C3F286D29B3C3B4004C359C /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Mobile/Common/Router.swift; sourceTree = SOURCE_ROOT; };
+		0C3F287129B3C3E4004C359C /* ErrorDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,8 +283,11 @@
 		0C3F27AC29B3B56C004C359C /* Mobile */ = {
 			isa = PBXGroup;
 			children = (
+				0C3F284F29B3C134004C359C /* Common */,
+				0C3F285029B3C138004C359C /* CommonUI */,
+				0C3F285129B3C143004C359C /* ProductsList */,
+				0C3F285229B3C159004C359C /* ShoppingBasketDetail */,
 				0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */,
-				0C3F27AF29B3B56C004C359C /* ContentView.swift */,
 				0C3F27B129B3B56E004C359C /* Assets.xcassets */,
 				0C3F27B329B3B56E004C359C /* Preview Content */,
 				0C3F27BD29B3B56E004C359C /* MobileTests */,
@@ -462,6 +487,86 @@
 			children = (
 				0C3F284929B3C072004C359C /* Product.swift */,
 				0C3F284B29B3C081004C359C /* Promotion.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C3F284F29B3C134004C359C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F287029B3C3C9004C359C /* Model */,
+				0C3F286D29B3C3B4004C359C /* Router.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0C3F285029B3C138004C359C /* CommonUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonUI;
+			sourceTree = "<group>";
+		};
+		0C3F285129B3C143004C359C /* ProductsList */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F285329B3C177004C359C /* Assembly */,
+				0C3F285429B3C192004C359C /* Model */,
+				0C3F285929B3C1F2004C359C /* ProductsListViewModel.swift */,
+				0C3F285B29B3C1FF004C359C /* ProductsListRouter.swift */,
+				0C3F285D29B3C20C004C359C /* ProductsListView.swift */,
+			);
+			path = ProductsList;
+			sourceTree = "<group>";
+		};
+		0C3F285229B3C159004C359C /* ShoppingBasketDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F285F29B3C21C004C359C /* Assembly */,
+				0C3F286029B3C221004C359C /* Model */,
+				0C3F286529B3C2B4004C359C /* ShoppingBasketDetailViewModel.swift */,
+				0C3F286729B3C2CC004C359C /* ShoppingBasketDetailRouter.swift */,
+				0C3F286929B3C2D7004C359C /* ShoppingBasketDetailView.swift */,
+			);
+			path = ShoppingBasketDetail;
+			sourceTree = "<group>";
+		};
+		0C3F285329B3C177004C359C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F285529B3C1B9004C359C /* ProductsListAssembler.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		0C3F285429B3C192004C359C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F285729B3C1DB004C359C /* ProductViewEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C3F285F29B3C21C004C359C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F286129B3C243004C359C /* ShoppingBasketDetailAssembler.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		0C3F286029B3C221004C359C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F286329B3C258004C359C /* ShoppingBasketViewEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C3F287029B3C3C9004C359C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F287129B3C3E4004C359C /* ErrorDescription.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -740,8 +845,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3F27B029B3B56C004C359C /* ContentView.swift in Sources */,
+				0C3F285629B3C1B9004C359C /* ProductsListAssembler.swift in Sources */,
+				0C3F286229B3C243004C359C /* ShoppingBasketDetailAssembler.swift in Sources */,
+				0C3F285C29B3C1FF004C359C /* ProductsListRouter.swift in Sources */,
 				0C3F27AE29B3B56C004C359C /* rpenya_eshop_challengeApp.swift in Sources */,
+				0C3F287229B3C3E4004C359C /* ErrorDescription.swift in Sources */,
+				0C3F286F29B3C3B4004C359C /* Router.swift in Sources */,
+				0C3F285829B3C1DB004C359C /* ProductViewEntity.swift in Sources */,
+				0C3F285E29B3C20C004C359C /* ProductsListView.swift in Sources */,
+				0C3F286429B3C258004C359C /* ShoppingBasketViewEntity.swift in Sources */,
+				0C3F285A29B3C1F2004C359C /* ProductsListViewModel.swift in Sources */,
+				0C3F286A29B3C2D7004C359C /* ShoppingBasketDetailView.swift in Sources */,
+				0C3F286629B3C2B4004C359C /* ShoppingBasketDetailViewModel.swift in Sources */,
+				0C3F286829B3C2CC004C359C /* ShoppingBasketDetailRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
