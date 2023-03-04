@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Combine
 
 public protocol ProductsRepository {
-    func getAllProducts()
+    func getAllProducts() -> AnyPublisher<[Product], Error>
 }
