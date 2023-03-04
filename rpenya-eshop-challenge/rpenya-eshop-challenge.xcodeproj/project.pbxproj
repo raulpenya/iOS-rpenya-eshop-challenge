@@ -28,6 +28,8 @@
 		0C3F281529B3B6CC004C359C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0C3F281D29B3B750004C359C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; };
 		0C3F281E29B3B750004C359C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C3F27FF29B3B6CB004C359C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0C3F282729B3BCB8004C359C /* NetworkingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F282629B3BCB8004C359C /* NetworkingDataSource.swift */; };
+		0C3F282929B3BCDE004C359C /* DataSourceErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		0C3F280229B3B6CB004C359C /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		0C3F280829B3B6CC004C359C /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F280F29B3B6CC004C359C /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		0C3F282629B3BCB8004C359C /* NetworkingDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingDataSource.swift; sourceTree = "<group>"; };
+		0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -269,6 +273,9 @@
 		0C3F27DD29B3B6B1004C359C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0C3F282229B3BC35004C359C /* Common */,
+				0C3F282329B3BC3D004C359C /* Products */,
+				0C3F282429B3BC47004C359C /* Promotions */,
 				0C3F27DE29B3B6B1004C359C /* Data.h */,
 				0C3F27DF29B3B6B1004C359C /* Data.docc */,
 				0C3F27EB29B3B6B1004C359C /* DataTests */,
@@ -307,6 +314,37 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0C3F282229B3BC35004C359C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F282529B3BC72004C359C /* NetworkingDataSource */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0C3F282329B3BC3D004C359C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		0C3F282429B3BC47004C359C /* Promotions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Promotions;
+			sourceTree = "<group>";
+		};
+		0C3F282529B3BC72004C359C /* NetworkingDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */,
+				0C3F282629B3BCB8004C359C /* NetworkingDataSource.swift */,
+			);
+			path = NetworkingDataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -609,7 +647,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3F282729B3BCB8004C359C /* NetworkingDataSource.swift in Sources */,
 				0C3F27E029B3B6B1004C359C /* Data.docc in Sources */,
+				0C3F282929B3BCDE004C359C /* DataSourceErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,6 +845,7 @@
 		0C3F27CF29B3B56E004C359C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -833,6 +874,7 @@
 		0C3F27D029B3B56E004C359C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
