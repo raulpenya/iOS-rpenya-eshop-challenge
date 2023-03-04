@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol PromotionsRepository {
+    func getAllPromotions()
+}

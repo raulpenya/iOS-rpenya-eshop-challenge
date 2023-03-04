@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol ProductsRepository {
+    func getAllProducts()
+}
