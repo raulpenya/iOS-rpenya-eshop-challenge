@@ -57,6 +57,7 @@
 		0C3F287429B3C832004C359C /* ProductsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F287329B3C832004C359C /* ProductsApi.swift */; };
 		0C3F287629B3C8F4004C359C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F287529B3C8F3004C359C /* HTTPMethod.swift */; };
 		0C3F287829B3CC6F004C359C /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F287729B3CC6F004C359C /* Api.swift */; };
+		0C3F287A29B3CF9B004C359C /* PromotionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F287929B3CF9B004C359C /* PromotionsRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +202,7 @@
 		0C3F287329B3C832004C359C /* ProductsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsApi.swift; sourceTree = "<group>"; };
 		0C3F287529B3C8F3004C359C /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		0C3F287729B3CC6F004C359C /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		0C3F287929B3CF9B004C359C /* PromotionsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +481,7 @@
 				0C3F284829B3C03E004C359C /* Model */,
 				0C3F284529B3C017004C359C /* UseCase */,
 				0C3F284D29B3C09B004C359C /* ProductsRepository.swift */,
+				0C3F287929B3CF9B004C359C /* PromotionsRepository.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -923,6 +926,7 @@
 				0C3F280329B3B6CB004C359C /* Domain.docc in Sources */,
 				0C3F284A29B3C072004C359C /* Product.swift in Sources */,
 				0C3F284C29B3C081004C359C /* Promotion.swift in Sources */,
+				0C3F287A29B3CF9B004C359C /* PromotionsRepository.swift in Sources */,
 				0C3F284E29B3C09B004C359C /* ProductsRepository.swift in Sources */,
 				0C3F284329B3BFAC004C359C /* UseCase.swift in Sources */,
 				0C3F284729B3C02A004C359C /* GetProductsWithPromotions.swift in Sources */,
