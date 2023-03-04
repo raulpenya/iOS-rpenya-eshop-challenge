@@ -18,6 +18,7 @@ protocol Api {
 
 extension Api {
     func createURLRequest() throws -> URLRequest {
+        // TODO: errors
         guard let url = URL(string: url) else {
             throw NSError(domain: "DataErrors.urlFormat.localizedDescription",
                           code: 00000000000000,
