@@ -1,6 +1,6 @@
 //
 //  NetworkingDataSource.swift
-//  iOS-Generic-Datasource_Example
+//  Data
 //
 //  Created by raulbot on 6/2/23.
 //
@@ -31,7 +31,7 @@ extension NetworkingDataSource {
         guard let urlResponse = response as? HTTPURLResponse else {
             throw DataSourceErrors.castHTTPURLResponseException
         }
-        if (200..<300) ~= urlResponse.statusCode {
+        if (200...299) ~= urlResponse.statusCode {
             return data
         } else {
             let str = String(decoding: data, as: UTF8.self)
