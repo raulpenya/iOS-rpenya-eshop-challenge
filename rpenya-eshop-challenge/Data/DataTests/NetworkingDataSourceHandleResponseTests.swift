@@ -90,31 +90,3 @@ final class NetworkingDataSourceHandleResponseTests: XCTestCase {
         XCTAssertEqual((errorResponse! as! DataSourceErrors).code, DataSourceErrors.castHTTPURLResponseException.code)
     }
 }
-
-extension URLResponse {
-    static func getURLResponseSuccess() -> URLResponse {
-        return HTTPURLResponse(url: URL(string: DataConstants.baseUrl+DataConstants.getProductsEndpoint)!, statusCode: 200, httpVersion: nil, headerFields: nil)!
-    }
-    
-    static func getURLResponseError() -> URLResponse {
-        return HTTPURLResponse(url: URL(string: DataConstants.baseUrl+DataConstants.getProductsEndpoint)!, statusCode: 404, httpVersion: nil, headerFields: nil)!
-    }
-    
-    static func getNoHTTPURLResponseError() -> URLResponse {
-        return URLResponse(url: URL(string: DataConstants.baseUrl+DataConstants.getProductsEndpoint)!, mimeType: nil, expectedContentLength: 0, textEncodingName: nil)
-    }
-}
-
-extension String {
-    static func getSuccessResponse() -> String {
-        return "{\"products\":[{\"code\":\"VOUCHER\",\"name\":\"CabifyVoucher\",\"price\":5},{\"code\":\"TSHIRT\",\"name\":\"CabifyT-Shirt\",\"price\":20},{\"code\":\"MUG\",\"name\":\"CabifyCoffeeMug\",\"price\":7.5}]}"
-    }
-    
-    static func getErrorResponse() -> String {
-        return "404 Bad request"
-    }
-    
-    static func getEmptyResponse() -> String {
-        return ""
-    }
-}
