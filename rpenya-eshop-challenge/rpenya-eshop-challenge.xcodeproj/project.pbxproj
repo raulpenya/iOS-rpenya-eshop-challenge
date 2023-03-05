@@ -436,9 +436,9 @@
 		0C3F282529B3BC72004C359C /* NetworkingDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				0C2DB06829B50BDA004395FB /* Session.swift */,
 				0C3F282629B3BCB8004C359C /* NetworkingDataSource.swift */,
 				0C3F282829B3BCDE004C359C /* DataSourceErrors.swift */,
-				0C2DB06829B50BDA004395FB /* Session.swift */,
 			);
 			path = NetworkingDataSource;
 			sourceTree = "<group>";

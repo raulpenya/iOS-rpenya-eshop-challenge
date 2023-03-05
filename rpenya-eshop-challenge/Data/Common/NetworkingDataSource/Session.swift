@@ -6,15 +6,15 @@
 //
 
 import Foundation
+import Combine
 
 protocol Session {
-    func dataTaskPublisher(for request: URLRequest) -> URLSession.DataTaskPublisher
+    typealias RequestResponse = URLSession.DataTaskPublisher.Output
+    func executeTaskPublisher(for request: URLRequest) -> AnyPublisher<RequestResponse, URLError>
 }
 
-extension Session {
-    func dataTaskPublisher(for request: URLRequest) -> URLSession.DataTaskPublisher {
-        return dataTaskPublisher(for: request)
+extension URLSession: Session {
+    func executeTaskPublisher(for request: URLRequest) -> AnyPublisher<RequestResponse, URLError> {
+        return dataTaskPublisher(for: request).eraseToAnyPublisher()
     }
 }
-
-extension URLSession: Session {}

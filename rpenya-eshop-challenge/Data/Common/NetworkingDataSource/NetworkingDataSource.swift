@@ -14,7 +14,7 @@ protocol NetworkingDataSource: AnyObject {
 
 extension NetworkingDataSource {
     func request<T, Q>(with session: Session, resource: Resource<T, Q>) -> AnyPublisher<Q, Error> {
-        return session.dataTaskPublisher(for: resource.request).tryMap { [weak self] data, response in
+        return session.executeTaskPublisher(for: resource.request).tryMap { [weak self] data, response in
             guard let strongSelf = self else {
                 throw  DataSourceErrors.instanceException
             }
