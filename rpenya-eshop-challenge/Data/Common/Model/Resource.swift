@@ -11,10 +11,3 @@ struct Resource<T: Decodable, Q> {
     let request: URLRequest
     let transform: (T) -> Q
 }
-
-protocol ResourceP {
-    associatedtype T: Decodable
-    associatedtype Q
-    var request: URLRequest { get set }
-    var transform: (T) -> Q { get set }
-}
