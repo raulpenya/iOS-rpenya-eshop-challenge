@@ -23,6 +23,7 @@
 		0C2DB08929B527CD004395FB /* MockProductsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB08829B527CD004395FB /* MockProductsDataSource.swift */; };
 		0C2DB09229B528EA004395FB /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB09029B528E2004395FB /* MockProduct.swift */; };
 		0C2DB09329B5294F004395FB /* MockProductRemoteEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB08C29B52880004395FB /* MockProductRemoteEntities.swift */; };
+		0C2DB09429B52DD1004395FB /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB09029B528E2004395FB /* MockProduct.swift */; };
 		0C3F27AE29B3B56C004C359C /* rpenya_eshop_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */; };
 		0C3F27B229B3B56E004C359C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F27B129B3B56E004C359C /* Assets.xcassets */; };
 		0C3F27B529B3B56E004C359C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F27B429B3B56E004C359C /* Preview Assets.xcassets */; };
@@ -1047,6 +1048,7 @@
 				0C2DB09329B5294F004395FB /* MockProductRemoteEntities.swift in Sources */,
 				0C2DB08929B527CD004395FB /* MockProductsDataSource.swift in Sources */,
 				0C2DB06129B50737004395FB /* NetworkingDataSourceRequestTests.swift in Sources */,
+				0C2DB09429B52DD1004395FB /* MockProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

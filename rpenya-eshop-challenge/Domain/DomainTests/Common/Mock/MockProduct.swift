@@ -8,8 +8,8 @@
 import Foundation
 @testable import Domain
 
-public struct MockProduct {
-    public static func givenProduct() -> Product {
+struct MockProduct {
+    static func givenProduct() -> Product {
         return Product(code: "", name: "", price: 0)
     }
 }
