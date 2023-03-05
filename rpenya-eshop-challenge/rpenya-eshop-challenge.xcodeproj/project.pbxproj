@@ -14,6 +14,7 @@
 		0C2DB06929B50BDA004395FB /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06829B50BDA004395FB /* Session.swift */; };
 		0C2DB06C29B50D6F004395FB /* URLResponse+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06A29B50D6D004395FB /* URLResponse+Extensions.swift */; };
 		0C2DB07029B50DBA004395FB /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06E29B50DB8004395FB /* String+Extensions.swift */; };
+		0C2DB07529B51C12004395FB /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB07329B51BEB004395FB /* MockSession.swift */; };
 		0C3F27AE29B3B56C004C359C /* rpenya_eshop_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */; };
 		0C3F27B229B3B56E004C359C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F27B129B3B56E004C359C /* Assets.xcassets */; };
 		0C3F27B529B3B56E004C359C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F27B429B3B56E004C359C /* Preview Assets.xcassets */; };
@@ -168,6 +169,7 @@
 		0C2DB06829B50BDA004395FB /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		0C2DB06A29B50D6D004395FB /* URLResponse+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLResponse+Extensions.swift"; sourceTree = "<group>"; };
 		0C2DB06E29B50DB8004395FB /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0C2DB07329B51BEB004395FB /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_eshop_challengeApp.swift; sourceTree = "<group>"; };
 		0C3F27B129B3B56E004C359C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				0C2DB06529B5085C004395FB /* MockNetworkingDataSource.swift */,
+				0C2DB07329B51BEB004395FB /* MockSession.swift */,
 				0C2DB06A29B50D6D004395FB /* URLResponse+Extensions.swift */,
 				0C2DB06E29B50DB8004395FB /* String+Extensions.swift */,
 			);
@@ -959,6 +962,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C2DB07529B51C12004395FB /* MockSession.swift in Sources */,
 				0C2DB07029B50DBA004395FB /* String+Extensions.swift in Sources */,
 				0C2DB06C29B50D6F004395FB /* URLResponse+Extensions.swift in Sources */,
 				0C2DB06329B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift in Sources */,
