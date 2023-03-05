@@ -1,5 +1,5 @@
 //
-//  HandleResponseTests.swift
+//  NetworkingDataSourceHandleResponseTests.swift
 //  DataTests
 //
 //  Created by raulbot on 5/3/23.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import Data
 
-final class HandleResponseTests: XCTestCase {
+final class NetworkingDataSourceHandleResponseTests: XCTestCase {
     func test_handleResponse_success() {
         //Given
         let dataSource = MockNetworkingDataSource()

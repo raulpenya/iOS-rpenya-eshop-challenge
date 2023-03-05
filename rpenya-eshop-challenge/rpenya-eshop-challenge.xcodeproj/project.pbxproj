@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C2DB05F29B50510004395FB /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB05E29B50510004395FB /* DataConstants.swift */; };
-		0C2DB06129B50737004395FB /* NetworkingDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06029B50737004395FB /* NetworkingDataSourceTests.swift */; };
-		0C2DB06329B5076D004395FB /* HandleResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06229B5076D004395FB /* HandleResponseTests.swift */; };
+		0C2DB06129B50737004395FB /* NetworkingDataSourceRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06029B50737004395FB /* NetworkingDataSourceRequestTests.swift */; };
+		0C2DB06329B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06229B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift */; };
 		0C2DB06729B50888004395FB /* MockNetworkingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06529B5085C004395FB /* MockNetworkingDataSource.swift */; };
 		0C3F27AE29B3B56C004C359C /* rpenya_eshop_challengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */; };
 		0C3F27B229B3B56E004C359C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C3F27B129B3B56E004C359C /* Assets.xcassets */; };
@@ -159,8 +159,8 @@
 
 /* Begin PBXFileReference section */
 		0C2DB05E29B50510004395FB /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
-		0C2DB06029B50737004395FB /* NetworkingDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDataSourceTests.swift; sourceTree = "<group>"; };
-		0C2DB06229B5076D004395FB /* HandleResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleResponseTests.swift; sourceTree = "<group>"; };
+		0C2DB06029B50737004395FB /* NetworkingDataSourceRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDataSourceRequestTests.swift; sourceTree = "<group>"; };
+		0C2DB06229B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDataSourceHandleResponseTests.swift; sourceTree = "<group>"; };
 		0C2DB06529B5085C004395FB /* MockNetworkingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkingDataSource.swift; sourceTree = "<group>"; };
 		0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_eshop_challengeApp.swift; sourceTree = "<group>"; };
@@ -364,8 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				0C2DB06429B50833004395FB /* Mocks */,
-				0C2DB06029B50737004395FB /* NetworkingDataSourceTests.swift */,
-				0C2DB06229B5076D004395FB /* HandleResponseTests.swift */,
+				0C2DB06029B50737004395FB /* NetworkingDataSourceRequestTests.swift */,
+				0C2DB06229B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -949,9 +949,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2DB06329B5076D004395FB /* HandleResponseTests.swift in Sources */,
+				0C2DB06329B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift in Sources */,
 				0C2DB06729B50888004395FB /* MockNetworkingDataSource.swift in Sources */,
-				0C2DB06129B50737004395FB /* NetworkingDataSourceTests.swift in Sources */,
+				0C2DB06129B50737004395FB /* NetworkingDataSourceRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
