@@ -15,10 +15,6 @@ final class PromotionsRemoteDataSourceTests: XCTestCase {
     var response: DataSourceResponse?
     var errorResponse: Error?
     var cancellableSet: Set<AnyCancellable> = []
-    
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
 
     func test_getAllPromotions_success() {
         //Given

@@ -1,29 +1,23 @@
 //
-//  SessionTests.swift
-//  rpenya-eshop-challengeTests
+//  ProductsRemoteDataSourceTests.swift
+//  rpenya-eshop-challenge
 //
 //  Created by raulbot on 6/3/23.
 //
 
 import XCTest
 @testable import Data
-import Domain
 import Combine
 
-final class SessionTests: XCTestCase {
-    
+final class ProductsRemoteDataSourceTests: XCTestCase {
+
+    let dataSource = ProductsRemoteDataSource()
     var response: DataSourceResponse?
     var errorResponse: Error?
     var cancellableSet: Set<AnyCancellable> = []
     
-    override func setUpWithError() throws {
-        response = nil
-        errorResponse = nil
-    }
-    
-    func test_session_executeTaskPublisher() {
+    func test_getAllProducts_success() {
         //Given
-        let dataSource = ProductsRemoteDataSource()
         let expectation = expectation(description: "test_session_executeTaskPublisher")
         //When
         dataSource.getAllProducts().sink { [weak self] completion in
@@ -41,4 +35,5 @@ final class SessionTests: XCTestCase {
         XCTAssertEqual(response, .success)
         XCTAssertNil(errorResponse)
     }
+
 }
