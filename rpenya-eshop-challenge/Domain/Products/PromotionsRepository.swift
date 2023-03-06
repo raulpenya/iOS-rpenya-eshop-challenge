@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import Combine
 
 public protocol PromotionsRepository {
-    func getAllPromotions()
+    func getAllPromotions() -> AnyPublisher<[Promotion], Error>
 }

@@ -11,16 +11,16 @@ import XCTest
 final class ProductsRemoteEntityTests: XCTestCase {
     func tests_ProductsRemoteEntity_decode() {
         //Given
-        let json = String.getSuccessResponse()
+        let json = String.getProductsSuccessResponse()
         //When
         let jsonData = json.data(using: .utf8)!
         let products: ProductsRemoteEntity? = try? JSONDecoder().decode(ProductsRemoteEntity.self, from: jsonData)
         //Then
         XCTAssertNotNil(products)
-        XCTAssertFalse(products!.products.isEmpty)
-        XCTAssertEqual(products!.products[0].code, "VOUCHER")
-        XCTAssertEqual(products!.products[0].name, "CabifyVoucher")
-        XCTAssertEqual(products!.products[0].price, 5)
+        XCTAssertFalse(products!.products!.isEmpty)
+        XCTAssertEqual(products!.products![0].code, "VOUCHER")
+        XCTAssertEqual(products!.products![0].name, "CabifyVoucher")
+        XCTAssertEqual(products!.products![0].price, 5)
     }
     
     func tests_ProductsRemoteEntity_transform() {
@@ -29,9 +29,18 @@ final class ProductsRemoteEntityTests: XCTestCase {
         //When
         let domainProducts = products.transformToDomain()
         //Then
-        XCTAssertEqual(products.products.count, domainProducts.count)
-        XCTAssertEqual(products.products[0].code, domainProducts[0].code)
-        XCTAssertEqual(products.products[0].name, domainProducts[0].name)
-        XCTAssertEqual(products.products[0].price, domainProducts[0].price)
+        XCTAssertEqual(products.products!.count, domainProducts.count)
+        XCTAssertEqual(products.products![0].code, domainProducts[0].code)
+        XCTAssertEqual(products.products![0].name, domainProducts[0].name)
+        XCTAssertEqual(products.products![0].price, domainProducts[0].price)
+    }
+    
+    func tests_ProductsRemoteEntity_transform_error() {
+        //Given
+        let products = MockProductsRemoteEntity.givenProductsNil()
+        //When
+        let domainProducts = products.transformToDomain()
+        //Then
+        XCTAssertTrue(domainProducts.isEmpty)
     }
 }

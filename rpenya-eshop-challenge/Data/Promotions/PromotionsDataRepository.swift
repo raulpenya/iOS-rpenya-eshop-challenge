@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import Domain
+import Combine
+
+struct PromotionsDataRepository: PromotionsRepository {
+    let dataSource: PromotionsDataSource
+    
+    func getAllPromotions() -> AnyPublisher<[Domain.Promotion], Error> {
+        return dataSource.getAllPromotions()
+    }
+}
