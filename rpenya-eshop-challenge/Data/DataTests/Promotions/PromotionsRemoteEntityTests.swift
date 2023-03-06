@@ -17,12 +17,12 @@ final class PromotionsRemoteEntityTests: XCTestCase {
         let promotions: PromotionsRemoteEntity? = try? JSONDecoder().decode(PromotionsRemoteEntity.self, from: jsonData)
         //Then
         XCTAssertNotNil(promotions)
-        XCTAssertFalse(promotions!.promotions.isEmpty)
-        XCTAssertEqual(promotions!.promotions[0].productCode, "VOUCHER")
-        XCTAssertEqual(promotions!.promotions[0].name, "Pay1get2")
-        XCTAssertEqual(promotions!.promotions[0].type, "PERCENTAGE")
-        XCTAssertEqual(promotions!.promotions[0].unitsNeeded, 2)
-        XCTAssertEqual(promotions!.promotions[0].discount, 0.50)
+        XCTAssertFalse(promotions!.promotions!.isEmpty)
+        XCTAssertEqual(promotions!.promotions![0].productCode, "VOUCHER")
+        XCTAssertEqual(promotions!.promotions![0].name, "Pay1get2")
+        XCTAssertEqual(promotions!.promotions![0].type, "PERCENTAGE")
+        XCTAssertEqual(promotions!.promotions![0].unitsNeeded, 2)
+        XCTAssertEqual(promotions!.promotions![0].discount, 0.50)
     }
     
     func tests_PromotionsRemoteEntity_transform_success() {
@@ -31,12 +31,21 @@ final class PromotionsRemoteEntityTests: XCTestCase {
         //When
         let domainPromotions = promotions.transformToDomain()
         //Then
-        XCTAssertEqual(promotions.promotions.count, domainPromotions.count)
-        XCTAssertEqual(promotions.promotions[0].productCode, domainPromotions[0].productCode)
-        XCTAssertEqual(promotions.promotions[0].name, domainPromotions[0].name)
-        XCTAssertEqual(promotions.promotions[0].type, domainPromotions[0].type.rawValue)
-        XCTAssertEqual(promotions.promotions[0].unitsNeeded, domainPromotions[0].unitsNeeded)
-        XCTAssertEqual(promotions.promotions[0].discount, domainPromotions[0].discount)
+        XCTAssertEqual(promotions.promotions!.count, domainPromotions.count)
+        XCTAssertEqual(promotions.promotions![0].productCode, domainPromotions[0].productCode)
+        XCTAssertEqual(promotions.promotions![0].name, domainPromotions[0].name)
+        XCTAssertEqual(promotions.promotions![0].type, domainPromotions[0].type.rawValue)
+        XCTAssertEqual(promotions.promotions![0].unitsNeeded, domainPromotions[0].unitsNeeded)
+        XCTAssertEqual(promotions.promotions![0].discount, domainPromotions[0].discount)
+    }
+    
+    func tests_PromotionsRemoteEntity_transform_error() {
+        //Given
+        let promotions = MockPromotionsRemoteEntity.givenPromotionsNil()
+        //When
+        let domainPromotions = promotions.transformToDomain()
+        //Then
+        XCTAssertTrue(domainPromotions.isEmpty)
     }
     
     func tests_PromotionsRemoteEntity_transform_wrongType() {
@@ -45,9 +54,9 @@ final class PromotionsRemoteEntityTests: XCTestCase {
         //When
         let domainPromotions = promotions.transformToDomain()
         //Then
-        XCTAssertNotEqual(promotions.promotions.count, domainPromotions.count)
-        XCTAssertTrue(promotions.promotions.count > domainPromotions.count)
-        XCTAssertEqual(promotions.promotions.count, 3)
+        XCTAssertNotEqual(promotions.promotions!.count, domainPromotions.count)
+        XCTAssertTrue(promotions.promotions!.count > domainPromotions.count)
+        XCTAssertEqual(promotions.promotions!.count, 3)
         XCTAssertEqual(domainPromotions.count, 2)
     }
 }

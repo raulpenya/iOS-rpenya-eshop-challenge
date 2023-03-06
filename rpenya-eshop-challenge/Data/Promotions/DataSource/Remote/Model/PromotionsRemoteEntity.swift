@@ -9,11 +9,11 @@ import Foundation
 import Domain
 
 struct PromotionsRemoteEntity: Decodable {
-    let promotions: [PromotionRemoteEntity]
+    let promotions: [PromotionRemoteEntity]?
 }
 
 extension PromotionsRemoteEntity {
     func transformToDomain() -> [Promotion] {
-        return promotions.compactMap { $0.transformToDomain() }
+        return promotions?.compactMap { $0.transformToDomain() } ?? []
     }
 }

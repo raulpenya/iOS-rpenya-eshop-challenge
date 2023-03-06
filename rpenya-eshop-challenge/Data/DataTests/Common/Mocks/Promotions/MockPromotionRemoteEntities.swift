@@ -16,6 +16,10 @@ struct MockPromotionsRemoteEntity {
             return PromotionsRemoteEntity(promotions: [MockPromotionRemoteEntity.givenPromotion(),MockPromotionRemoteEntity.givenPromotion(),MockPromotionRemoteEntity.givenPromotion()])
         }
     }
+    
+    static func givenPromotionsNil() -> PromotionsRemoteEntity {
+        return PromotionsRemoteEntity(promotions: nil)
+    }
 }
 
 struct MockPromotionRemoteEntity {
@@ -29,5 +33,9 @@ struct MockPromotionRemoteEntity {
     
     static func givenPromotion(productCode: String = MockPromotionRemoteEntity.productCode1, name: String = MockPromotionRemoteEntity.name1, type: String = MockPromotionRemoteEntity.type1, unitsNeeded: Int = MockPromotionRemoteEntity.unitsNeeded1, discount: Double = MockPromotionRemoteEntity.discount1) -> PromotionRemoteEntity {
         return PromotionRemoteEntity(productCode: productCode, name: name, type: type, unitsNeeded: unitsNeeded, discount: discount)
+    }
+    
+    static func givenPromotionNil() -> PromotionRemoteEntity {
+        return PromotionRemoteEntity(productCode: nil, name: nil, type: nil, unitsNeeded: nil, discount: nil)
     }
 }

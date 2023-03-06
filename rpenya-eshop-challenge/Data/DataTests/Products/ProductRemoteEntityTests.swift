@@ -16,9 +16,19 @@ final class ProductRemoteEntityTests: XCTestCase {
         //When
         let domainProduct = product.transformToDomain()
         //Then
-        XCTAssertEqual(product.code, domainProduct.code)
-        XCTAssertEqual(product.name, domainProduct.name)
-        XCTAssertEqual(product.price, domainProduct.price)
+        XCTAssertNotNil(domainProduct)
+        XCTAssertEqual(product.code, domainProduct?.code)
+        XCTAssertEqual(product.name, domainProduct?.name)
+        XCTAssertEqual(product.price, domainProduct?.price)
+    }
+    
+    func tests_ProductRemoteEntity_transform_error() {
+        //Given
+        let product = MockProductRemoteEntity.givenProductNil()
+        //When
+        let domainProduct = product.transformToDomain()
+        //Then
+        XCTAssertNil(domainProduct)
     }
     
     func tests_ProductRemoteEntity_equatable_success() {
