@@ -9,6 +9,20 @@ import XCTest
 @testable import Data
 
 final class ProductsRemoteEntityMapperTests: XCTestCase {
+    func tests_ProductsRemoteEntity_decode() {
+        //Given
+        let json = String.getSuccessResponse()
+        //When
+        let jsonData = json.data(using: .utf8)!
+        let products: ProductsRemoteEntity? = try? JSONDecoder().decode(ProductsRemoteEntity.self, from: jsonData)
+        //Then
+        XCTAssertNotNil(products)
+        XCTAssertFalse(products!.products.isEmpty)
+        XCTAssertEqual(products!.products[0].code, "VOUCHER")
+        XCTAssertEqual(products!.products[0].name, "CabifyVoucher")
+        XCTAssertEqual(products!.products[0].price, 5)
+    }
+    
     func tests_ProductsRemoteEntity_transform() {
         //Given
         let products = MockProductsRemoteEntity.givenProducts()
