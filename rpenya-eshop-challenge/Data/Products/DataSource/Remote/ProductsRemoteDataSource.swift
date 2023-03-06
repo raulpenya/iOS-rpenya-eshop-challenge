@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import Domain
+import Combine
+
+class ProductsRemoteDataSource: ProductsDataSource, NetworkingDataSource {
+    func getAllProducts() -> AnyPublisher<[Domain.Product], Error> {
+        return request(resource: ProductResources.getAllProductsResource())
+    }
+}

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import Domain
+import Combine
+
+protocol ProductsDataSource {
+    func getAllProducts() -> AnyPublisher<[Domain.Product], Error>
+}

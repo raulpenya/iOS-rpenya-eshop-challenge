@@ -1,6 +1,6 @@
 //
 //  NetworkingDataSource.swift
-//  iOS-Generic-Datasource_Example
+//  Data
 //
 //  Created by raulbot on 6/2/23.
 //
@@ -8,18 +8,16 @@
 import Foundation
 import Combine
 
-struct Resource<T: Decodable, Q> {
-    let request: URLRequest
-    let transform: (T) -> Q
-}
-
 protocol NetworkingDataSource: AnyObject {
-    func request<T, Q>(with session: URLSession, resource: Resource<T, Q>) -> AnyPublisher<Q, Error>
+    func request<T, Q>(with session: Session, resource: Resource<T, Q>?) -> AnyPublisher<Q, Error>
 }
 
 extension NetworkingDataSource {
-    func request<T, Q>(with session: URLSession, resource: Resource<T, Q>) -> AnyPublisher<Q, Error> {
-        return session.dataTaskPublisher(for: resource.request).tryMap { [weak self] data, response in
+    func request<T, Q>(with session: Session = URLSession.shared, resource: Resource<T, Q>?) -> AnyPublisher<Q, Error> {
+        guard let resource = resource else {
+            return Fail(error: DataSourceErrors.requestException).eraseToAnyPublisher()
+        }
+        return session.executeTaskPublisher(for: resource.request).tryMap { [weak self] data, response in
             guard let strongSelf = self else {
                 throw  DataSourceErrors.instanceException
             }
@@ -31,7 +29,7 @@ extension NetworkingDataSource {
         guard let urlResponse = response as? HTTPURLResponse else {
             throw DataSourceErrors.castHTTPURLResponseException
         }
-        if (200..<300) ~= urlResponse.statusCode {
+        if (200...299) ~= urlResponse.statusCode {
             return data
         } else {
             let str = String(decoding: data, as: UTF8.self)
