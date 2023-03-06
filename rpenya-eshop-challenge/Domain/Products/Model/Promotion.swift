@@ -26,12 +26,14 @@ public enum PromotionType: String, Equatable {
 
 public struct Promotion: Equatable {
     public let productCode: String
+    public let name: String
     public let type: PromotionType
     public let unitsNeeded: Int
     public let discount: Double
     
-    public init(productCode: String, type: PromotionType, unitsNeeded: Int, discount: Double) {
+    public init(productCode: String, name: String, type: PromotionType, unitsNeeded: Int, discount: Double) {
         self.productCode = productCode
+        self.name = name
         self.type = type
         self.unitsNeeded = unitsNeeded
         self.discount = discount

@@ -11,7 +11,7 @@ import XCTest
 final class ProductsRemoteEntityTests: XCTestCase {
     func tests_ProductsRemoteEntity_decode() {
         //Given
-        let json = String.getSuccessResponse()
+        let json = String.getProductsSuccessResponse()
         //When
         let jsonData = json.data(using: .utf8)!
         let products: ProductsRemoteEntity? = try? JSONDecoder().decode(ProductsRemoteEntity.self, from: jsonData)

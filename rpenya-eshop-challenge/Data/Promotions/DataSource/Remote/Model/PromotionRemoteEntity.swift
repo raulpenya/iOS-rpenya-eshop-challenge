@@ -10,6 +10,7 @@ import Domain
 
 struct PromotionRemoteEntity: Decodable, Equatable {
     let productCode: String
+    let name: String
     let type: String
     let unitsNeeded: Int
     let discount: Double
@@ -22,6 +23,6 @@ struct PromotionRemoteEntity: Decodable, Equatable {
 extension PromotionRemoteEntity {
     func transformToDomain() -> Promotion? {
         guard let type = PromotionType(rawValue: type) else { return nil }
-        return Promotion(productCode: productCode, type: type, unitsNeeded: unitsNeeded, discount: discount)
+        return Promotion(productCode: productCode, name: name, type: type, unitsNeeded: unitsNeeded, discount: discount)
     }
 }
