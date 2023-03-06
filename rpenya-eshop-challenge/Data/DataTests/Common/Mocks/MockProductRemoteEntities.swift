@@ -15,11 +15,15 @@ struct MockProductsRemoteEntity {
 }
 
 struct MockProductRemoteEntity {
-    static let code = "TSHIRT"
-    static let name = "Cabify T-Shirt"
-    static let price = 7.5
+    static let code1 = "TSHIRT"
+    static let name1 = "Cabify T-Shirt"
+    static let price1 = 7.5
     
-    static func givenProduct() -> ProductRemoteEntity {
+    static let code2 = "VOUCHER"
+    static let name2 = "Cabify Voucher"
+    static let price2 = 5
+    
+    static func givenProduct(code: String = MockProductRemoteEntity.code1, name: String = MockProductRemoteEntity.name1, price: Double = MockProductRemoteEntity.price1) -> ProductRemoteEntity {
         return ProductRemoteEntity(code: code, name: name, price: price)
     }
 }
