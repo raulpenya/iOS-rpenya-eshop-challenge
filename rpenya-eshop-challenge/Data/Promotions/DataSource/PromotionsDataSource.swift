@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import Domain
+import Combine
+
+protocol PromotionsDataSource {
+    func getAllPromotions() -> AnyPublisher<[Domain.Promotion], Error>
+}

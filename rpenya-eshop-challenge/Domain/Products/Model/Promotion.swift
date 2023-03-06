@@ -7,14 +7,6 @@
 
 import Foundation
 
-//{
-//      "productCode": "VOUCHER",
-//      "name": "Pay 1 get 2",
-//      "type": "PERCENTAGE",
-//      "unitsNeeded": 2,
-//      "discount": 0.50
-//    }
-
 public enum PromotionType: String, Equatable {
     case percentage = "PERCENTAGE"
     case newprice = "NEWPRICE"
