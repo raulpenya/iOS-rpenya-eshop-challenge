@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C079BA929B6444900726AED /* PromotionsRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079BA829B6444900726AED /* PromotionsRemoteEntity.swift */; };
+		0C079BAB29B6474000726AED /* PromotionsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079BAA29B6474000726AED /* PromotionsApi.swift */; };
 		0C2DB05F29B50510004395FB /* DataConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB05E29B50510004395FB /* DataConstants.swift */; };
 		0C2DB06129B50737004395FB /* NetworkingDataSourceRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06029B50737004395FB /* NetworkingDataSourceRequestTests.swift */; };
 		0C2DB06329B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB06229B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift */; };
@@ -177,6 +178,7 @@
 
 /* Begin PBXFileReference section */
 		0C079BA829B6444900726AED /* PromotionsRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsRemoteEntity.swift; sourceTree = "<group>"; };
+		0C079BAA29B6474000726AED /* PromotionsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsApi.swift; sourceTree = "<group>"; };
 		0C2DB05E29B50510004395FB /* DataConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConstants.swift; sourceTree = "<group>"; };
 		0C2DB06029B50737004395FB /* NetworkingDataSourceRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDataSourceRequestTests.swift; sourceTree = "<group>"; };
 		0C2DB06229B5076D004395FB /* NetworkingDataSourceHandleResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDataSourceHandleResponseTests.swift; sourceTree = "<group>"; };
@@ -584,6 +586,7 @@
 			children = (
 				0C079BA829B6444900726AED /* PromotionsRemoteEntity.swift */,
 				0C3F283929B3BE7F004C359C /* PromotionRemoteEntity.swift */,
+				0C079BAA29B6474000726AED /* PromotionsApi.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1035,6 +1038,7 @@
 				0C56290229B5F5FC00E9CB7D /* ProductResources.swift in Sources */,
 				0C3F283629B3BE45004C359C /* ProductsDataSource.swift in Sources */,
 				0C3F284029B3BEC8004C359C /* PromotionsDataRepository.swift in Sources */,
+				0C079BAB29B6474000726AED /* PromotionsApi.swift in Sources */,
 				0C2DB05F29B50510004395FB /* DataConstants.swift in Sources */,
 				0C2DB06929B50BDA004395FB /* Session.swift in Sources */,
 				0C3F283C29B3BE93004C359C /* PromotionsRemoteDataSource.swift in Sources */,
