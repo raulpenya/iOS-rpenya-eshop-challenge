@@ -11,16 +11,10 @@ import Combine
 import Domain
 
 final class NetworkingDataSourceRequestTests: XCTestCase {
-    
-    enum RequestResponse {
-        case success
-        case error
-    }
-    
     let dataSource = MockNetworkingDataSource()
     let session = MockSession()
     var transformCalled = false
-    var response: RequestResponse?
+    var response: DataSourceResponse?
     var errorResponse: Error?
     var urlRequest: URLRequest?
     var resource: Resource<ProductsRemoteEntity, [Product]>?
@@ -33,6 +27,7 @@ final class NetworkingDataSourceRequestTests: XCTestCase {
         }
         transformCalled = false
         response = nil
+        errorResponse = nil
     }
 
     func test_request_success() {

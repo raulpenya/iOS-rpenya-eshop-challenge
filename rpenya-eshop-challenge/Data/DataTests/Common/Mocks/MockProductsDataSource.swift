@@ -25,7 +25,7 @@ class MockProductsDataSource: ProductsDataSource {
         case .success:
             return Result.Publisher([MockProduct.givenProduct()]).eraseToAnyPublisher()
         case .error:
-            return Fail(error: NSError(domain: "MockProductsDataSource.getAllProducts.error", code: 400)).eraseToAnyPublisher()
+            return Fail(error: DataSourceErrors.networkingRequestError).eraseToAnyPublisher()
         }
     }
 }
