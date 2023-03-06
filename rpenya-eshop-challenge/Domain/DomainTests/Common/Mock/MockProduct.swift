@@ -10,6 +10,6 @@ import Foundation
 
 struct MockProduct {
     static func givenProduct() -> Product {
-        return Product(code: "", name: "", price: 0)
+        return Product(code: "", name: "", price: 0, promotion: nil)
     }
 }

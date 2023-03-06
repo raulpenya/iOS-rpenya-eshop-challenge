@@ -20,6 +20,6 @@ struct ProductRemoteEntity: Decodable, Equatable {
 
 extension ProductRemoteEntity {
     func transformToDomain() -> Product {
-        return Product(code: code, name: name, price: price)
+        return Product(code: code, name: name, price: price, promotion: nil)
     }
 }
