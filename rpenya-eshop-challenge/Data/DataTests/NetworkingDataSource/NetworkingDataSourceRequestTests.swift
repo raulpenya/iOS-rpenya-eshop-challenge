@@ -61,7 +61,7 @@ final class NetworkingDataSourceRequestTests: XCTestCase {
     func test_request_noresource_error() {
         //Given
         session.response = .success
-        let expectation = expectation(description: "test_request_error")
+        let expectation = expectation(description: "test_request_noresource_error")
         resource = nil
         //When
         dataSource.request(with: session, resource: resource).sink { [weak self] completion in
