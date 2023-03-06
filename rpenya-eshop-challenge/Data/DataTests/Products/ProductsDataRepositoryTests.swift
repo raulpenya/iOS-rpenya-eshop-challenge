@@ -54,7 +54,7 @@ final class ProductsDataRepositoryTests: XCTestCase {
         //Given
         dataSource.response = .error
         let dataRepository = ProductsDataRepository(dataSource: dataSource)
-        let expectation = expectation(description: "test_getAllProducts_success")
+        let expectation = expectation(description: "test_getAllProducts_error")
         //When
         dataRepository.getAllProducts().sink { [weak self] completion in
             switch completion {
