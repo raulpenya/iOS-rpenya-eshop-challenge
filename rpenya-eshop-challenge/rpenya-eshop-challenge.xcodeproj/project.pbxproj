@@ -362,10 +362,10 @@
 		0C2DB06429B50833004395FB /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				0C2DB07329B51BEB004395FB /* MockSession.swift */,
-				0C2DB06529B5085C004395FB /* MockNetworkingDataSource.swift */,
 				0C079BCE29B6627100726AED /* Products */,
 				0C079BCF29B6627B00726AED /* Promotions */,
+				0C2DB07329B51BEB004395FB /* MockSession.swift */,
+				0C2DB06529B5085C004395FB /* MockNetworkingDataSource.swift */,
 				0C56290829B6133900E9CB7D /* MockApi.swift */,
 			);
 			path = Mocks;
