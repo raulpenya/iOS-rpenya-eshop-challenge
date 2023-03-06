@@ -18,11 +18,8 @@ protocol Api {
 
 extension Api {
     func createURLRequest() throws -> URLRequest {
-        // TODO: errors
         guard let url = URL(string: url) else {
-            throw NSError(domain: "DataErrors.urlFormat.localizedDescription",
-                          code: 00000000000000,
-                          userInfo: nil)
+            throw DataErrors.apiURLException
         }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue

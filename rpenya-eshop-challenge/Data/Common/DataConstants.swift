@@ -15,5 +15,4 @@ struct DataConstants {
     static let getPromotionsEndpoint = "raulpenya/bd43e4cabd6afbb95ca965eb684fce4a/raw/8e8e229fb033f694834f04af902f2735d37124b7/Promotions.json"
 }
 
-
 //https://gist.githubusercontent.com/palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json

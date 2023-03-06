@@ -9,11 +9,14 @@ import Foundation
 import Combine
 
 protocol NetworkingDataSource: AnyObject {
-    func request<T, Q>(with session: Session, resource: Resource<T, Q>) -> AnyPublisher<Q, Error>
+    func request<T, Q>(with session: Session, resource: Resource<T, Q>?) -> AnyPublisher<Q, Error>
 }
 
 extension NetworkingDataSource {
-    func request<T, Q>(with session: Session, resource: Resource<T, Q>) -> AnyPublisher<Q, Error> {
+    func request<T, Q>(with session: Session = URLSession.shared, resource: Resource<T, Q>?) -> AnyPublisher<Q, Error> {
+        guard let resource = resource else {
+            return Fail(error: DataSourceErrors.requestException).eraseToAnyPublisher()
+        }
         return session.executeTaskPublisher(for: resource.request).tryMap { [weak self] data, response in
             guard let strongSelf = self else {
                 throw  DataSourceErrors.instanceException
