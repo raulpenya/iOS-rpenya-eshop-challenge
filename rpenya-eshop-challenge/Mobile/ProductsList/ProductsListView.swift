@@ -18,10 +18,10 @@ struct ProductsListView: View {
                     ForEach(0..<30) { _ in
                         let promotion = Promotion(productCode: "TSHIRT", name: "Pay 1 get 2", type: .percentage, unitsNeeded: 2, discount: 0.5)
                         let product = Product(code: "TSHIRT", name: "Cabify T-Shirt", price: 20, promotion: promotion)
-                        ProductListCell(item: product)
+                        ProductListCell(item: product).listRowSeparator(.hidden)
                     }
-                }.listStyle(PlainListStyle())
-                CheckoutButtonView(action: viewModel.checkoutButtonPressed)
+                }.listStyle(.plain)
+                CompleteButtonView(action: viewModel.checkoutButtonPressed)
             }.navigationTitle("eShop")
         }
     }

@@ -20,12 +20,11 @@ struct ProductListCell: View {
                     Text(item.name)
                         .font(.system(.title3, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
                     Text(promo.name)
-                        .font(.system(.subheadline, weight: .regular)).frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal, 6
-                        )
+                        .font(.system(.subheadline, weight: .regular)).frame(maxWidth: .infinity, alignment: .leading).padding(.horizontal, 6)
                     
                 } else {
                     Text(item.name)
-                        .font(.system(.title3, weight: .semibold)).padding(.horizontal, 16)
+                        .font(.system(.title3, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
                 }
             }.padding(.horizontal, 16)
             HStack {

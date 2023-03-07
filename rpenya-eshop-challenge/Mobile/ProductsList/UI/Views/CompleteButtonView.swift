@@ -1,5 +1,5 @@
 //
-//  CheckoutButtonView.swift
+//  CompleteButtonView.swift
 //  rpenya-eshop-challenge
 //
 //  Created by raulbot on 7/3/23.
@@ -7,19 +7,24 @@
 
 import SwiftUI
 
-struct CheckoutButtonView: View {
+struct CompleteButtonView: View {
     
     var action: (() -> Void)
     
     var body: some View {
         HStack {
-            Button("Proceed checkout") {
-                print("Button -")
+            Button {
+                print("CompleteButtonView")
                 action()
+            } label: {
+                Text("Proceed checkout")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .bold()
             }.frame(height: 70).frame(minWidth: 0, maxWidth: .infinity)
                 .background {
                     RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Color(.systemOrange))
+                        .fill(Color(.systemGreen))
                 }
         }
         .padding(.all, 20).frame(maxWidth: .infinity, alignment: .center).background(Color.white // any non-transparent background
@@ -31,7 +36,7 @@ struct CheckoutButtonView: View {
 
 struct CheckoutButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        CheckoutButtonView(action: {
+        CompleteButtonView(action: {
             print("CheckoutButtonView")
         })
     }
