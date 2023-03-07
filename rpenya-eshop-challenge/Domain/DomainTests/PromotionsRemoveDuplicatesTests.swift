@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Domain
 
 final class PromotionsRemoveDuplicatesTests: XCTestCase {
     func test_removeDuplicates_withDuplicates() {
