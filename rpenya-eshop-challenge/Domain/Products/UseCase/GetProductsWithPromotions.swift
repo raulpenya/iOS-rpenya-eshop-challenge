@@ -22,6 +22,10 @@ public class GetProductsWithPromotions: UseCase {
     func execute(_ requestValues: GetProductsWithPromotionsRequestValues) -> AnyPublisher<Products, Error> {
         let productsPublisher = productsRepository.getAllProducts()
         let promotionsPublisher = promotionsRepository.getAllPromotions()
+            .catch { _ in
+            return Result<Promotions, Error>.Publisher(Promotions(promotions: [])).eraseToAnyPublisher()
+        }
+        
         return Publishers.Zip(productsPublisher, promotionsPublisher).flatMap { products, promotion in
             return Result<Products, Error>.Publisher(products.linkPromotions(promotion)).eraseToAnyPublisher()
         }.eraseToAnyPublisher()
