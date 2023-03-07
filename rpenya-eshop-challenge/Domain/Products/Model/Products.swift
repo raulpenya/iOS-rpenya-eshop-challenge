@@ -14,3 +14,9 @@ public struct Products {
         self.products = products
     }
 }
+
+public extension Products {
+    func removeDuplicates() -> Products {
+        return Products(products: products.uniqued())
+    }
+}

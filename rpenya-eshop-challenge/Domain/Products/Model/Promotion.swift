@@ -16,7 +16,7 @@ public enum PromotionType: String, Equatable {
     }
 }
 
-public struct Promotion: Equatable {
+public struct Promotion: Hashable, Equatable {
     public let productCode: String
     public let name: String
     public let type: PromotionType
@@ -33,5 +33,9 @@ public struct Promotion: Equatable {
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.productCode == rhs.productCode
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        productCode.hash(into: &hasher)
     }
 }

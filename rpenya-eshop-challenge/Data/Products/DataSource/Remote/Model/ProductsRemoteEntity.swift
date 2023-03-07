@@ -14,6 +14,6 @@ struct ProductsRemoteEntity: Decodable {
 
 extension ProductsRemoteEntity {
     func transformToDomain() -> Products {
-        return Products(products: products.compactMap { $0.transformToDomain() })
+        return Products(products: products.compactMap { $0.transformToDomain() }).removeDuplicates()
     }
 }

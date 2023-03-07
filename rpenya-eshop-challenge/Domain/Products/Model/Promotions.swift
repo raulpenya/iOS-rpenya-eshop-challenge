@@ -14,3 +14,9 @@ public struct Promotions {
         self.promotions = promotions
     }
 }
+
+public extension Promotions {
+    func removeDuplicates() -> Promotions {
+        return Promotions(promotions: promotions.uniqued())
+    }
+}

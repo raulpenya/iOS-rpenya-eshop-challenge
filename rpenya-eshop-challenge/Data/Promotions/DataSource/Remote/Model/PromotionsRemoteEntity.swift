@@ -14,6 +14,6 @@ struct PromotionsRemoteEntity: Decodable {
 
 extension PromotionsRemoteEntity {
     func transformToDomain() -> Promotions {
-        return Promotions(promotions: promotions.compactMap { $0.transformToDomain() })  
+        return Promotions(promotions: promotions.compactMap { $0.transformToDomain() }).removeDuplicates()
     }
 }

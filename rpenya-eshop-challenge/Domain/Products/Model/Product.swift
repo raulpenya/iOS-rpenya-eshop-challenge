@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Product: Equatable {
+public struct Product: Hashable, Equatable {
     public let code: String
     public let name: String
     public let price: Double
@@ -24,5 +24,9 @@ public struct Product: Equatable {
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.code == rhs.code
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        code.hash(into: &hasher)
     }
 }

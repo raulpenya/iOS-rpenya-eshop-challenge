@@ -92,6 +92,7 @@
 		0C56290A29B6149800E9CB7D /* MockApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C56290829B6133900E9CB7D /* MockApi.swift */; };
 		0C59DFE929B74211000BFD07 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59DFE829B74211000BFD07 /* Products.swift */; };
 		0C59DFEB29B7421D000BFD07 /* Promotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59DFEA29B7421D000BFD07 /* Promotions.swift */; };
+		0C59DFEE29B74CE5000BFD07 /* Sequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59DFED29B74CE5000BFD07 /* Sequence+Extensions.swift */; };
 		0CE4EDE129B3D2C0005114A9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EDE029B3D2C0005114A9 /* Resource.swift */; };
 		0CE4EDE629B3D480005114A9 /* ProductsRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EDE529B3D480005114A9 /* ProductsRemoteEntity.swift */; };
 /* End PBXBuildFile section */
@@ -271,6 +272,7 @@
 		0C56290829B6133900E9CB7D /* MockApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApi.swift; sourceTree = "<group>"; };
 		0C59DFE829B74211000BFD07 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		0C59DFEA29B7421D000BFD07 /* Promotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promotions.swift; sourceTree = "<group>"; };
+		0C59DFED29B74CE5000BFD07 /* Sequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extensions.swift"; sourceTree = "<group>"; };
 		0CE4EDE029B3D2C0005114A9 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		0CE4EDE529B3D480005114A9 /* ProductsRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRemoteEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -650,7 +652,8 @@
 		0C3F284129B3BF9B004C359C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0C3F284229B3BFAC004C359C /* UseCase.swift */,
+				0C59DFEF29B74CF3000BFD07 /* Model */,
+				0C59DFEC29B74CD5000BFD07 /* Extensions */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -761,6 +764,22 @@
 			isa = PBXGroup;
 			children = (
 				0C3F287129B3C3E4004C359C /* ErrorDescription.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C59DFEC29B74CD5000BFD07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0C59DFED29B74CE5000BFD07 /* Sequence+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0C59DFEF29B74CF3000BFD07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C3F284229B3BFAC004C359C /* UseCase.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1149,6 +1168,7 @@
 			files = (
 				0C3F280329B3B6CB004C359C /* Domain.docc in Sources */,
 				0C3F284A29B3C072004C359C /* Product.swift in Sources */,
+				0C59DFEE29B74CE5000BFD07 /* Sequence+Extensions.swift in Sources */,
 				0C3F284C29B3C081004C359C /* Promotion.swift in Sources */,
 				0C59DFEB29B7421D000BFD07 /* Promotions.swift in Sources */,
 				0C3F287A29B3CF9B004C359C /* PromotionsRepository.swift in Sources */,
