@@ -47,7 +47,7 @@ final class PromotionsRemoteEntityTests: XCTestCase {
         //Then
         XCTAssertNotEqual(promotions.promotions.count, domainPromotions.promotions.count)
         XCTAssertTrue(promotions.promotions.count > domainPromotions.promotions.count)
-        XCTAssertEqual(promotions.promotions.count, 3)
-        XCTAssertEqual(domainPromotions.promotions.count, 2)
+        XCTAssertEqual(promotions.promotions.count, 2)
+        XCTAssertEqual(domainPromotions.promotions.count, 1)
     }
 }

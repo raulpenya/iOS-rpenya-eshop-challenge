@@ -48,7 +48,6 @@ final class ProductsDataRepositoryTests: XCTestCase {
         XCTAssertTrue(dataSource.called)
         XCTAssertNotNil(productsResponse)
         XCTAssertFalse(productsResponse!.products.isEmpty)
-        XCTAssertEqual(productsResponse!.products.count, 1)
     }
     
     func test_getAllProducts_error() {

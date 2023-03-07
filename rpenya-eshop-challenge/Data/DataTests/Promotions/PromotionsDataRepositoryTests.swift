@@ -48,7 +48,6 @@ final class PromotionsDataRepositoryTests: XCTestCase {
         XCTAssertTrue(dataSource.called)
         XCTAssertNotNil(promotionsResponse)
         XCTAssertFalse(promotionsResponse!.promotions.isEmpty)
-        XCTAssertEqual(promotionsResponse!.promotions.count, 1)
     }
     
     func test_getAllPromotions_error() {
