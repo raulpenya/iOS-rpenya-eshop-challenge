@@ -14,12 +14,12 @@ final class ProductsDataRepositoryTests: XCTestCase {
     let dataSource = MockProductsDataSource()
     var response: DataSourceResponse?
     var errorResponse: Error?
-    var productsResponse: [Product] = []
+    var productsResponse: Products?
     
     override func setUpWithError() throws {
         response = nil
         errorResponse = nil
-        productsResponse = []
+        productsResponse = nil
         dataSource.called = false
     }
     
@@ -46,8 +46,8 @@ final class ProductsDataRepositoryTests: XCTestCase {
         XCTAssertEqual(response, .success)
         XCTAssertNil(errorResponse)
         XCTAssertTrue(dataSource.called)
-        XCTAssertFalse(productsResponse.isEmpty)
-        XCTAssertEqual(productsResponse.count, 1)
+        XCTAssertNotNil(productsResponse)
+        XCTAssertFalse(productsResponse!.products.isEmpty)
     }
     
     func test_getAllProducts_error() {
@@ -73,6 +73,6 @@ final class ProductsDataRepositoryTests: XCTestCase {
         XCTAssertEqual(response, .error)
         XCTAssertNotNil(errorResponse)
         XCTAssertTrue(dataSource.called)
-        XCTAssertTrue(productsResponse.isEmpty)
+        XCTAssertNil(productsResponse)
     }
 }

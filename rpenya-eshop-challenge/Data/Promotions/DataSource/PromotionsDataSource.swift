@@ -10,5 +10,5 @@ import Domain
 import Combine
 
 protocol PromotionsDataSource {
-    func getAllPromotions() -> AnyPublisher<[Domain.Promotion], Error>
+    func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error>
 }

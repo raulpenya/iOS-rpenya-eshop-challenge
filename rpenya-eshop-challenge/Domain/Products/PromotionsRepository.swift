@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 public protocol PromotionsRepository {
-    func getAllPromotions() -> AnyPublisher<[Promotion], Error>
+    func getAllPromotions() -> AnyPublisher<Promotions, Error>
 }

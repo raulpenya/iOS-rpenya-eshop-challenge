@@ -12,7 +12,7 @@ import Combine
 struct PromotionsDataRepository: PromotionsRepository {
     let dataSource: PromotionsDataSource
     
-    func getAllPromotions() -> AnyPublisher<[Domain.Promotion], Error> {
+    func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error> {
         return dataSource.getAllPromotions()
     }
 }

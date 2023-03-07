@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 public protocol ProductsRepository {
-    func getAllProducts() -> AnyPublisher<[Product], Error>
+    func getAllProducts() -> AnyPublisher<Products, Error>
 }

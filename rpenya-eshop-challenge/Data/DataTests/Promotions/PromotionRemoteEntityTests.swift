@@ -12,7 +12,7 @@ final class PromotionRemoteEntityTests: XCTestCase {
 
     func tests_PromotionRemoteEntity_transform_success() {
         //Given
-        let promotion = MockPromotionRemoteEntity.givenPromotion()
+        let promotion = MockPromotionRemoteEntity.givenPromotion1()
         //When
         let domainPromotion = promotion.transformToDomain()
         //Then
@@ -24,18 +24,9 @@ final class PromotionRemoteEntityTests: XCTestCase {
         XCTAssertEqual(promotion.unitsNeeded, domainPromotion?.unitsNeeded)
     }
     
-    func tests_PromotionRemoteEntity_transform_error() {
-        //Given
-        let promotion = MockPromotionRemoteEntity.givenPromotionNil()
-        //When
-        let domainPromotion = promotion.transformToDomain()
-        //Then
-        XCTAssertNil(domainPromotion)
-    }
-    
     func tests_PromotionRemoteEntity_transform_wrongType() {
         //Given
-        let promotion = MockPromotionRemoteEntity.givenPromotion(type: "unknown")
+        let promotion = MockPromotionRemoteEntity.givenPromotion1(type: "unknown")
         //When
         let domainPromotion = promotion.transformToDomain()
         //Then
@@ -44,8 +35,8 @@ final class PromotionRemoteEntityTests: XCTestCase {
     
     func tests_PromotionRemoteEntity_equatable_success() {
         //Given
-        let promotion1 = MockPromotionRemoteEntity.givenPromotion()
-        let promotion2 = MockPromotionRemoteEntity.givenPromotion()
+        let promotion1 = MockPromotionRemoteEntity.givenPromotion1()
+        let promotion2 = MockPromotionRemoteEntity.givenPromotion1()
         //When
         let result = promotion1 == promotion2
         //Then
@@ -54,8 +45,8 @@ final class PromotionRemoteEntityTests: XCTestCase {
 
     func tests_PromotionRemoteEntity_equatable_false() {
         //Given
-        let promotion1 = MockPromotionRemoteEntity.givenPromotion()
-        let promotion2 = MockPromotionRemoteEntity.givenPromotion(productCode: MockPromotionRemoteEntity.productCode2)
+        let promotion1 = MockPromotionRemoteEntity.givenPromotion1()
+        let promotion2 = MockPromotionRemoteEntity.givenPromotion2()
         //When
         let result = promotion1 == promotion2
         //Then

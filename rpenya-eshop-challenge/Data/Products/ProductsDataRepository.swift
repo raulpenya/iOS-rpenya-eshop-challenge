@@ -13,7 +13,7 @@ struct ProductsDataRepository: ProductsRepository {
     
     let dataSource: ProductsDataSource
     
-    func getAllProducts() -> AnyPublisher<[Domain.Product], Error> {
+    func getAllProducts() -> AnyPublisher<Domain.Products, Error> {
         return dataSource.getAllProducts()
     }
 }

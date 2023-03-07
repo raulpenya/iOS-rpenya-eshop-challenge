@@ -10,28 +10,32 @@ import Foundation
 
 struct MockProductsRemoteEntity {
     static func givenProducts() -> ProductsRemoteEntity {
-        return ProductsRemoteEntity(products: [MockProductRemoteEntity.givenProduct(),MockProductRemoteEntity.givenProduct(),MockProductRemoteEntity.givenProduct()])
-    }
-    
-    static func givenProductsNil() -> ProductsRemoteEntity {
-        return ProductsRemoteEntity(products: nil)
+        return ProductsRemoteEntity(products: [MockProductRemoteEntity.givenProduct1(),MockProductRemoteEntity.givenProduct2(),MockProductRemoteEntity.givenProduct3()])
     }
 }
 
 struct MockProductRemoteEntity {
     static let code1 = "TSHIRT"
     static let name1 = "Cabify T-Shirt"
-    static let price1 = 7.5
+    static let price1 = 20.00
     
     static let code2 = "VOUCHER"
     static let name2 = "Cabify Voucher"
-    static let price2 = 5
+    static let price2 = 5.00
     
-    static func givenProduct(code: String = MockProductRemoteEntity.code1, name: String = MockProductRemoteEntity.name1, price: Double = MockProductRemoteEntity.price1) -> ProductRemoteEntity {
-        return ProductRemoteEntity(code: code, name: name, price: price)
+    static let code3 = "MUG"
+    static let name3 = "Cabify Coffee Mug"
+    static let price3 = 7.50
+    
+    static func givenProduct1() -> ProductRemoteEntity {
+        return ProductRemoteEntity(code: code1, name: name1, price: price1)
     }
     
-    static func givenProductNil() -> ProductRemoteEntity {
-        return ProductRemoteEntity(code: nil, name: nil, price: nil)
+    static func givenProduct2() -> ProductRemoteEntity {
+        return ProductRemoteEntity(code: code2, name: name2, price: price2)
+    }
+    
+    static func givenProduct3() -> ProductRemoteEntity {
+        return ProductRemoteEntity(code: code3, name: name3, price: price3)
     }
 }

@@ -14,11 +14,11 @@ class MockPromotionsDataSource: PromotionsDataSource {
     var called: Bool = false
     var response: DataSourceResponse = .success
     
-    func getAllPromotions() -> AnyPublisher<[Domain.Promotion], Error> {
+    func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error> {
         called = true
         switch response {
         case .success:
-            return Result.Publisher([MockPromotion.givenPromotion()]).eraseToAnyPublisher()
+            return Result.Publisher(MockPromotions.givenPromotions()).eraseToAnyPublisher()
         case .error:
             return Fail(error: DataSourceErrors.networkingRequestError).eraseToAnyPublisher()
         }
