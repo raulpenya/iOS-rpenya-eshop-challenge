@@ -23,7 +23,7 @@ public class GetProductsWithPromotions: UseCase {
         let productsPublisher = productsRepository.getAllProducts()
         let promotionsPublisher = promotionsRepository.getAllPromotions()
         return Publishers.Zip(productsPublisher, promotionsPublisher).flatMap { products, promotion in
-            return Result<Products, Error>.Publisher(products).eraseToAnyPublisher()
+            return Result<Products, Error>.Publisher(products.linkPromotions(promotion)).eraseToAnyPublisher()
         }.eraseToAnyPublisher()
     }
 }

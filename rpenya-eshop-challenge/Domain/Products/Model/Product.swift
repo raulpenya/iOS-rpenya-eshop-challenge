@@ -30,3 +30,9 @@ public struct Product: Hashable, Equatable {
         code.hash(into: &hasher)
     }
 }
+
+extension Product {
+    func addPromotion(_ promotion: Promotion) -> Product {
+        return Product(code: code, name: name, price: price, promotion: promotion)
+    }
+}

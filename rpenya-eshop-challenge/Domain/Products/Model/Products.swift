@@ -15,6 +15,19 @@ public struct Products {
     }
 }
 
+extension Products {
+    func linkPromotions(_ promotions: Promotions) -> Products {
+        let newProducts = products.compactMap { product in
+            var newProduct = product
+            if let promotion = promotions.promotions.filter({ $0.productCode == product.code }).first {
+                newProduct = product.addPromotion(promotion)
+            }
+            return newProduct
+        }
+        return Products(products: newProducts)
+    }
+}
+
 public extension Products {
     func removeDuplicates() -> Products {
         return Products(products: products.uniqued())
