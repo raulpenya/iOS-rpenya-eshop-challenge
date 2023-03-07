@@ -9,8 +9,11 @@ import Foundation
 import Domain
 import Combine
 
-class ProductsRemoteDataSource: ProductsDataSource, NetworkingDataSource {
-    func getAllProducts() -> AnyPublisher<Domain.Products, Error> {
+public class ProductsRemoteDataSource: ProductsDataSource, NetworkingDataSource {
+    
+    public init() {}
+    
+    public func getAllProducts() -> AnyPublisher<Domain.Products, Error> {
         return request(resource: ProductResources.getAllProductsResource())
     }
 }

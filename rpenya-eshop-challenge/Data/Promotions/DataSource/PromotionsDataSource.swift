@@ -9,6 +9,6 @@ import Foundation
 import Domain
 import Combine
 
-protocol PromotionsDataSource {
+public protocol PromotionsDataSource {
     func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error>
 }

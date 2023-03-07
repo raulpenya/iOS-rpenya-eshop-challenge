@@ -23,7 +23,19 @@ extension ProductsListAssembler {
 //    }
     
     func resolve() -> ProductsListViewModel {
-        return ProductsListViewModel()
+        return ProductsListViewModel(getProductsWithPromotionsUseCase: resolve())
+    }
+    
+    func resolve() -> GetProductsWithPromotions {
+        return GetProductsWithPromotions(productsRepository: resolve(), promotionsRepository: resolve())
+    }
+    
+    func resolve() -> ProductsRepository {
+        return ProductsDataRepository(dataSource: ProductsRemoteDataSource())
+    }
+    
+    func resolve() -> PromotionsRepository {
+        return PromotionsDataRepository(dataSource: PromotionsRemoteDataSource())
     }
 }
 

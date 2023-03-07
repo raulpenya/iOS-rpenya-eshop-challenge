@@ -9,10 +9,15 @@ import Foundation
 import Domain
 import Combine
 
-struct PromotionsDataRepository: PromotionsRepository {
+public struct PromotionsDataRepository: PromotionsRepository {
+    
     let dataSource: PromotionsDataSource
     
-    func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error> {
+    public init(dataSource: PromotionsDataSource) {
+        self.dataSource = dataSource
+    }
+    
+    public func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error> {
         return dataSource.getAllPromotions()
     }
 }

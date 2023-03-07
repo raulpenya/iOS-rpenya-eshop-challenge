@@ -9,8 +9,11 @@ import Foundation
 import Domain
 import Combine
 
-class PromotionsRemoteDataSource: PromotionsDataSource, NetworkingDataSource {
-    func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error> {
+public class PromotionsRemoteDataSource: PromotionsDataSource, NetworkingDataSource {
+    
+    public init() {}
+    
+    public func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error> {
         return request(resource: PromotionResources.getAllPromotionsResource())
     }
 }
