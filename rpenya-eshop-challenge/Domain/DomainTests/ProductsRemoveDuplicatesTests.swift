@@ -23,6 +23,16 @@ final class ProductsRemoveDuplicatesTests: XCTestCase {
     }
 
     func test_removeDuplicates_withoutDuplicates() {
-        
+        //Given
+        let productsWithoutDuplicates = MockProducts.givenProducts(duplicates: false)
+        //When
+        let finalProducts = productsWithoutDuplicates.removeDuplicates()
+        //Then
+        XCTAssertEqual(productsWithoutDuplicates.products.count, finalProducts.products.count)
+        XCTAssertEqual(productsWithoutDuplicates.products.count, 3)
+        XCTAssertEqual(finalProducts.products.count, 3)
+        XCTAssertEqual(finalProducts.products[0].code, MockProduct.code1)
+        XCTAssertEqual(finalProducts.products[1].code, MockProduct.code2)
+        XCTAssertEqual(finalProducts.products[2].code, MockProduct.code3)
     }
 }
