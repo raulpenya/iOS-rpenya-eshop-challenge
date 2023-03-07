@@ -101,6 +101,7 @@
 		0C59E00C29B76451000BFD07 /* ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59E00A29B7644C000BFD07 /* ProductsTests.swift */; };
 		0C6488F129B78BCA00D3DF6F /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F029B78BCA00D3DF6F /* ProductListCell.swift */; };
 		0C6488F529B79A3F00D3DF6F /* CompleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F429B79A3F00D3DF6F /* CompleteButtonView.swift */; };
+		0C6488F729B7BAC300D3DF6F /* TextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F629B7BAC300D3DF6F /* TextModifier.swift */; };
 		0CE4EDE129B3D2C0005114A9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EDE029B3D2C0005114A9 /* Resource.swift */; };
 		0CE4EDE629B3D480005114A9 /* ProductsRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EDE529B3D480005114A9 /* ProductsRemoteEntity.swift */; };
 /* End PBXBuildFile section */
@@ -289,6 +290,7 @@
 		0C59E00A29B7644C000BFD07 /* ProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTests.swift; sourceTree = "<group>"; };
 		0C6488F029B78BCA00D3DF6F /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
 		0C6488F429B79A3F00D3DF6F /* CompleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteButtonView.swift; sourceTree = "<group>"; };
+		0C6488F629B7BAC300D3DF6F /* TextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextModifier.swift; sourceTree = "<group>"; };
 		0CE4EDE029B3D2C0005114A9 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		0CE4EDE529B3D480005114A9 /* ProductsRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRemoteEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -836,6 +838,7 @@
 			isa = PBXGroup;
 			children = (
 				0C6488F429B79A3F00D3DF6F /* CompleteButtonView.swift */,
+				0C6488F629B7BAC300D3DF6F /* TextModifier.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1125,6 +1128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3F285629B3C1B9004C359C /* ProductsListAssembler.swift in Sources */,
+				0C6488F729B7BAC300D3DF6F /* TextModifier.swift in Sources */,
 				0C3F286229B3C243004C359C /* ShoppingBasketDetailAssembler.swift in Sources */,
 				0C3F285C29B3C1FF004C359C /* ProductsListRouter.swift in Sources */,
 				0C3F27AE29B3B56C004C359C /* rpenya_eshop_challengeApp.swift in Sources */,

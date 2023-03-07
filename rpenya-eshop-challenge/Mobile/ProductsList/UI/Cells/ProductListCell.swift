@@ -16,21 +16,9 @@ struct ProductListCell: View {
     var body: some View {
         HStack {
             VStack {
+                Text(item.name).modifier(TitleTextModifier())
                 if let promo = item.promotion {
-                    Text(item.name)
-                        .font(.system(.title3, weight: .semibold))
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .lineLimit(1)
-                    Text(promo.name)
-                        .font(.system(.subheadline, weight: .regular))
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 6)
-                        .lineLimit(2)
-                        .minimumScaleFactor(0.01)
-                    
-                } else {
-                    Text(item.name)
-                        .font(.system(.title3, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading)
+                    Text(promo.name).modifier(SubtitleTextModifier())
                 }
             }.padding(.leading, 16)
             HStack {
