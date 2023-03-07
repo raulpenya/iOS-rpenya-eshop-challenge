@@ -17,11 +17,11 @@ final class NetworkingDataSourceRequestTests: XCTestCase {
     var response: DataSourceResponse?
     var errorResponse: Error?
     var urlRequest: URLRequest?
-    var resource: Resource<ProductsRemoteEntity, [Product]>?
+    var resource: Resource<ProductsRemoteEntity, Products>?
     
     override func setUpWithError() throws {
         urlRequest = try! ProductsApi.getAllProducts.asURLRequest()
-        resource = Resource<ProductsRemoteEntity, [Product]>(request: urlRequest!) { [weak self] products in
+        resource = Resource<ProductsRemoteEntity, Products>(request: urlRequest!) { [weak self] products in
             self?.transformCalled = true
             return products.transformToDomain()
         }

@@ -24,15 +24,6 @@ final class PromotionRemoteEntityTests: XCTestCase {
         XCTAssertEqual(promotion.unitsNeeded, domainPromotion?.unitsNeeded)
     }
     
-    func tests_PromotionRemoteEntity_transform_error() {
-        //Given
-        let promotion = MockPromotionRemoteEntity.givenPromotionNil()
-        //When
-        let domainPromotion = promotion.transformToDomain()
-        //Then
-        XCTAssertNil(domainPromotion)
-    }
-    
     func tests_PromotionRemoteEntity_transform_wrongType() {
         //Given
         let promotion = MockPromotionRemoteEntity.givenPromotion(type: "unknown")

@@ -12,10 +12,6 @@ struct MockProductsRemoteEntity {
     static func givenProducts() -> ProductsRemoteEntity {
         return ProductsRemoteEntity(products: [MockProductRemoteEntity.givenProduct(),MockProductRemoteEntity.givenProduct(),MockProductRemoteEntity.givenProduct()])
     }
-    
-    static func givenProductsNil() -> ProductsRemoteEntity {
-        return ProductsRemoteEntity(products: nil)
-    }
 }
 
 struct MockProductRemoteEntity {
@@ -29,9 +25,5 @@ struct MockProductRemoteEntity {
     
     static func givenProduct(code: String = MockProductRemoteEntity.code1, name: String = MockProductRemoteEntity.name1, price: Double = MockProductRemoteEntity.price1) -> ProductRemoteEntity {
         return ProductRemoteEntity(code: code, name: name, price: price)
-    }
-    
-    static func givenProductNil() -> ProductRemoteEntity {
-        return ProductRemoteEntity(code: nil, name: nil, price: nil)
     }
 }

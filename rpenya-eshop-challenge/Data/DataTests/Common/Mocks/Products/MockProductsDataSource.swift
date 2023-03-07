@@ -19,11 +19,11 @@ class MockProductsDataSource: ProductsDataSource {
     var called: Bool = false
     var response: DataSourceResponse = .success
     
-    func getAllProducts() -> AnyPublisher<[Domain.Product], Error> {
+    func getAllProducts() -> AnyPublisher<Domain.Products, Error> {
         called = true
         switch response {
         case .success:
-            return Result.Publisher([MockProduct.givenProduct()]).eraseToAnyPublisher()
+            return Result.Publisher(MockProducts.givenProducts()).eraseToAnyPublisher()
         case .error:
             return Fail(error: DataSourceErrors.networkingRequestError).eraseToAnyPublisher()
         }

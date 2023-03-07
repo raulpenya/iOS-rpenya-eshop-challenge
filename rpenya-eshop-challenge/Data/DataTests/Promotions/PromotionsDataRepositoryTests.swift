@@ -14,12 +14,12 @@ final class PromotionsDataRepositoryTests: XCTestCase {
     let dataSource = MockPromotionsDataSource()
     var response: DataSourceResponse?
     var errorResponse: Error?
-    var promotionsResponse: [Promotion] = []
+    var promotionsResponse: Promotions?
 
     override func setUpWithError() throws {
         response = nil
         errorResponse = nil
-        promotionsResponse = []
+        promotionsResponse = nil
         dataSource.called = false
     }
 
@@ -46,8 +46,9 @@ final class PromotionsDataRepositoryTests: XCTestCase {
         XCTAssertEqual(response, .success)
         XCTAssertNil(errorResponse)
         XCTAssertTrue(dataSource.called)
-        XCTAssertFalse(promotionsResponse.isEmpty)
-        XCTAssertEqual(promotionsResponse.count, 1)
+        XCTAssertNotNil(promotionsResponse)
+        XCTAssertFalse(promotionsResponse!.promotions.isEmpty)
+        XCTAssertEqual(promotionsResponse!.promotions.count, 1)
     }
     
     func test_getAllPromotions_error() {
@@ -73,6 +74,6 @@ final class PromotionsDataRepositoryTests: XCTestCase {
         XCTAssertEqual(response, .error)
         XCTAssertNotNil(errorResponse)
         XCTAssertTrue(dataSource.called)
-        XCTAssertTrue(promotionsResponse.isEmpty)
+        XCTAssertNil(promotionsResponse)
     }
 }
