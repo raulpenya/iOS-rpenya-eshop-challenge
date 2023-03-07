@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 public class GetProductsWithPromotions: UseCase {
-    typealias T = [Product]
+    typealias T = Products
     typealias Q = GetProductsWithPromotionsRequestValues
     let productsRepository: ProductsRepository
     let promotionsRepository: PromotionsRepository
@@ -19,11 +19,11 @@ public class GetProductsWithPromotions: UseCase {
         self.promotionsRepository = promotionsRepository
     }
     
-    func execute(_ requestValues: GetProductsWithPromotionsRequestValues) -> AnyPublisher<[Product], Error> {
-        let productPublisher = productsRepository.getAllProducts()
+    func execute(_ requestValues: GetProductsWithPromotionsRequestValues) -> AnyPublisher<Products, Error> {
+        let productsPublisher = productsRepository.getAllProducts()
         let promotionsPublisher = promotionsRepository.getAllPromotions()
-        return Publishers.Zip(productPublisher, promotionsPublisher).flatMap { products, promotion in
-            return Result<[Product], Error>.Publisher(products).eraseToAnyPublisher()
+        return Publishers.Zip(productsPublisher, promotionsPublisher).flatMap { products, promotion in
+            return Result<Products, Error>.Publisher(products).eraseToAnyPublisher()
         }.eraseToAnyPublisher()
     }
 }

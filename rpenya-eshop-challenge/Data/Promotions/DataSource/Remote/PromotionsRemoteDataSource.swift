@@ -10,7 +10,7 @@ import Domain
 import Combine
 
 class PromotionsRemoteDataSource: PromotionsDataSource, NetworkingDataSource {
-    func getAllPromotions() -> AnyPublisher<[Domain.Promotion], Error> {
+    func getAllPromotions() -> AnyPublisher<Domain.Promotions, Error> {
         return request(resource: PromotionResources.getAllPromotionsResource())
     }
 }

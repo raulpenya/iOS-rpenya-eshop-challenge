@@ -9,9 +9,9 @@ import Foundation
 import Domain
 
 struct PromotionResources {
-    static func getAllPromotionsResource() -> Resource<PromotionsRemoteEntity, [Promotion]>? {
+    static func getAllPromotionsResource() -> Resource<PromotionsRemoteEntity, Promotions>? {
         guard let urlRequest = try? PromotionsApi.getAllPromotions.asURLRequest() else { return nil }
-        return Resource<PromotionsRemoteEntity, [Promotion]>(request: urlRequest) { promotions in
+        return Resource<PromotionsRemoteEntity, Promotions>(request: urlRequest) { promotions in
             return promotions.transformToDomain()
         }
     }
