@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CompleteButtonView: View {
     
+    var isDisabled = false
+    
     var action: (() -> Void)
     
     var body: some View {
@@ -17,17 +19,13 @@ struct CompleteButtonView: View {
                 print("CompleteButtonView")
                 action()
             } label: {
-                Text("Proceed checkout")
-                    .font(.title)
-                    .foregroundColor(.white)
-                    .bold()
+                Text("Proceed checkout").modifier(CompleteButtonTextModifier())
             }.frame(height: 70).frame(minWidth: 0, maxWidth: .infinity)
                 .background {
                     RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Color(.systemGreen))
-                }
-        }
-        .padding(.all, 20).frame(maxWidth: .infinity, alignment: .center).background(Color.white // any non-transparent background
+                        .fill(isDisabled ? Color(.systemGreen).opacity(0.2) : Color(.systemGreen))
+                }.disabled(isDisabled)
+        }.padding(.all, 20).frame(maxWidth: .infinity, alignment: .center).background(Color.white // any non-transparent background
             
 //            .shadow(color: .black.opacity(0.3), radius: 3, x: 0, y: -5)//.mask(Rectangle().padding(.top, -20))
           )

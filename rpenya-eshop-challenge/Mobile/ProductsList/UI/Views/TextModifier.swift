@@ -24,3 +24,21 @@ struct SubtitleTextModifier: ViewModifier {
             .minimumScaleFactor(0.01)
     }
 }
+
+struct AddRemoveButtonTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.title)
+            .foregroundColor(.white)
+            .bold()
+            .minimumScaleFactor(0.01)
+    }
+}
+
+struct CompleteButtonTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.title)
+            .foregroundColor(.white)
+            .bold()
+            .minimumScaleFactor(0.01)
+    }
+}

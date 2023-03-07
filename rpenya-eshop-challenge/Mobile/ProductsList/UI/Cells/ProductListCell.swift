@@ -25,18 +25,18 @@ struct ProductListCell: View {
                 Button {
                     print("Button -")
                 } label: {
-                    Text("-")
-                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 70).background {
+                    Text("-").modifier(AddRemoveButtonTextModifier())
+                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 50).background {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(Color(.lightGray))
                 }
                 Text("0")
-                    .font(.system(.title3, weight: .semibold)).padding(.horizontal, 16)
+                    .font(.system(.title3, weight: .semibold)).padding(.horizontal, 8)
                 Button {
                     print("Button +")
                 } label: {
-                    Text("+")
-                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 70).background {
+                    Text("+").modifier(AddRemoveButtonTextModifier())
+                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 50).background {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(Color(.lightGray))
                 }
