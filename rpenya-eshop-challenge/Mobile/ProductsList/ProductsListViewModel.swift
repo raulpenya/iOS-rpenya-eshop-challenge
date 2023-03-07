@@ -22,6 +22,10 @@ class ProductsListViewModel: ObservableObject {
         getProductsWithPromotions()
     }
     
+    @Sendable func refreshData() {
+        getProductsWithPromotions()
+    }
+    
     func getProductsWithPromotions() {
         getProductsWithPromotionsUseCase.execute(GetProductsWithPromotionsRequestValues()).sink { [weak self] completion in
             switch completion {
