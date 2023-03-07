@@ -21,7 +21,7 @@ struct ProductsListView: View {
                         ProductListCell(item: product)
                     }
                 }.listStyle(PlainListStyle())
-                CheckoutButtonView()
+                CheckoutButtonView(action: viewModel.checkoutButtonPressed)
             }.navigationTitle("eShop")
         }
     }

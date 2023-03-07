@@ -18,6 +18,10 @@ class ProductsListViewModel: ObservableObject {
         self.getProductsWithPromotionsUseCase = getProductsWithPromotionsUseCase
     }
     
+    func checkoutButtonPressed() {
+        getProductsWithPromotions()
+    }
+    
     func getProductsWithPromotions() {
         getProductsWithPromotionsUseCase.execute(GetProductsWithPromotionsRequestValues()).sink { [weak self] completion in
             switch completion {

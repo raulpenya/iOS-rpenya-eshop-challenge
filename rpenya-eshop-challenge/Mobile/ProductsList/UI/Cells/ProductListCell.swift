@@ -29,17 +29,21 @@ struct ProductListCell: View {
                 }
             }.padding(.horizontal, 16)
             HStack {
-                Button("-") {
+                Button {
                     print("Button -")
-                }.padding(.horizontal, 16).frame(width: 50, height: 70).background {
+                } label: {
+                    Text("-")
+                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 70).background {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(Color(.lightGray))
                 }
                 Text("0")
                     .font(.system(.title3, weight: .semibold)).padding(.horizontal, 16)
-                Button("+") {
+                Button {
                     print("Button +")
-                }.padding(.horizontal, 16).frame(width: 50, height: 70).background {
+                } label: {
+                    Text("+")
+                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 70).background {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(Color(.lightGray))
                 }
