@@ -25,7 +25,7 @@ extension Products {
     func linkPromotions(_ promotions: Promotions) -> Products {
         let newProducts = products.compactMap { product in
             var newProduct = product
-            if let promotion = promotions.promotions.filter({ $0.productCode == product.code }).first {
+            if let promotion = promotions.promotions.filter({ $0.productCode.lowercased() == product.code.lowercased() }).first {
                 newProduct = product.addPromotion(promotion)
             }
             return newProduct
