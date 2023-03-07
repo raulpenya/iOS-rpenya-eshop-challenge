@@ -18,9 +18,15 @@ struct ProductListCell: View {
             VStack {
                 if let promo = item.promotion {
                     Text(item.name)
-                        .font(.system(.title3, weight: .semibold)).frame(maxWidth: .infinity, alignment: .leading).lineLimit(1)
+                        .font(.system(.title3, weight: .semibold))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .lineLimit(1)
                     Text(promo.name)
-                        .font(.system(.subheadline, weight: .regular)).frame(maxWidth: .infinity, alignment: .leading).padding(.leading, 6).lineLimit(2)
+                        .font(.system(.subheadline, weight: .regular))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 6)
+                        .lineLimit(2)
+                        .minimumScaleFactor(0.01)
                     
                 } else {
                     Text(item.name)
@@ -58,7 +64,7 @@ struct ProductListCell: View {
 
 struct ProductListCell_Previews: PreviewProvider {
     static var previews: some View {
-        let promotion = Promotion(productCode: "TSHIRT", name: "Pay 1 get 2 Pay 1 get 2 Pay 1 get 2 Pay 1 get 2 Pay 1 get 2 ", type: .percentage, unitsNeeded: 2, discount: 0.5)
+        let promotion = Promotion(productCode: "TSHIRT", name: "Pay 1 get 2", type: .percentage, unitsNeeded: 2, discount: 0.5)
         let product = Product(code: "TSHIRT", name: "Cabify T-Shirt", price: 20, promotion: promotion)
         ProductListCell(item: product)
     }
