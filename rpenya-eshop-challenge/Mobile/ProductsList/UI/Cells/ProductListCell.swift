@@ -29,16 +29,27 @@ struct ProductListCell: View {
                 }
             }.padding(.horizontal, 16)
             HStack {
+                Button("-") {
+                    print("Button -")
+                }.padding(.horizontal, 16).frame(width: 50, height: 70).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Color(.lightGray))
+                }
                 Text("0")
                     .font(.system(.title3, weight: .semibold)).padding(.horizontal, 16)
-                Button("-") {
-                    print("-")
-                }.padding(.horizontal, 16)
                 Button("+") {
-                    print("-")
-                }.padding(.horizontal, 16)
+                    print("Button +")
+                }.padding(.horizontal, 16).frame(width: 50, height: 70).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Color(.lightGray))
+                }
             }.frame(maxWidth: .infinity, alignment: .trailing)
         }.frame(maxWidth: .infinity, alignment: .leading)
+            .frame(height: 70)
+            .background {
+                RoundedRectangle(cornerRadius: 12.0)
+                    .fill(Color(.systemYellow))
+            }
     }
 }
 

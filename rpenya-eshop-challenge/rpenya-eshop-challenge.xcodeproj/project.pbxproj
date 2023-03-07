@@ -824,9 +824,17 @@
 		0C6488F229B78EEE00D3DF6F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				0C6488F329B793FC00D3DF6F /* Views */,
 				0C6488ED29B78B8F00D3DF6F /* Cells */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		0C6488F329B793FC00D3DF6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0CE4EDE229B3D2D9005114A9 /* Model */ = {
