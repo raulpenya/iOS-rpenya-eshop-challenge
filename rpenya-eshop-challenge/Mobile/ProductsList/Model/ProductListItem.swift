@@ -16,11 +16,15 @@ enum ProductListItemAction {
     case remove
 }
 
-struct ProductListItem: Identifiable {
+struct ProductListItem: Identifiable, Equatable {
     var id = UUID()
     let basketProduct: BasketProductViewEntity
     let view: ProductListItemView
     let action: ((ProductListItem, ProductListItemAction) -> Void)?
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.basketProduct == rhs.basketProduct
+    }
     
     func getTitle() -> String {
         return basketProduct.product.name

@@ -8,12 +8,16 @@
 import Foundation
 import Domain
 
-struct ProductViewEntity {
+struct ProductViewEntity: Equatable {
     public let code: String
     public let name: String
     public let price: Double
     public let currency: String
     public let promotion: PromotionViewEntity?
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.code == rhs.code
+    }
 }
 
 extension Product {

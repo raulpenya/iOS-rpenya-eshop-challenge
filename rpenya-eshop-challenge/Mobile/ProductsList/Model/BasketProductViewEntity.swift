@@ -8,9 +8,13 @@
 import Foundation
 import Domain
 
-struct BasketProductViewEntity {
+struct BasketProductViewEntity: Equatable {
     let product: ProductViewEntity
     let units: Int
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.product == rhs.product
+    }
 }
 
 extension BasketProductViewEntity {

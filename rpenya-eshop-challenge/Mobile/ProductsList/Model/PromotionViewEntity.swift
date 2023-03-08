@@ -8,7 +8,7 @@
 import Foundation
 import Domain
 
-struct PromotionViewEntity {
+struct PromotionViewEntity: Equatable {
     public let productCode: String
     public let name: String
     public let type: PromotionType
@@ -21,6 +21,10 @@ struct PromotionViewEntity {
         self.type = type
         self.unitsNeeded = unitsNeeded
         self.discount = discount
+    }
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.productCode == rhs.productCode
     }
 }
 

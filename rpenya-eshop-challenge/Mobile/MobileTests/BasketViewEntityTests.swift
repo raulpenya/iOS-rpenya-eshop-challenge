@@ -11,10 +11,22 @@ import XCTest
 final class BasketViewEntityTests: XCTestCase {
     func test_transformToProductsList() {
         //Given
-        
+        let basket = MockBasketViewEntity.givenBasket()
         //When
-        
+        let productsList = basket.transformToProductsList(action: action)
         //Then
-        
+        XCTAssertEqual(basket.products[0].product, productsList.items[0].basketProduct.product)
+        XCTAssertEqual(basket.products[0].units, productsList.items[0].basketProduct.units)
     }
+    
+    func test_transformToBasket() {
+        //Given
+        let products = MockProducts.givenProducts(duplicates: false)
+        //When
+        let basket = products.transformToBasket()
+        //Then
+        XCTAssertEqual(basket.products.count, products.products.count)
+    }
+    
+    func action(item: ProductListItem, action: ProductListItemAction) { }
 }
