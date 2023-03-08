@@ -1,5 +1,5 @@
 //
-//  ProductListCell.swift
+//  ProductListCellView.swift
 //  rpenya-eshop-challenge
 //
 //  Created by raulbot on 7/3/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Domain
 
-struct ProductListCell: View {
+struct ProductListCellView: View {
     
     var item: ProductListItem
     
@@ -30,8 +30,7 @@ struct ProductListCell: View {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(Color(.lightGray))
                 }
-                Text("0")
-                    .font(.system(.title3, weight: .semibold)).padding(.horizontal, 8)
+                Text(item.getUnits()).modifier(UnitsTextModifier())
                 Button {
                     print("Button +")
                 } label: {
@@ -52,6 +51,6 @@ struct ProductListCell: View {
 
 struct ProductListCell_Previews: PreviewProvider {
     static var previews: some View {
-        ProductListCell(item: ProductsListModelPreviewProvider.getProductListItem1())
+        ProductListCellView(item: ProductsListModelPreviewProvider.getProductListItem1())
     }
 }

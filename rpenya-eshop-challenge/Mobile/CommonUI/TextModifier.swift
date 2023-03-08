@@ -25,6 +25,13 @@ struct SubtitleTextModifier: ViewModifier {
     }
 }
 
+struct UnitsTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.system(.title3, weight: .semibold)).padding(.horizontal, 8)
+            .minimumScaleFactor(0.01)
+    }
+}
+
 struct AddRemoveButtonTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.title)

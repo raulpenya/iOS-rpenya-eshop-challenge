@@ -11,7 +11,7 @@ struct ProductsList: View {
     let listItem: ProductsListItem
     var body: some View {
         List (listItem.items) { item in
-            item.getCell()
+            item.getCell(for: .productsList)
         }.listStyle(.plain)
     }
 }

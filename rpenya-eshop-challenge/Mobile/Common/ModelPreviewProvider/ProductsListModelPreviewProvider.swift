@@ -13,11 +13,11 @@ struct ProductsListModelPreviewProvider {
     }
     
     static func getProductListItem1() -> ProductListItem {
-        return ProductListItem(product: ProductsListModelPreviewProvider.getProduct())
+        return ProductListItem(product: ProductsListModelPreviewProvider.getProduct(), units: 3)
     }
     
     static func getProductListItem2() -> ProductListItem {
-        return ProductListItem(product: ProductsListModelPreviewProvider.getProductWithoutPromotion())
+        return ProductListItem(product: ProductsListModelPreviewProvider.getProductWithoutPromotion(), units: 200)
     }
     
     static func getProduct() -> ProductViewEntity {

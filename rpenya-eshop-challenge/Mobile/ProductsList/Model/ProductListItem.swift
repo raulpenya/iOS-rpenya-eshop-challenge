@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct ProductListItem: Identifiable {
+    
+    enum ProductListItemView {
+        case productsList
+    }
+    
     var id = UUID()
     let product: ProductViewEntity
+    let units: Int
     
     func getTitle() -> String {
         return product.name
@@ -20,8 +26,15 @@ struct ProductListItem: Identifiable {
         return promotion.name
     }
     
+    func getUnits() -> String {
+        return String(units)
+    }
+    
     @ViewBuilder
-    func getCell() -> some View {
-        ProductListCell(item: self).listRowSeparator(.hidden)
+    func getCell(for view: ProductListItemView) -> some View {
+        switch view {
+        case .productsList:
+            ProductListCellView(item: self).listRowSeparator(.hidden)
+        }
     }
 }
