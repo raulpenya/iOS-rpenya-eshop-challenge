@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct BasketProductViewEntity {
+    let product: ProductViewEntity
+    let units: Int
+}

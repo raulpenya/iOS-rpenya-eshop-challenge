@@ -14,24 +14,25 @@ struct ProductListItem: Identifiable {
     }
     
     var id = UUID()
-    let product: ProductViewEntity
-    let units: Int
+    let basketProduct: BasketProductViewEntity
+    let view: ProductListItemView
+//    let action: ((ProductListItem) -> Void)?
     
     func getTitle() -> String {
-        return product.name
+        return basketProduct.product.name
     }
     
     func getSubtitle() -> String? {
-        guard let promotion = product.promotion else { return nil }
+        guard let promotion = basketProduct.product.promotion else { return nil }
         return promotion.name
     }
     
     func getUnits() -> String {
-        return String(units)
+        return String(basketProduct.units)
     }
     
     @ViewBuilder
-    func getCell(for view: ProductListItemView) -> some View {
+    func getCell() -> some View {
         switch view {
         case .productsList:
             ProductListCellView(item: self).listRowSeparator(.hidden)
