@@ -1,14 +1,13 @@
 //
-//  rpenya_eshop_challengeTests.swift
+//  BasketViewEntityTests.swift
 //  rpenya-eshop-challengeTests
 //
-//  Created by raulbot on 4/3/23.
+//  Created by raulbot on 8/3/23.
 //
 
 import XCTest
-@testable import rpenya_eshop_challenge
 
-final class rpenya_eshop_challengeTests: XCTestCase {
+final class BasketViewEntityTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
