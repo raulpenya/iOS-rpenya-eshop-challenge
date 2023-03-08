@@ -10,15 +10,15 @@ import Domain
 
 struct ProductListCell: View {
     
-    var item: Product
+    var item: ProductListItem
     
     @ViewBuilder
     var body: some View {
         HStack {
             VStack {
-                Text(item.name).modifier(TitleTextModifier())
-                if let promo = item.promotion {
-                    Text(promo.name).modifier(SubtitleTextModifier())
+                Text(item.getTitle()).modifier(TitleTextModifier())
+                if let subtitle = item.getSubtitle() {
+                    Text(subtitle).modifier(SubtitleTextModifier())
                 }
             }.padding(.leading, 16)
             HStack {
@@ -52,8 +52,9 @@ struct ProductListCell: View {
 
 struct ProductListCell_Previews: PreviewProvider {
     static var previews: some View {
-        let promotion = Promotion(productCode: "TSHIRT", name: "Pay 1 get 2", type: .percentage, unitsNeeded: 2, discount: 0.5)
-        let product = Product(code: "TSHIRT", name: "Cabify T-Shirt", price: 20, promotion: promotion)
-        ProductListCell(item: product)
+        let promotion = PromotionViewEntity(productCode: "TSHIRT", name: "Pay 1 get 2", type: .percentage, unitsNeeded: 2, discount: 0.5)
+        let product = ProductViewEntity(code: "TSHIRT", name: "Cabify T-Shirt", price: 20, currency: "€", promotion: promotion)
+        let item = ProductListItem(product: product)
+        ProductListCell(item: item)
     }
 }
