@@ -17,7 +17,6 @@ enum ProductListItemAction {
 }
 
 struct ProductListItem: Identifiable {
-    
     var id = UUID()
     let basketProduct: BasketProductViewEntity
     let view: ProductListItemView

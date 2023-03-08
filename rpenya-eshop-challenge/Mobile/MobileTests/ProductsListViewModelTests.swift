@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import rpenya_eshop_challenge
 
 final class ProductsListViewModelTests: XCTestCase {
 

@@ -114,6 +114,12 @@
 		0CC0345E29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0345D29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift */; };
 		0CC0346029B8CB74004DC8CC /* ProductListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0345F29B8CB74004DC8CC /* ProductListItemTests.swift */; };
 		0CC0346229B8CBB2004DC8CC /* ProductsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346129B8CBB2004DC8CC /* ProductsListViewModelTests.swift */; };
+		0CC0346329B8CC6E004DC8CC /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB09029B528E2004395FB /* MockProduct.swift */; };
+		0CC0346429B8CC71004DC8CC /* MockPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079BC029B6534100726AED /* MockPromotion.swift */; };
+		0CC0346829B8CF86004DC8CC /* MockBasketViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346729B8CF86004DC8CC /* MockBasketViewEntity.swift */; };
+		0CC0346A29B8CFA0004DC8CC /* MockBasketProductViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346929B8CFA0004DC8CC /* MockBasketProductViewEntity.swift */; };
+		0CC0346C29B8D04A004DC8CC /* MockProductViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346B29B8D04A004DC8CC /* MockProductViewEntity.swift */; };
+		0CC0346E29B8D05E004DC8CC /* MockPromotionViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346D29B8D05E004DC8CC /* MockPromotionViewEntity.swift */; };
 		0CE4EDE129B3D2C0005114A9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EDE029B3D2C0005114A9 /* Resource.swift */; };
 		0CE4EDE629B3D480005114A9 /* ProductsRemoteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE4EDE529B3D480005114A9 /* ProductsRemoteEntity.swift */; };
 /* End PBXBuildFile section */
@@ -315,6 +321,10 @@
 		0CC0345D29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductViewEntityTests.swift; sourceTree = "<group>"; };
 		0CC0345F29B8CB74004DC8CC /* ProductListItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListItemTests.swift; sourceTree = "<group>"; };
 		0CC0346129B8CBB2004DC8CC /* ProductsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelTests.swift; sourceTree = "<group>"; };
+		0CC0346729B8CF86004DC8CC /* MockBasketViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBasketViewEntity.swift; sourceTree = "<group>"; };
+		0CC0346929B8CFA0004DC8CC /* MockBasketProductViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBasketProductViewEntity.swift; sourceTree = "<group>"; };
+		0CC0346B29B8D04A004DC8CC /* MockProductViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductViewEntity.swift; sourceTree = "<group>"; };
+		0CC0346D29B8D05E004DC8CC /* MockPromotionViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPromotionViewEntity.swift; sourceTree = "<group>"; };
 		0CE4EDE029B3D2C0005114A9 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		0CE4EDE529B3D480005114A9 /* ProductsRemoteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRemoteEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -529,6 +539,7 @@
 		0C3F27BD29B3B56E004C359C /* MobileTests */ = {
 			isa = PBXGroup;
 			children = (
+				0CC0346529B8CEF5004DC8CC /* Common */,
 				0CC0345729B8CAE0004DC8CC /* ProductViewEntityTests.swift */,
 				0CC0345929B8CB19004DC8CC /* PromotionViewEntityTests.swift */,
 				0CC0345B29B8CB33004DC8CC /* BasketViewEntityTests.swift */,
@@ -871,6 +882,25 @@
 			path = ModelPreviewProvider;
 			sourceTree = "<group>";
 		};
+		0CC0346529B8CEF5004DC8CC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0CC0346629B8CEFC004DC8CC /* Model */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0CC0346629B8CEFC004DC8CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CC0346B29B8D04A004DC8CC /* MockProductViewEntity.swift */,
+				0CC0346D29B8D05E004DC8CC /* MockPromotionViewEntity.swift */,
+				0CC0346729B8CF86004DC8CC /* MockBasketViewEntity.swift */,
+				0CC0346929B8CFA0004DC8CC /* MockBasketProductViewEntity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0CE4EDE229B3D2D9005114A9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1186,11 +1216,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CC0346029B8CB74004DC8CC /* ProductListItemTests.swift in Sources */,
+				0CC0346C29B8D04A004DC8CC /* MockProductViewEntity.swift in Sources */,
 				0CC0345829B8CAE0004DC8CC /* ProductViewEntityTests.swift in Sources */,
 				0CC0345C29B8CB33004DC8CC /* BasketViewEntityTests.swift in Sources */,
 				0CC0345A29B8CB19004DC8CC /* PromotionViewEntityTests.swift in Sources */,
 				0CC0346229B8CBB2004DC8CC /* ProductsListViewModelTests.swift in Sources */,
 				0CC0345E29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift in Sources */,
+				0CC0346329B8CC6E004DC8CC /* MockProduct.swift in Sources */,
+				0CC0346A29B8CFA0004DC8CC /* MockBasketProductViewEntity.swift in Sources */,
+				0CC0346E29B8D05E004DC8CC /* MockPromotionViewEntity.swift in Sources */,
+				0CC0346429B8CC71004DC8CC /* MockPromotion.swift in Sources */,
+				0CC0346829B8CF86004DC8CC /* MockBasketViewEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
