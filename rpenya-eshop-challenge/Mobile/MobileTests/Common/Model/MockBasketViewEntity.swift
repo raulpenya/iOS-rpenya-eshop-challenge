@@ -10,6 +10,6 @@ import Foundation
 
 struct MockBasketViewEntity {
     static func givenBasket() -> BasketViewEntity {
-        return BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct()])
+        return BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct1()])
     }
 }

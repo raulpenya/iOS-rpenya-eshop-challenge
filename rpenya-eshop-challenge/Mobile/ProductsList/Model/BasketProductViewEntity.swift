@@ -18,8 +18,8 @@ struct BasketProductViewEntity: Equatable {
 }
 
 extension BasketProductViewEntity {
-    func transformToProductList(action: ((ProductListItem, ProductListItemAction) -> Void)?) -> ProductListItem {
-        return ProductListItem(basketProduct: self, view: .productsList, action: action)
+    func transformToProductListItem(view: ProductListItemView = .productsList, action: ((ProductListItem, ProductListItemAction) -> Void)?) -> ProductListItem {
+        return ProductListItem(basketProduct: self, view: view, action: action)
     }
 }
 

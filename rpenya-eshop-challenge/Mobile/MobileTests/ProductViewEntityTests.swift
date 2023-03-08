@@ -20,4 +20,24 @@ final class ProductViewEntityTests: XCTestCase {
         XCTAssertEqual(product.price, productViewEntity.price)
         XCTAssertEqual(product.currency, productViewEntity.currency)
     }
+    
+    func test_equatable_true() {
+        //Given
+        let product1 = MockProductViewEntity.givenProduct1()
+        let product2 = MockProductViewEntity.givenProduct1()
+        //When
+        let result = product1 == product2
+        //Then
+        XCTAssertTrue(result)
+    }
+    
+    func test_equatable_false() {
+        //Given
+        let product1 = MockProductViewEntity.givenProduct1()
+        let product2 = MockProductViewEntity.givenProduct2()
+        //When
+        let result = product1 == product2
+        //Then
+        XCTAssertFalse(result)
+    }
 }

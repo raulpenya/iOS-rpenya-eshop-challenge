@@ -14,7 +14,16 @@ struct MockProductViewEntity {
     static let price1 = 20.00
     static let currency1 = "€"
     
+    static let code2 = "VOUCHER"
+    static let name2 = "Cabify Voucher"
+    static let price2 = 5.00
+    static let currency2 = "€"
+    
     static func givenProduct1() -> ProductViewEntity {
-        return ProductViewEntity(code: code1, name: name1, price: price1, currency: currency1, promotion: nil)
+        return ProductViewEntity(code: code1, name: name1, price: price1, currency: currency1, promotion: MockPromotionViewEntity.givenPromotion1())
+    }
+    
+    static func givenProduct2() -> ProductViewEntity {
+        return ProductViewEntity(code: code2, name: name2, price: price2, currency: currency2, promotion: MockPromotionViewEntity.givenPromotion2())
     }
 }
