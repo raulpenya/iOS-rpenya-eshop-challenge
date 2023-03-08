@@ -7,16 +7,21 @@
 
 import SwiftUI
 
+enum ProductListItemView {
+    case productsList
+}
+
+enum ProductListItemAction {
+    case add
+    case remove
+}
+
 struct ProductListItem: Identifiable {
-    
-    enum ProductListItemView {
-        case productsList
-    }
     
     var id = UUID()
     let basketProduct: BasketProductViewEntity
     let view: ProductListItemView
-//    let action: ((ProductListItem) -> Void)?
+    let action: ((ProductListItem, ProductListItemAction) -> Void)?
     
     func getTitle() -> String {
         return basketProduct.product.name
