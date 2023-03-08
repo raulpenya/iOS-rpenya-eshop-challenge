@@ -7,10 +7,6 @@
 
 import SwiftUI
 
-struct ProductsListItem {
-    let items: [ProductListItem]
-}
-
 struct ProductListItem: Identifiable {
     var id = UUID()
     let product: ProductViewEntity

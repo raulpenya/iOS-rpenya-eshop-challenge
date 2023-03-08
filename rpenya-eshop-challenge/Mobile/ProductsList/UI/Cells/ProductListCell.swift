@@ -52,9 +52,6 @@ struct ProductListCell: View {
 
 struct ProductListCell_Previews: PreviewProvider {
     static var previews: some View {
-        let promotion = PromotionViewEntity(productCode: "TSHIRT", name: "Pay 1 get 2", type: .percentage, unitsNeeded: 2, discount: 0.5)
-        let product = ProductViewEntity(code: "TSHIRT", name: "Cabify T-Shirt", price: 20, currency: "€", promotion: promotion)
-        let item = ProductListItem(product: product)
-        ProductListCell(item: item)
+        ProductListCell(item: ProductsListModelPreviewProvider.getProductListItem1())
     }
 }
