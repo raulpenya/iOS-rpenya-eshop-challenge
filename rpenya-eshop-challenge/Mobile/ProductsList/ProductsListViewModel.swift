@@ -11,6 +11,9 @@ import Combine
 
 class ProductsListViewModel: ObservableObject {
     
+    @Published var listModel: BasketViewEntity?
+    @Published var currentBasket: BasketViewEntity?
+    @Published var errorDescription: ErrorDescription?
     let getProductsWithPromotionsUseCase: GetProductsWithPromotions
     var cancellableSet: Set<AnyCancellable> = []
     
