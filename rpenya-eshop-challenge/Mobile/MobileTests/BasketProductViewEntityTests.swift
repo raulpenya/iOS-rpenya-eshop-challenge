@@ -13,7 +13,7 @@ final class BasketProductViewEntityTests: XCTestCase {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1()
         //When
-        let item = basketProduct.transformToProductListItem(view: .productsList, action: action)
+        let item = basketProduct.transformToProductsListItem(view: .productsList, action: action)
         //Then
         XCTAssertEqual(item.basketProduct.product, basketProduct.product)
         XCTAssertEqual(item.view, .productsList)
@@ -49,5 +49,5 @@ final class BasketProductViewEntityTests: XCTestCase {
         XCTAssertFalse(result)
     }
     
-    func action(item: ProductListItem, action: ProductListItemAction) { }
+    func action(item: ProductsListItem, action: ProductsListItemAction) { }
 }

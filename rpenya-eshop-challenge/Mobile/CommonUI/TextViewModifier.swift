@@ -1,5 +1,5 @@
 //
-//  TextModifier.swift
+//  TextViewModifier.swift
 //  rpenya-eshop-challenge
 //
 //  Created by raulbot on 7/3/23.

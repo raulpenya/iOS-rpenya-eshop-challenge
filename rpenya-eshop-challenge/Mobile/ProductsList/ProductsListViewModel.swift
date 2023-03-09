@@ -21,7 +21,7 @@ class ProductsListViewModel: ObservableObject {
         self.getProductsWithPromotionsUseCase = getProductsWithPromotionsUseCase
     }
     
-    func productListItemButtonPressed(item: ProductListItem, action: ProductListItemAction) {
+    func ProductsListItemButtonPressed(item: ProductsListItem, action: ProductsListItemAction) {
         switch action {
         case .add:
             print("add")

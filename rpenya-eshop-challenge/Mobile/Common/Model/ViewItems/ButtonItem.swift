@@ -13,12 +13,6 @@ protocol ButtonItem {
     var action: ((ButtonItem) -> Void) { get set }
 }
 
-struct ProductListButtonItem: ButtonItem {
-    var title: String
-    var isDisabled: Bool
-    var action: ((ButtonItem) -> Void)
-}
-
 struct CheckoutListButtonItem: ButtonItem {
     var title: String
     var isDisabled: Bool

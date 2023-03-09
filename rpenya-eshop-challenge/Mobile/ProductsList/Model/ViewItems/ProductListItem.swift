@@ -1,5 +1,5 @@
 //
-//  ProductListItem.swift
+//  ProductsListItem.swift
 //  rpenya-eshop-challenge
 //
 //  Created by raulbot on 8/3/23.
@@ -7,20 +7,20 @@
 
 import SwiftUI
 
-enum ProductListItemView {
+enum ProductsListItemView {
     case productsList
 }
 
-enum ProductListItemAction {
+enum ProductsListItemAction {
     case add
     case remove
 }
 
-struct ProductListItem: Identifiable, Equatable {
+struct ProductsListItem: ListItem {
     var id = UUID()
     let basketProduct: BasketProductViewEntity
-    let view: ProductListItemView
-    let action: ((ProductListItem, ProductListItemAction) -> Void)?
+    let view: ProductsListItemView
+    let action: ((ProductsListItem, ProductsListItemAction) -> Void)?
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.basketProduct == rhs.basketProduct
@@ -38,12 +38,10 @@ struct ProductListItem: Identifiable, Equatable {
     func getUnits() -> String {
         return String(basketProduct.units)
     }
-    
-    @ViewBuilder
-    func getCell() -> some View {
-        switch view {
-        case .productsList:
-            ProductListCellView(item: self).listRowSeparator(.hidden)
-        }
+}
+
+extension ProductsListItem {
+    func transformToAnyItem() -> AnyItem {
+        return  AnyItem(item: self)
     }
 }

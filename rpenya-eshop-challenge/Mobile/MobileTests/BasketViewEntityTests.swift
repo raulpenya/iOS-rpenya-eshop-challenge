@@ -28,5 +28,5 @@ final class BasketViewEntityTests: XCTestCase {
         XCTAssertEqual(basket.products.count, products.products.count)
     }
     
-    func action(item: ProductListItem, action: ProductListItemAction) { }
+    func action(item: ProductsListItem, action: ProductsListItemAction) { }
 }

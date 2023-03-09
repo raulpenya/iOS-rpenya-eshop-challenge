@@ -8,11 +8,19 @@
 import SwiftUI
 import Domain
 
+struct ProductCells: View {
+    let item: ProductsListItem
+    var body: some View {
+        switch item.view {
+        case .productsList:
+            ProductListCellView(item: item).listRowSeparator(.hidden)
+        }
+    }
+}
+
 struct ProductListCellView: View {
+    var item: ProductsListItem
     
-    var item: ProductListItem
-    
-    @ViewBuilder
     var body: some View {
         HStack {
             VStack {
@@ -51,6 +59,6 @@ struct ProductListCellView: View {
 
 struct ProductListCell_Previews: PreviewProvider {
     static var previews: some View {
-        ProductListCellView(item: ProductsListModelPreviewProvider.getProductListItem1())
+        ProductListCellView(item: ProductsListModelPreviewProvider.getProductsListItem1())
     }
 }

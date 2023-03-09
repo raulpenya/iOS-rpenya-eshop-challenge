@@ -1,5 +1,5 @@
 //
-//  ProductsListModelPreviewProvider.swift
+//  swift
 //  rpenya-eshop-challenge
 //
 //  Created by raulbot on 8/3/23.
@@ -8,20 +8,28 @@
 import Foundation
 
 struct ProductsListModelPreviewProvider {
-    static func getProductsListItem() -> ProductsListItem {
-        return ProductsListItem(items: [ProductsListModelPreviewProvider.getProductListItem1(), ProductsListModelPreviewProvider.getProductListItem2()])
+    static func getProductsListItem() -> ProductsListItems {
+        return ProductsListItems(items: [anyItem1(), anyItem2()])
     }
     
-    static func getProductListItem1() -> ProductListItem {
-        return ProductListItem(basketProduct: ProductsListModelPreviewProvider.getBasketProduct1(), view: .productsList) { item, action in
+    static func anyItem1() -> AnyItem {
+        return AnyItem(item: getProductsListItem1())
+    }
+    
+    static func anyItem2() -> AnyItem {
+        return AnyItem(item: getProductsListItem2())
+    }
+    
+    static func getProductsListItem1() -> ProductsListItem {
+        return ProductsListItem(basketProduct: getBasketProduct1(), view: .productsList) { item, action in
             print(action)
             print(action)
             print(item)
         }
     }
     
-    static func getProductListItem2() -> ProductListItem {
-        return ProductListItem(basketProduct: ProductsListModelPreviewProvider.getBasketProduct2(), view: .productsList) { item, action in
+    static func getProductsListItem2() -> ProductsListItem {
+        return ProductsListItem(basketProduct: getBasketProduct2(), view: .productsList) { item, action in
             print(action)
             print(action)
             print(item)
@@ -37,7 +45,7 @@ struct ProductsListModelPreviewProvider {
     }
     
     static func getProduct() -> ProductViewEntity {
-        return ProductViewEntity(code: "TSHIRT", name: "Cabify T-Shirt", price: 20, currency: "€", promotion: ProductsListModelPreviewProvider.getPromotion())
+        return ProductViewEntity(code: "TSHIRT", name: "Cabify T-Shirt", price: 20, currency: "€", promotion: getPromotion())
     }
     
     static func getProductWithoutPromotion() -> ProductViewEntity {
