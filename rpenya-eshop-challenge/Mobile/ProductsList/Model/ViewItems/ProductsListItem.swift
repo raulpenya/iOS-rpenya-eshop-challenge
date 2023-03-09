@@ -35,6 +35,10 @@ struct ProductsListItem: ListItem {
         return promotion.name
     }
     
+    func getPrice() -> String {
+        return "35,99 €"
+    }
+    
     func getUnits() -> String {
         return String(basketProduct.units)
     }

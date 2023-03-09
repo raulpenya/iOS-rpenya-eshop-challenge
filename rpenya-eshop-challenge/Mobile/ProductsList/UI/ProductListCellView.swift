@@ -24,36 +24,47 @@ struct ProductListCellView: View {
     var body: some View {
         HStack {
             VStack {
-                Text(item.getTitle()).modifier(TitleTextModifier())
+                Text(item.getTitle()).modifier(TitleTextModifier()).padding(.bottom, 6).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Color(.lightGray))
+                }
                 if let subtitle = item.getSubtitle() {
                     Text(subtitle).modifier(SubtitleTextModifier())
                 }
-            }.padding(.leading, 16)
-            HStack {
-                Button {
-                    if let action = item.action {
-                        action(item, .remove)
-                    }
-                } label: {
-                    Text("-").modifier(AddRemoveButtonTextModifier())
-                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 50).background {
+            }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading).padding([.top, .leading, .bottom], 16).padding(.trailing, 0)
+            VStack {
+                Text(item.getPrice()).modifier(PriceTextModifier()).padding(.bottom, 6).background {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(Color(.lightGray))
                 }
-                Text(item.getUnits()).modifier(UnitsTextModifier())
-                Button {
-                    if let action = item.action {
-                        action(item, .add)
+                HStack {
+                    Button {
+                        if let action = item.action {
+                            action(item, .remove)
+                        }
+                    } label: {
+                        Text("-").modifier(AddRemoveButtonTextModifier())
+                    }.buttonStyle(BorderlessButtonStyle()).frame(width: 50, height: 50).background {
+                        RoundedRectangle(cornerRadius: 12.0)
+                            .fill(Color(.lightGray))
                     }
-                } label: {
-                    Text("+").modifier(AddRemoveButtonTextModifier())
-                }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 50).background {
+                    Text(item.getUnits()).modifier(UnitsTextModifier())
+                    Button {
+                        if let action = item.action {
+                            action(item, .add)
+                        }
+                    } label: {
+                        Text("+").modifier(AddRemoveButtonTextModifier())
+                    }.buttonStyle(BorderlessButtonStyle()).frame(width: 50, height: 50).background {
+                        RoundedRectangle(cornerRadius: 12.0)
+                            .fill(Color(.lightGray))
+                    }
+                }.frame(maxWidth: .infinity, alignment: .trailing).background {
                     RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Color(.lightGray))
+                        .fill(Color(.red))
                 }
-            }.frame(maxWidth: .infinity, alignment: .trailing).padding(.trailing, 16)
-        }.frame(maxWidth: .infinity, alignment: .leading)
-            .frame(height: 70)
+            }.frame(width: 150).padding([.top, .bottom, .trailing], 16).padding(.leading, 0)
+        }.frame(maxWidth: .infinity, maxHeight: 130, alignment: .leading)
             .background {
                 RoundedRectangle(cornerRadius: 12.0)
                     .fill(Color(.systemYellow))

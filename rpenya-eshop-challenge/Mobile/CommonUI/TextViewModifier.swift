@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title3, weight: .semibold))
-            .frame(maxWidth: .infinity, alignment: .leading)
+        content.font(.system(.title, weight: .semibold))
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
@@ -19,8 +19,17 @@ struct TitleTextModifier: ViewModifier {
 struct SubtitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.subheadline, weight: .regular))
-            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .topLeading)
             .padding(.leading, 6)
+            .lineLimit(2)
+            .minimumScaleFactor(0.01)
+    }
+}
+
+struct PriceTextModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content.font(.system(.title, weight: .bold))
+            .frame(maxWidth: .infinity, alignment: .trailing)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
@@ -28,8 +37,7 @@ struct SubtitleTextModifier: ViewModifier {
 
 struct UnitsTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title3, weight: .semibold)).padding(.horizontal, 8)
-            .minimumScaleFactor(0.01)
+        content.font(.system(.title3, weight: .semibold)).frame(width: 30, height: 30).minimumScaleFactor(0.01)
     }
 }
 
