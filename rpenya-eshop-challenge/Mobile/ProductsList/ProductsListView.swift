@@ -25,7 +25,7 @@ struct ProductsListView: View {
                     PlainListView(listItems: listItems).refreshable(action: viewModel.refreshData)
                     CompleteButtonView(item: buttonItem)
                 }
-            }.navigationTitle("eshop")
+            }.navigationTitle("eShop")
         }
     }
 }
