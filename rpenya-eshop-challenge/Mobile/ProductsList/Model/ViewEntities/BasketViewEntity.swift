@@ -18,14 +18,15 @@ extension BasketViewEntity {
     }
     
     func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {
-        let isDisbled = false
-        return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isDisbled, action: action)
+        return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isEmpty(), action: action)
     }
 }
 
 extension BasketViewEntity {
     func isEmpty() -> Bool {
-        return true
+        return products.reduce(0) { partialResult, product in
+            partialResult+product.units
+        } == 0
     }
 }
 

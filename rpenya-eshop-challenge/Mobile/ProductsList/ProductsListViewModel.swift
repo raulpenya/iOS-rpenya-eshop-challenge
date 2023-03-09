@@ -21,8 +21,8 @@ class ProductsListViewModel: ObservableObject {
     let getProductsWithPromotionsUseCase: GetProductsWithPromotions
     var cancellableSet: Set<AnyCancellable> = []
     var currentBasket: BasketViewEntity?
-    var listModel: ListItems?
-    var buttonModel: ButtonItem?
+//    var listModel: ListItems?
+//    var buttonModel: ButtonItem?
     var errorDescription: ErrorDescription?
     
     init(getProductsWithPromotionsUseCase: GetProductsWithPromotions) {
@@ -71,9 +71,9 @@ class ProductsListViewModel: ObservableObject {
         let basket = result.transformToBasket()
         currentBasket = basket
         let listItems = basket.transformToProductsList(action: productsListItemButtonPressed)
-        listModel = listItems
+//        listModel = listItems
         let buttonItem = basket.transformToProductListButtonItem(action: checkoutButtonPressed)
-        buttonModel = buttonItem
+//        buttonModel = buttonItem
         state = .loaded(listItems, buttonItem)
     }
     
