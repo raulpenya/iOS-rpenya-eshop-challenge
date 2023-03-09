@@ -20,7 +20,7 @@ struct MockPromotionViewEntity {
     static let name2 = "Pay 1 get 2"
     static let type2 = PromotionType.newprice
     static let unitsNeeded2 = 2
-    static let discount2 = 0.50
+    static let discount2 = 4.00
     
     static func givenPromotion1() -> PromotionViewEntity {
         return PromotionViewEntity(productCode: productCode1, name: name1, type: type1, unitsNeeded: unitsNeeded1, discount: discount1)

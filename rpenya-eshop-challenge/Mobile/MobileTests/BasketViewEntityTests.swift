@@ -19,6 +19,10 @@ final class BasketViewEntityTests: XCTestCase {
         XCTAssertEqual(basket.products[0].units, (productsList.items[0].item as! ProductsListItem).basketProduct.units)
     }
     
+    func test_transformToProductListButtonItem() {
+        
+    }
+    
     func test_transformToBasket() {
         //Given
         let products = MockProducts.givenProducts(duplicates: false)
@@ -26,6 +30,75 @@ final class BasketViewEntityTests: XCTestCase {
         let basket = products.transformToBasket()
         //Then
         XCTAssertEqual(basket.products.count, products.products.count)
+    }
+    
+    func test_isEmpty_true() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
+        let basket = BasketViewEntity(products: [basketProduct])
+        //When
+        let result = basket.isEmpty()
+        //Then
+        XCTAssertTrue(result)
+    }
+    
+    func test_isEmpty_false() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1()
+        let basket = BasketViewEntity(products: [basketProduct])
+        //When
+        let result = basket.isEmpty()
+        //Then
+        XCTAssertFalse(result)
+    }
+    
+    func test_modifyProductUnits_increase_success() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
+        let basket = BasketViewEntity(products: [basketProduct])
+        //When
+        let newBasket = basket.modifyProductUnits(basketProduct, action: .addProduct)
+        //Then
+        XCTAssertEqual(newBasket.products[0].units, 1)
+    }
+    
+    func test_modifyProductUnits_increase_unsuccess() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: BasketProductViewEntity.max_units)
+        let basket = BasketViewEntity(products: [basketProduct])
+        //When
+        let newBasket = basket.modifyProductUnits(basketProduct, action: .addProduct)
+        //Then
+        XCTAssertEqual(newBasket.products[0].units, BasketProductViewEntity.max_units)
+    }
+    
+    func test_modifyProductUnits_decrease_success() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 1)
+        let basket = BasketViewEntity(products: [basketProduct])
+        //When
+        let newBasket = basket.modifyProductUnits(basketProduct, action: .removeProduct)
+        //Then
+        XCTAssertEqual(newBasket.products[0].units, 0)
+    }
+    
+    func test_modifyProductUnits_decrease_unsuccess() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: BasketProductViewEntity.min_units)
+        let basket = BasketViewEntity(products: [basketProduct])
+        //When
+        let newBasket = basket.modifyProductUnits(basketProduct, action: .removeProduct)
+        //Then
+        XCTAssertEqual(newBasket.products[0].units, 0)
+    }
+    
+    func test_getBasketPriceString() {
+        //Given
+        let basket = MockBasketViewEntity.givenBasket()
+        //When
+        let priceString = basket.getBasketPriceString()
+        //Then
+        XCTAssertEqual(priceString, "")
     }
     
     func action(item: ProductsListItem, action: ProductsListItemAction) { }

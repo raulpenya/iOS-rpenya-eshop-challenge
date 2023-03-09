@@ -9,11 +9,11 @@ import Foundation
 @testable import rpenya_eshop_challenge
 
 struct MockBasketProductViewEntity {
-    static func givenBasketProduct1() -> BasketProductViewEntity {
-        return BasketProductViewEntity(product: MockProductViewEntity.givenProduct1(), units: 3)
+    static func givenBasketProduct1(units: Int = 3) -> BasketProductViewEntity {
+        return BasketProductViewEntity(product: MockProductViewEntity.givenProduct1(), units: units)
     }
     
-    static func givenBasketProduct2() -> BasketProductViewEntity {
-        return BasketProductViewEntity(product: MockProductViewEntity.givenProduct2(), units: 40)
+    static func givenBasketProduct2(units: Int = 40) -> BasketProductViewEntity {
+        return BasketProductViewEntity(product: MockProductViewEntity.givenProduct2(), units: units)
     }
 }

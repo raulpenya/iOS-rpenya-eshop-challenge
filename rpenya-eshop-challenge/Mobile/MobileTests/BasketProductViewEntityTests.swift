@@ -49,5 +49,33 @@ final class BasketProductViewEntityTests: XCTestCase {
         XCTAssertFalse(result)
     }
     
+    func test_modifyUnits_increase() {
+        
+    }
+    
+    func test_modifyUnits_decrease() {
+        
+    }
+    
+    func test_getDiscountAmount() {
+        
+    }
+    
+    func test_getAmountWithoutDiscount() {
+        
+    }
+    
+    func test_getAmountWithDiscount() {
+        
+    }
+    
+    func test_getAmountWithPercentageDiscount() {
+        
+    }
+    
+    func test_getAmountWithNewPriceDiscount() {
+        
+    }
+    
     func action(item: ProductsListItem, action: ProductsListItemAction) { }
 }
