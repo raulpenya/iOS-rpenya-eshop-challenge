@@ -9,19 +9,35 @@ import Foundation
 import Domain
 import Combine
 
+enum State {
+    case idle
+    case loading
+    case failed(ErrorDescription)
+    case loaded(ListItems, ButtonItem)
+}
+
 class ProductsListViewModel: ObservableObject {
-    
-    @Published var listModel: BasketViewEntity?
-    @Published var currentBasket: BasketViewEntity?
-    @Published var errorDescription: ErrorDescription?
+    @Published private(set) var state = State.idle
     let getProductsWithPromotionsUseCase: GetProductsWithPromotions
     var cancellableSet: Set<AnyCancellable> = []
+    var currentBasket: BasketViewEntity?
+    var listModel: ListItems?
+    var buttonModel: ButtonItem?
+    var errorDescription: ErrorDescription?
     
     init(getProductsWithPromotionsUseCase: GetProductsWithPromotions) {
         self.getProductsWithPromotionsUseCase = getProductsWithPromotionsUseCase
     }
     
-    func ProductsListItemButtonPressed(item: ProductsListItem, action: ProductsListItemAction) {
+    func loadData() {
+        getProductsWithPromotions()
+    }
+    
+    @Sendable func refreshData() {
+        getProductsWithPromotions()
+    }
+    
+    func productsListItemButtonPressed(item: ProductsListItem, action: ProductsListItemAction) {
         switch action {
         case .add:
             print("add")
@@ -30,26 +46,39 @@ class ProductsListViewModel: ObservableObject {
         }
     }
     
-    func checkoutButtonPressed() {
-        getProductsWithPromotions()
-    }
-    
-    @Sendable func refreshData() {
-        getProductsWithPromotions()
+    func checkoutButtonPressed(item: ButtonItem) {
+        print("checkoutButtonPressed")
     }
     
     func getProductsWithPromotions() {
-        getProductsWithPromotionsUseCase.execute(GetProductsWithPromotionsRequestValues()).sink { [weak self] completion in
+        state = .loading
+        getProductsWithPromotionsUseCase.execute(GetProductsWithPromotionsRequestValues()).receive(on: RunLoop.main).sink { [weak self] completion in
             switch completion {
             case .failure(let error):
-                print(error)
-//                let error = ErrorDescription(text: (error as? RepositoryErrors)?.localizedDescription ?? error.localizedDescription)
-//                self?.errorDescription = error
+                print(error.localizedDescription)
+                self?.handleError(error)
             case .finished:
                 print("ProductsListViewModel :: getProductsWithPromotions :: publisher finished")
             }
         } receiveValue: { [weak self] result in
             print("ProductsListViewModel :: getProductsWithPromotions :: result :: \(result)")
+            self?.handleResult(result)
         }.store(in: &cancellableSet)
+    }
+    
+    func handleResult(_ result: Products) {
+        let basket = result.transformToBasket()
+        currentBasket = basket
+        let listItems = basket.transformToProductsList(action: productsListItemButtonPressed)
+        listModel = listItems
+        let buttonItem = basket.transformToProductListButtonItem(action: checkoutButtonPressed)
+        buttonModel = buttonItem
+        state = .loaded(listItems, buttonItem)
+    }
+    
+    func handleError(_ error: Error) {
+        let error = ErrorDescription(text: error.localizedDescription)
+        errorDescription = error
+        state = .failed(error)
     }
 }
