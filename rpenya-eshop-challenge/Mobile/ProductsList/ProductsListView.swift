@@ -16,7 +16,8 @@ struct ProductsListView: View {
             VStack {
                 let listItem = ProductsListModelPreviewProvider.getProductsListItem()
                 listItem.getList().refreshable(action: viewModel.refreshData)
-                CompleteButtonView(action: viewModel.checkoutButtonPressed)
+                let buttonItem = ButtonItemModelPreviewProvider.givenButtonItem()
+                CompleteButtonView(item: buttonItem)
             }.navigationTitle("eShop")
         }
     }

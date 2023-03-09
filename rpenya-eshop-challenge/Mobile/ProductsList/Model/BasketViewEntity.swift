@@ -16,6 +16,17 @@ extension BasketViewEntity {
     func transformToProductsList(action: ((ProductListItem, ProductListItemAction) -> Void)?) -> ProductsListItem {
         return ProductsListItem(items: products.compactMap { $0.transformToProductListItem(action: action) })
     }
+    
+    func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ProductListButtonItem {
+        let isDisbled = false
+        return ProductListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isDisbled, action: action)
+    }
+}
+
+extension BasketViewEntity {
+    func isEmpty() -> Bool {
+        return true
+    }
 }
 
 extension Products {
