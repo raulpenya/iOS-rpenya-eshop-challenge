@@ -14,11 +14,18 @@ struct ProductsListView: View {
     var body: some View {
         NavigationView {
             VStack {
-                let listItem = ProductsListModelPreviewProvider.getProductsListItem()
-                PlainListView(listItem: listItem).refreshable(action: viewModel.refreshData)
-                let buttonItem = ButtonItemModelPreviewProvider.givenButtonItem()
-                CompleteButtonView(item: buttonItem)
-            }.navigationTitle("eShop")
+                switch viewModel.state {
+                case .idle:
+                    Color.clear.onAppear(perform: viewModel.loadData)
+                case .loading:
+                    ProgressView()
+                case .failed(let error):
+                    Text(error.text)
+                case .loaded(let listItems, let buttonItem):
+                    PlainListView(listItems: listItems).refreshable(action: viewModel.refreshData)
+                    CompleteButtonView(item: buttonItem)
+                }
+            }.navigationTitle("eshop")
         }
     }
 }
