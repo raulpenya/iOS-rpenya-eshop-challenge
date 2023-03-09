@@ -8,10 +8,10 @@
 import  SwiftUI
 
 struct PlainListView: View {
-    let listItem: ListItems
+    let listItems: ListItems
     
     var body: some View {
-        List (listItem.items) { anyItem in
+        List (listItems.items) { anyItem in
             if let item = anyItem.item as? ProductsListItem {
                 ProductCells(item: item)
             }
@@ -21,6 +21,6 @@ struct PlainListView: View {
 
 struct PlainList_Previews: PreviewProvider {
     static var previews: some View {
-        PlainListView(listItem: ProductsListModelPreviewProvider.getProductsListItem())
+        PlainListView(listItems: ProductsListModelPreviewProvider.getProductsListItem())
     }
 }

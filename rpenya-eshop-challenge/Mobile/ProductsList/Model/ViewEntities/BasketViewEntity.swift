@@ -13,11 +13,11 @@ struct BasketViewEntity {
 }
 
 extension BasketViewEntity {
-    func transformToProductsList(action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ProductsListItems {
+    func transformToProductsList(action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ListItems {
         return ProductsListItems(items: products.compactMap { $0.transformToProductsListItem(action: action).transformToAnyItem() })
     }
     
-    func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ProductsListButtonItem {
+    func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {
         let isDisbled = false
         return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isDisbled, action: action)
     }
