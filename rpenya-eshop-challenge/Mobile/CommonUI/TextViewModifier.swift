@@ -20,7 +20,6 @@ struct SubtitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.subheadline, weight: .regular))
             .frame(maxWidth: .infinity, alignment: .topLeading)
-            .padding(.leading, 6)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
@@ -36,7 +35,9 @@ struct PriceTextModifier: ViewModifier {
 
 struct UnitsTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title3, weight: .semibold)).frame(width: 30, height: 30).minimumScaleFactor(0.01)
+        content.font(.system(.title3, weight: .semibold))
+            .frame(width: 30, height: 30)
+            .minimumScaleFactor(0.01)
     }
 }
 
@@ -54,6 +55,8 @@ struct CompleteButtonTextModifier: ViewModifier {
         content.font(.title)
             .foregroundColor(.white)
             .bold()
+            .lineLimit(2)
             .minimumScaleFactor(0.01)
+            .padding(.all, 6)
     }
 }

@@ -42,6 +42,10 @@ extension BasketProductViewEntity { //operation methods
         }
         return newBasketProduct
     }
+    
+    func getPriceAmount() -> Double {
+        return product.price*Double(units)
+    }
 }
 
 extension Product {

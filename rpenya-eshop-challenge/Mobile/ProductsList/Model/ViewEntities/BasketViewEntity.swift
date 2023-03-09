@@ -18,7 +18,11 @@ extension BasketViewEntity { //transform methods
     }
     
     func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {
-        return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isEmpty(), action: action)
+        var title = NSLocalizedString("proceed_checkout", comment: "")
+        if let price = getBasketPrice() {
+            title = title + "\n" + price
+        }
+        return ProductsListButtonItem(title: title, isDisabled: isEmpty(), action: action)
     }
 }
 
@@ -37,6 +41,14 @@ extension BasketViewEntity { //operation methods
             newBasket = BasketViewEntity(products: products)
         }
         return newBasket
+    }
+    
+    func getBasketPrice() -> String? {
+        //TODO: currency
+        let price = products.reduce(0) { partialResult, product in
+            return partialResult+product.getPriceAmount()
+        }
+        return price > 0 ? String(format: "%.2f", price) : nil
     }
 }
 
