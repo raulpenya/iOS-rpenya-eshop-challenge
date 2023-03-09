@@ -30,7 +30,6 @@ struct PriceTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title, weight: .bold))
             .frame(maxWidth: .infinity, alignment: .trailing)
-            .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
 }

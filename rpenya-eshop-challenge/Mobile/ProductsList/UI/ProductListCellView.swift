@@ -24,19 +24,13 @@ struct ProductListCellView: View {
     var body: some View {
         HStack {
             VStack {
-                Text(item.getTitle()).modifier(TitleTextModifier()).padding(.bottom, 6).background {
-                    RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Color(.lightGray))
-                }
+                Text(item.getTitle()).modifier(TitleTextModifier()).padding(.bottom, 6)
                 if let subtitle = item.getSubtitle() {
                     Text(subtitle).modifier(SubtitleTextModifier())
                 }
             }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading).padding([.top, .leading, .bottom], 16).padding(.trailing, 0)
             VStack {
-                Text(item.getPrice()).modifier(PriceTextModifier()).padding(.bottom, 6).background {
-                    RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Color(.lightGray))
-                }
+                Text(item.getPrice()).modifier(PriceTextModifier()).padding(.bottom, 6)
                 HStack {
                     Button {
                         if let action = item.action {
@@ -59,12 +53,9 @@ struct ProductListCellView: View {
                         RoundedRectangle(cornerRadius: 12.0)
                             .fill(Color(.lightGray))
                     }
-                }.frame(maxWidth: .infinity, alignment: .trailing).background {
-                    RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Color(.red))
-                }
+                }.frame(maxWidth: .infinity, alignment: .trailing)
             }.frame(width: 150).padding([.top, .bottom, .trailing], 16).padding(.leading, 0)
-        }.frame(maxWidth: .infinity, maxHeight: 130, alignment: .leading)
+        }.frame(maxWidth: .infinity, maxHeight: 130)
             .background {
                 RoundedRectangle(cornerRadius: 12.0)
                     .fill(Color(.systemYellow))
