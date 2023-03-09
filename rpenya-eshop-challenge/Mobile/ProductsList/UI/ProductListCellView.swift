@@ -31,7 +31,9 @@ struct ProductListCellView: View {
             }.padding(.leading, 16)
             HStack {
                 Button {
-                    print("Button -")
+                    if let action = item.action {
+                        action(item, .remove)
+                    }
                 } label: {
                     Text("-").modifier(AddRemoveButtonTextModifier())
                 }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 50).background {
@@ -40,7 +42,9 @@ struct ProductListCellView: View {
                 }
                 Text(item.getUnits()).modifier(UnitsTextModifier())
                 Button {
-                    print("Button +")
+                    if let action = item.action {
+                        action(item, .add)
+                    }
                 } label: {
                     Text("+").modifier(AddRemoveButtonTextModifier())
                 }.buttonStyle(BorderlessButtonStyle()).padding(.horizontal, 16).frame(width: 50, height: 50).background {

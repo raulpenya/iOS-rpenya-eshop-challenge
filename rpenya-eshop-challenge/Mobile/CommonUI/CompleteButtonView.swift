@@ -14,7 +14,6 @@ struct CompleteButtonView: View {
     var body: some View {
         HStack {
             Button {
-                print("CompleteButtonView")
                 item.action(item)
             } label: {
                 Text(item.title).modifier(CompleteButtonTextModifier())

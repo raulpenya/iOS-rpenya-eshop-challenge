@@ -38,6 +38,7 @@ class ProductsListViewModel: ObservableObject {
     }
     
     func productsListItemButtonPressed(item: ProductsListItem, action: ProductsListItemAction) {
+        print(item.basketProduct.product.name)
         switch action {
         case .add:
             print("add")
@@ -47,7 +48,7 @@ class ProductsListViewModel: ObservableObject {
     }
     
     func checkoutButtonPressed(item: ButtonItem) {
-        print("checkoutButtonPressed")
+        print(item.title)
     }
     
     func getProductsWithPromotions() {
