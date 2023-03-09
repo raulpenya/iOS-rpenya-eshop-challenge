@@ -43,8 +43,48 @@ extension BasketProductViewEntity { //operation methods
         return newBasketProduct
     }
     
-    func getPriceAmount() -> Double {
+    func getDiscountAmount() -> Double {
+        return getAmountWithDiscount() - getAmountWithoutDiscount()
+    }
+    
+    func getAmountWithoutDiscount() -> Double {
         return product.price*Double(units)
+    }
+    
+    func getAmountWithDiscount() -> Double {
+        var amount: Double = 0
+        if let promotion = product.promotion {
+            switch promotion.type {
+            case .percentage:
+                amount = getAmountWithPercentageDiscount()
+            case .newprice:
+                amount = getAmountWithNewPriceDiscount()
+            }
+        } else {
+            amount = product.price*Double(units)
+        }
+        return amount
+    }
+    
+    func getAmountWithPercentageDiscount() -> Double {
+        var amount: Double = 0
+        if let promotion = product.promotion {
+            let groupedPrice = product.price*Double(promotion.unitsNeeded)*promotion.discount
+            let unitsGrouped = modf(Double(units)/Double(promotion.unitsNeeded))
+            amount = unitsGrouped.1*Double(promotion.unitsNeeded)*product.price
+            amount = amount + unitsGrouped.0*groupedPrice
+        }
+        return amount
+    }
+    
+    func getAmountWithNewPriceDiscount() -> Double {
+        var amount: Double = 0
+        if let promotion = product.promotion, units >= promotion.unitsNeeded {
+            amount = promotion.discount*Double(units)
+        } else {
+            amount = product.price*Double(units)
+        }
+        return amount
     }
 }
 
