@@ -17,9 +17,9 @@ extension BasketViewEntity {
         return ProductsListItems(items: products.compactMap { $0.transformToProductsListItem(action: action).transformToAnyItem() })
     }
     
-    func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ProductListButtonItem {
+    func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ProductsListButtonItem {
         let isDisbled = false
-        return ProductListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isDisbled, action: action)
+        return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isDisbled, action: action)
     }
 }
 

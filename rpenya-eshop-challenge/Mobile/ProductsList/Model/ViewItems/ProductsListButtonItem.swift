@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductListButtonItem: ButtonItem {
+struct ProductsListButtonItem: ButtonItem {
     var title: String
     var isDisabled: Bool
     var action: ((ButtonItem) -> Void)
