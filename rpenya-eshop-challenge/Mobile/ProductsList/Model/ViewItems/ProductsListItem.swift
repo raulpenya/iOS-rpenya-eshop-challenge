@@ -36,7 +36,7 @@ struct ProductsListItem: ListItem {
     }
     
     func getPrice() -> String {
-        return "35,99 €"
+        return basketProduct.product.getPrice()
     }
     
     func getUnits() -> String {

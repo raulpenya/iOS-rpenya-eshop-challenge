@@ -20,6 +20,12 @@ struct ProductViewEntity: Equatable {
     }
 }
 
+extension ProductViewEntity { //operation methods
+    func getPrice() -> String {
+        return String(format: "%.2f", price) + " " + currency
+    }
+}
+
 extension Product {
     func transformToUI() -> ProductViewEntity {
         return ProductViewEntity(code: code, name: name, price: price, currency: currency, promotion: promotion?.transformToUI())
