@@ -27,10 +27,12 @@ final class ProductsListItemTests: XCTestCase {
         let title = item.getTitle()
         let subtitle = item.getSubtitle()
         let units = item.getUnits()
+        let price = item.getPrice()
         //Then
         XCTAssertEqual(title, item.basketProduct.product.name)
         XCTAssertEqual(subtitle, item.basketProduct.product.promotion?.name)
         XCTAssertEqual(units, String(item.basketProduct.units))
+        XCTAssertEqual(price, "20.00€/u")
     }
     
     func test_equatable_true() {

@@ -40,4 +40,13 @@ final class ProductViewEntityTests: XCTestCase {
         //Then
         XCTAssertFalse(result)
     }
+    
+    func test_getPriceString() {
+        //Given
+        let product1 = MockProductViewEntity.givenProduct1()
+        //When
+        let price = product1.getPriceString()
+        //Then
+        XCTAssertEqual(price, "20.00€/u")
+    }
 }
