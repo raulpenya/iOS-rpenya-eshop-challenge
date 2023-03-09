@@ -38,13 +38,14 @@ class ProductsListViewModel: ObservableObject {
     }
     
     func productsListItemButtonPressed(item: ProductsListItem, action: ProductsListItemAction) {
-        print(item.basketProduct.product.name)
+        var newBasket = currentBasket
         switch action {
         case .add:
-            print("add")
+            newBasket = currentBasket?.modifyProductUnits(item.basketProduct, action: .addProduct)
         case .remove:
-            print("remove")
+            newBasket = currentBasket?.modifyProductUnits(item.basketProduct, action: .removeProduct)
         }
+        updateView(with: newBasket!)
     }
     
     func checkoutButtonPressed(item: ButtonItem) {
@@ -57,29 +58,30 @@ class ProductsListViewModel: ObservableObject {
             switch completion {
             case .failure(let error):
                 print(error.localizedDescription)
-                self?.handleError(error)
+                self?.receiveError(error)
             case .finished:
                 print("ProductsListViewModel :: getProductsWithPromotions :: publisher finished")
             }
         } receiveValue: { [weak self] result in
             print("ProductsListViewModel :: getProductsWithPromotions :: result :: \(result)")
-            self?.handleResult(result)
+            self?.receiveResult(result)
         }.store(in: &cancellableSet)
     }
     
-    func handleResult(_ result: Products) {
-        let basket = result.transformToBasket()
-        currentBasket = basket
-        let listItems = basket.transformToProductsList(action: productsListItemButtonPressed)
-//        listModel = listItems
-        let buttonItem = basket.transformToProductListButtonItem(action: checkoutButtonPressed)
-//        buttonModel = buttonItem
-        state = .loaded(listItems, buttonItem)
+    func receiveResult(_ result: Products) {
+        updateView(with: result.transformToBasket())
     }
     
-    func handleError(_ error: Error) {
+    func receiveError(_ error: Error) {
         let error = ErrorDescription(text: error.localizedDescription)
         errorDescription = error
         state = .failed(error)
+    }
+    
+    func updateView(with basket: BasketViewEntity) {
+        currentBasket = basket
+        let listItems = basket.transformToProductsList(action: productsListItemButtonPressed)
+        let buttonItem = basket.transformToProductListButtonItem(action: checkoutButtonPressed)
+        state = .loaded(listItems, buttonItem)
     }
 }

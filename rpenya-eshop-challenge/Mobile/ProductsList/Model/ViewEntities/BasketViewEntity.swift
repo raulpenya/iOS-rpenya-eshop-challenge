@@ -12,7 +12,7 @@ struct BasketViewEntity {
     let products: [BasketProductViewEntity]
 }
 
-extension BasketViewEntity {
+extension BasketViewEntity { //transform methods
     func transformToProductsList(action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ListItems {
         return ProductsListItems(items: products.compactMap { $0.transformToProductsListItem(action: action).transformToAnyItem() })
     }
@@ -22,11 +22,21 @@ extension BasketViewEntity {
     }
 }
 
-extension BasketViewEntity {
+extension BasketViewEntity { //operation methods
     func isEmpty() -> Bool {
         return products.reduce(0) { partialResult, product in
             partialResult+product.units
         } == 0
+    }
+    
+    func modifyProductUnits(_ product: BasketProductViewEntity, action: BasketProductAction) -> BasketViewEntity {
+        var products = products
+        var newBasket = self
+        if let index = products.firstIndex(where: { $0.product == product.product }) {
+            products[index] = products[index].modifyUnits(action)
+            newBasket = BasketViewEntity(products: products)
+        }
+        return newBasket
     }
 }
 
