@@ -111,7 +111,7 @@ final class BasketViewEntityTests: XCTestCase {
         //Given
         let basket = MockBasketViewEntity.givenBasket()
         //When
-        let priceString = basket.getBasketPriceString()
+        let priceString = basket.getBasketPriceWithDiscountString()
         //Then
         XCTAssertEqual(priceString, "56.00€")
     }
@@ -121,7 +121,7 @@ final class BasketViewEntityTests: XCTestCase {
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
         let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
         //When
-        let priceString = basket.getBasketPriceString()
+        let priceString = basket.getBasketPriceWithDiscountString()
         //Then
         XCTAssertNil(priceString)
     }
