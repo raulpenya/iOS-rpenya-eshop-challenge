@@ -15,23 +15,26 @@ struct BasketItemCellView: View {
             HStack {
                 Text(item.getTitle()).modifier(TitleTextModifier())
                 Text(item.getUnits()).modifier(UnitsTextModifier())
-                Text(item.getPrice()).modifier(PriceTextModifier())
-            }.frame(width: .infinity).background {
+                Text(item.getAmount()).modifier(PriceTextModifier())
+            }.background {
                 RoundedRectangle(cornerRadius: 12.0)
                     .fill(Color(.red))
-            }.frame(maxWidth: .infinity, maxHeight: 80)
+            }
             if let subtitle = item.getSubtitle() {
                 HStack {
                     Text(subtitle).modifier(SubtitleTextModifier())
-                    Text(item.getDiscountAmount()).modifier(SubtitleTextModifier()).frame(alignment: .trailing).frame(width: .infinity).background {
+                    Text(item.getDiscountAmount()).modifier(SubtitleTextModifier()).frame(alignment: .trailing).background {
                         RoundedRectangle(cornerRadius: 12.0)
                             .fill(Color(.red))
                     }
-                }.frame(width: .infinity).background {
+                }.background {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(Color(.systemYellow))
                 }
             }
+        }.background {
+            RoundedRectangle(cornerRadius: 12.0)
+                .fill(Color(.blue))
         }
     }
 }

@@ -47,6 +47,10 @@ extension BasketProductViewEntity { //operation methods
         return String(format: "%.2f", getDiscountAmount())
     }
     
+    func getAmountWithDiscountString() -> String {
+        return String(format: "%.2f", getAmountWithDiscount())
+    }
+    
     func getDiscountAmount() -> Double {
         return getAmountWithDiscount() - getAmountWithoutDiscount()
     }

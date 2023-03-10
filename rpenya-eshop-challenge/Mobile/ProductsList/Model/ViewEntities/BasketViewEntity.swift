@@ -14,8 +14,8 @@ struct BasketViewEntity {
 }
 
 extension BasketViewEntity { //transform methods
-    func transformToProductsList(action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ListItems {
-        return ProductsListItems(items: products.compactMap { $0.transformToProductsListItem(action: action).transformToAnyItem() })
+    func transformToProductsList(view: ProductsListItemView = .productsList, action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ListItems {
+        return ProductsListItems(items: products.compactMap { $0.transformToProductsListItem(view: view, action: action).transformToAnyItem() })
     }
     
     func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {

@@ -44,6 +44,10 @@ struct ProductsListItem: ListItem {
         return basketProduct.getDiscountAmountSting()
     }
     
+    func getAmount() -> String {
+        return basketProduct.getAmountWithDiscountString()
+    }
+    
     func getUnits() -> String {
         return String(basketProduct.units)
     }
