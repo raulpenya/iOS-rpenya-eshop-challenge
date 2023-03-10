@@ -11,19 +11,46 @@ struct BasketItemCellView: View {
     var item: ProductsListItem
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             HStack {
-                Text(item.getTitle()).modifier(TitleTextModifier())
-                Text(item.getUnits()).modifier(UnitsTextModifier())
-                Text(item.getAmount()).modifier(PriceTextModifier())
-            }.background {
+                Text(item.getTitle()).font(.system(.title, weight: .semibold))
+                    .frame(maxWidth: .infinity, alignment: .topLeading)
+                    .lineLimit(2)
+                    .padding([.top, .leading, .bottom], 10.0)
+                    .minimumScaleFactor(0.01).background {
+                        RoundedRectangle(cornerRadius: 12.0)
+                            .fill(Color(.green))
+                    }
+                Text(item.getPrice()).font(.system(.title3, weight: .semibold))
+                    .minimumScaleFactor(0.01).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Color(.yellow))
+                }
+                Text("x").font(.system(.title3, weight: .semibold))
+                    .minimumScaleFactor(0.01).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Color(.yellow))
+                }
+                Text(item.getUnits()).font(.system(.title3, weight: .semibold))
+                    .minimumScaleFactor(0.01).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Color(.yellow))
+                }
+                Text(item.getAmount()).padding([.top, .bottom, .trailing], 10.0).font(.system(.title, weight: .bold))
+                    .frame(alignment: .trailing)
+                    .minimumScaleFactor(0.01).background {
+                    RoundedRectangle(cornerRadius: 12.0)
+                        .fill(Color(.orange))
+                }
+            }
+            .frame(maxWidth: .infinity).background {
                 RoundedRectangle(cornerRadius: 12.0)
                     .fill(Color(.red))
             }
             if let subtitle = item.getSubtitle() {
                 HStack {
-                    Text(subtitle).modifier(SubtitleTextModifier())
-                    Text(item.getDiscountAmount()).modifier(SubtitleTextModifier()).frame(alignment: .trailing).background {
+                    Text(subtitle).modifier(SubtitleTextModifier()).padding([.top, .leading, .bottom], 10.0)
+                    Text(item.getDiscountAmount()).font(.system(.title3, weight: .semibold)).padding([.top, .bottom, .trailing], 10.0).background {
                         RoundedRectangle(cornerRadius: 12.0)
                             .fill(Color(.red))
                     }
