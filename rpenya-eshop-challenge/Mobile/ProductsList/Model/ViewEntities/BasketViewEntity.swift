@@ -10,6 +10,7 @@ import Domain
 
 struct BasketViewEntity {
     let products: [BasketProductViewEntity]
+    let currency: String
 }
 
 extension BasketViewEntity { //transform methods
@@ -38,22 +39,26 @@ extension BasketViewEntity { //operation methods
         var newBasket = self
         if let index = products.firstIndex(where: { $0.product == product.product }) {
             products[index] = products[index].modifyUnits(action)
-            newBasket = BasketViewEntity(products: products)
+            newBasket = BasketViewEntity(products: products, currency: newBasket.currency)
         }
         return newBasket
     }
     
     func getBasketPriceString() -> String? {
-        //TODO: currency
         let price = products.reduce(0) { partialResult, product in
             return partialResult+product.getAmountWithDiscount()
         }
-        return price > 0 ? String(format: "%.2f", price) : nil
+        return price > 0 ? String(format: "%.2f", price)+currency : nil
     }
 }
 
 extension Products {
     func transformToBasket() -> BasketViewEntity {
-        return BasketViewEntity(products: products.compactMap { $0.transformToBasketProduct() })
+        var currency = ""
+        let products = products.compactMap { product in
+            currency = product.currency
+            return product.transformToBasketProduct()
+        }
+        return BasketViewEntity(products: products, currency: currency)
     }
 }

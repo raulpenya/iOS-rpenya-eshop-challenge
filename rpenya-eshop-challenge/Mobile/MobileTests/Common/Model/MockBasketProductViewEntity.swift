@@ -13,7 +13,7 @@ struct MockBasketProductViewEntity {
         return BasketProductViewEntity(product: MockProductViewEntity.givenProduct1(), units: units)
     }
     
-    static func givenBasketProduct2(units: Int = 40) -> BasketProductViewEntity {
+    static func givenBasketProduct2(units: Int = 4) -> BasketProductViewEntity {
         return BasketProductViewEntity(product: MockProductViewEntity.givenProduct2(), units: units)
     }
 }

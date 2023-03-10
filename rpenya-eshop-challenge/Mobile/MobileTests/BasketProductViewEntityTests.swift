@@ -49,32 +49,118 @@ final class BasketProductViewEntityTests: XCTestCase {
         XCTAssertFalse(result)
     }
     
-    func test_modifyUnits_increase() {
-        
+    func test_modifyUnits_increase_success() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1()
+        //When
+        let result = basketProduct.modifyUnits(.addProduct)
+        //Then
+        XCTAssertTrue(result.units > basketProduct.units)
+        XCTAssertEqual(result.units, basketProduct.units+1)
     }
     
-    func test_modifyUnits_decrease() {
-        
+    func test_modifyUnits_increase_unsuccess() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: BasketProductViewEntity.max_units)
+        //When
+        let result = basketProduct.modifyUnits(.addProduct)
+        //Then
+        XCTAssertEqual(result.units, basketProduct.units)
+        XCTAssertEqual(result.units, BasketProductViewEntity.max_units)
+    }
+    
+    func test_modifyUnits_decrease_success() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1()
+        //When
+        let result = basketProduct.modifyUnits(.removeProduct)
+        //Then
+        XCTAssertTrue(result.units < basketProduct.units)
+        XCTAssertEqual(result.units, basketProduct.units-1)
+    }
+    
+    func test_modifyUnits_decrease_unsuccess() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: BasketProductViewEntity.min_units)
+        //When
+        let result = basketProduct.modifyUnits(.removeProduct)
+        //Then
+        XCTAssertEqual(result.units, basketProduct.units)
+        XCTAssertEqual(result.units, BasketProductViewEntity.min_units)
     }
     
     func test_getDiscountAmount() {
-        
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 3)
+        //When
+        let result = basketProduct.getDiscountAmount()
+        //Then
+        XCTAssertEqual(result, -20.00)
     }
     
     func test_getAmountWithoutDiscount() {
-        
+        //Given
+        let product = MockProductViewEntity.givenProduct1(promotion: nil)
+        let basketProduct = BasketProductViewEntity(product: product, units: 3)
+        //When
+        let result = basketProduct.getAmountWithDiscount()
+        //Then
+        XCTAssertEqual(result, Double(basketProduct.units)*basketProduct.product.price)
     }
     
-    func test_getAmountWithDiscount() {
-        
+    func test_getAmountWithDiscount_percentage() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 3)
+        //When
+        let result = basketProduct.getAmountWithDiscount()
+        //Then
+        XCTAssertEqual(result, 40.00)
+    }
+    
+    func test_getAmountWithDiscount_newPrice() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct2(units: 3)
+        //When
+        let result = basketProduct.getAmountWithDiscount()
+        //Then
+        XCTAssertEqual(result, Double(basketProduct.units)*basketProduct.product.promotion!.discount)
+    }
+    
+    func test_getAmountWithDiscount_noPromotion() {
+        //Given
+        let product = MockProductViewEntity.givenProduct1(promotion: nil)
+        let basketProduct = BasketProductViewEntity(product: product, units: 3)
+        //When
+        let result = basketProduct.getAmountWithDiscount()
+        //Then
+        XCTAssertEqual(result, Double(basketProduct.units)*basketProduct.product.price)
     }
     
     func test_getAmountWithPercentageDiscount() {
-        
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 3)
+        //When
+        let result = basketProduct.getAmountWithPercentageDiscount()
+        //Then
+        XCTAssertEqual(result, 40.00)
     }
     
-    func test_getAmountWithNewPriceDiscount() {
-        
+    func test_getAmountWithNewPriceDiscount_discount() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct2(units: 3)
+        //When
+        let result = basketProduct.getAmountWithNewPriceDiscount()
+        //Then
+        XCTAssertEqual(result, Double(basketProduct.units)*basketProduct.product.promotion!.discount)
+    }
+    
+    func test_getAmountWithNewPriceDiscount_noDiscount() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct2(units: 2)
+        //When
+        let result = basketProduct.getAmountWithNewPriceDiscount()
+        //Then
+        XCTAssertEqual(result, Double(basketProduct.units)*basketProduct.product.price)
     }
     
     func action(item: ProductsListItem, action: ProductsListItemAction) { }

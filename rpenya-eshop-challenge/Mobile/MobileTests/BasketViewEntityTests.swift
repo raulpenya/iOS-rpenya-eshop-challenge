@@ -20,7 +20,22 @@ final class BasketViewEntityTests: XCTestCase {
     }
     
     func test_transformToProductListButtonItem() {
-        
+        //Given
+        let basket = MockBasketViewEntity.givenBasket()
+        //When
+        let buttonItem = basket.transformToProductListButtonItem(action: buttonAction)
+        //Then
+        XCTAssertFalse(buttonItem.isDisabled)
+    }
+    
+    func test_transformToProductListButtonItem_empty() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
+        let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
+        //When
+        let buttonItem = basket.transformToProductListButtonItem(action: buttonAction)
+        //Then
+        XCTAssertTrue(buttonItem.isDisabled)
     }
     
     func test_transformToBasket() {
@@ -35,7 +50,7 @@ final class BasketViewEntityTests: XCTestCase {
     func test_isEmpty_true() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
-        let basket = BasketViewEntity(products: [basketProduct])
+        let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
         //When
         let result = basket.isEmpty()
         //Then
@@ -45,7 +60,7 @@ final class BasketViewEntityTests: XCTestCase {
     func test_isEmpty_false() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1()
-        let basket = BasketViewEntity(products: [basketProduct])
+        let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
         //When
         let result = basket.isEmpty()
         //Then
@@ -55,7 +70,7 @@ final class BasketViewEntityTests: XCTestCase {
     func test_modifyProductUnits_increase_success() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
-        let basket = BasketViewEntity(products: [basketProduct])
+        let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
         //When
         let newBasket = basket.modifyProductUnits(basketProduct, action: .addProduct)
         //Then
@@ -65,7 +80,7 @@ final class BasketViewEntityTests: XCTestCase {
     func test_modifyProductUnits_increase_unsuccess() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: BasketProductViewEntity.max_units)
-        let basket = BasketViewEntity(products: [basketProduct])
+        let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
         //When
         let newBasket = basket.modifyProductUnits(basketProduct, action: .addProduct)
         //Then
@@ -75,7 +90,7 @@ final class BasketViewEntityTests: XCTestCase {
     func test_modifyProductUnits_decrease_success() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 1)
-        let basket = BasketViewEntity(products: [basketProduct])
+        let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
         //When
         let newBasket = basket.modifyProductUnits(basketProduct, action: .removeProduct)
         //Then
@@ -85,7 +100,7 @@ final class BasketViewEntityTests: XCTestCase {
     func test_modifyProductUnits_decrease_unsuccess() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: BasketProductViewEntity.min_units)
-        let basket = BasketViewEntity(products: [basketProduct])
+        let basket = BasketViewEntity(products: [basketProduct], currency: "€")
         //When
         let newBasket = basket.modifyProductUnits(basketProduct, action: .removeProduct)
         //Then
@@ -98,8 +113,19 @@ final class BasketViewEntityTests: XCTestCase {
         //When
         let priceString = basket.getBasketPriceString()
         //Then
-        XCTAssertEqual(priceString, "")
+        XCTAssertEqual(priceString, "56.00€")
+    }
+    
+    func test_getBasketPriceString_empty() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
+        let basket = BasketViewEntity(products: [basketProduct], currency: MockBasketViewEntity.currency)
+        //When
+        let priceString = basket.getBasketPriceString()
+        //Then
+        XCTAssertNil(priceString)
     }
     
     func action(item: ProductsListItem, action: ProductsListItemAction) { }
+    func buttonAction(item: ButtonItem) { }
 }
