@@ -9,11 +9,22 @@ import Foundation
 import Domain
 import Combine
 
-enum State {
+enum State: Equatable {
     case idle
     case loading
     case failed(ErrorDescription)
     case loaded(ListItems, ButtonItem)
+    
+    static func == (lhs: State, rhs: State) -> Bool {
+        switch (lhs, rhs) {
+        case (.idle, .idle), (.loading, .loading):
+            return true
+        case (.failed(_), .failed(_)), (.loaded(_, _), .loaded(_, _)):
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 class ProductsListViewModel: ObservableObject {
@@ -43,7 +54,8 @@ class ProductsListViewModel: ObservableObject {
         case .remove:
             newBasket = currentBasket?.modifyProductUnits(item.basketProduct, action: .removeProduct)
         }
-        updateView(with: newBasket!)
+        guard let newBasket = newBasket else { return }
+        updateView(with: newBasket)
     }
     
     func checkoutButtonPressed(item: ButtonItem) {
@@ -71,7 +83,7 @@ class ProductsListViewModel: ObservableObject {
     }
     
     func receiveError(_ error: Error) {
-        let error = ErrorDescription(text: error.localizedDescription)
+        let error = error.transformToErrorDescription()
         errorDescription = error
         state = .failed(error)
     }

@@ -11,3 +11,9 @@ struct ErrorDescription: Identifiable {
     var id: String = UUID().uuidString
     let text: String
 }
+
+extension Error {
+    func transformToErrorDescription() -> ErrorDescription {
+        return ErrorDescription(text: localizedDescription)
+    }
+}

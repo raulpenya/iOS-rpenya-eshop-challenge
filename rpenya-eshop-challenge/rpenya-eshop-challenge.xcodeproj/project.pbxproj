@@ -101,6 +101,10 @@
 		0C6488F129B78BCA00D3DF6F /* ProductListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F029B78BCA00D3DF6F /* ProductListCellView.swift */; };
 		0C6488F529B79A3F00D3DF6F /* CompleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F429B79A3F00D3DF6F /* CompleteButtonView.swift */; };
 		0C6488F729B7BAC300D3DF6F /* TextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F629B7BAC300D3DF6F /* TextViewModifier.swift */; };
+		0C87BB9129BB554B005DFB8E /* MockGetProductsWithPromotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */; };
+		0C87BB9229BB55E8005DFB8E /* MockProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59DFFE29B75C2E000BFD07 /* MockProductsRepository.swift */; };
+		0C87BB9329BB55EA005DFB8E /* MockPromotionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59E00029B75C3E000BFD07 /* MockPromotionsRepository.swift */; };
+		0C87BB9529BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C87BB9429BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift */; };
 		0C92CD8629BA01F900C51F4A /* PlainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92CD8529BA01F900C51F4A /* PlainListView.swift */; };
 		0C92CD8929BA099400C51F4A /* ListItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92CD8829BA099400C51F4A /* ListItems.swift */; };
 		0C92CD9129BA0AA500C51F4A /* ProductsListButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C92CD9029BA0AA500C51F4A /* ProductsListButtonItem.swift */; };
@@ -115,7 +119,7 @@
 		0CC0345C29B8CB33004DC8CC /* BasketViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0345B29B8CB33004DC8CC /* BasketViewEntityTests.swift */; };
 		0CC0345E29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0345D29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift */; };
 		0CC0346029B8CB74004DC8CC /* ProductsListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0345F29B8CB74004DC8CC /* ProductsListItemTests.swift */; };
-		0CC0346229B8CBB2004DC8CC /* ProductsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346129B8CBB2004DC8CC /* ProductsListViewModelTests.swift */; };
+		0CC0346229B8CBB2004DC8CC /* ProductsListViewModelStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346129B8CBB2004DC8CC /* ProductsListViewModelStateTests.swift */; };
 		0CC0346329B8CC6E004DC8CC /* MockProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2DB09029B528E2004395FB /* MockProduct.swift */; };
 		0CC0346429B8CC71004DC8CC /* MockPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C079BC029B6534100726AED /* MockPromotion.swift */; };
 		0CC0346829B8CF86004DC8CC /* MockBasketViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0346729B8CF86004DC8CC /* MockBasketViewEntity.swift */; };
@@ -313,6 +317,8 @@
 		0C6488F029B78BCA00D3DF6F /* ProductListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCellView.swift; sourceTree = "<group>"; };
 		0C6488F429B79A3F00D3DF6F /* CompleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteButtonView.swift; sourceTree = "<group>"; };
 		0C6488F629B7BAC300D3DF6F /* TextViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModifier.swift; sourceTree = "<group>"; };
+		0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetProductsWithPromotions.swift; sourceTree = "<group>"; };
+		0C87BB9429BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelFlowTests.swift; sourceTree = "<group>"; };
 		0C92CD8529BA01F900C51F4A /* PlainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainListView.swift; sourceTree = "<group>"; };
 		0C92CD8829BA099400C51F4A /* ListItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItems.swift; sourceTree = "<group>"; };
 		0C92CD9029BA0AA500C51F4A /* ProductsListButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListButtonItem.swift; sourceTree = "<group>"; };
@@ -327,7 +333,7 @@
 		0CC0345B29B8CB33004DC8CC /* BasketViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewEntityTests.swift; sourceTree = "<group>"; };
 		0CC0345D29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductViewEntityTests.swift; sourceTree = "<group>"; };
 		0CC0345F29B8CB74004DC8CC /* ProductsListItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListItemTests.swift; sourceTree = "<group>"; };
-		0CC0346129B8CBB2004DC8CC /* ProductsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelTests.swift; sourceTree = "<group>"; };
+		0CC0346129B8CBB2004DC8CC /* ProductsListViewModelStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelStateTests.swift; sourceTree = "<group>"; };
 		0CC0346729B8CF86004DC8CC /* MockBasketViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBasketViewEntity.swift; sourceTree = "<group>"; };
 		0CC0346929B8CFA0004DC8CC /* MockBasketProductViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBasketProductViewEntity.swift; sourceTree = "<group>"; };
 		0CC0346B29B8D04A004DC8CC /* MockProductViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductViewEntity.swift; sourceTree = "<group>"; };
@@ -555,7 +561,8 @@
 				0CC0345B29B8CB33004DC8CC /* BasketViewEntityTests.swift */,
 				0CC0345D29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift */,
 				0CC0345F29B8CB74004DC8CC /* ProductsListItemTests.swift */,
-				0CC0346129B8CBB2004DC8CC /* ProductsListViewModelTests.swift */,
+				0CC0346129B8CBB2004DC8CC /* ProductsListViewModelStateTests.swift */,
+				0C87BB9429BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift */,
 			);
 			path = MobileTests;
 			sourceTree = "<group>";
@@ -936,6 +943,7 @@
 				0CC0346729B8CF86004DC8CC /* MockBasketViewEntity.swift */,
 				0CC0346929B8CFA0004DC8CC /* MockBasketProductViewEntity.swift */,
 				0CEED6E729B9005300170FBA /* MockProductListItem.swift */,
+				0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1259,16 +1267,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CC0346029B8CB74004DC8CC /* ProductsListItemTests.swift in Sources */,
+				0C87BB9229BB55E8005DFB8E /* MockProductsRepository.swift in Sources */,
 				0CC0346C29B8D04A004DC8CC /* MockProductViewEntity.swift in Sources */,
+				0C87BB9529BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift in Sources */,
 				0CC0345829B8CAE0004DC8CC /* ProductViewEntityTests.swift in Sources */,
 				0CEED6E829B9005300170FBA /* MockProductListItem.swift in Sources */,
 				0CC0345C29B8CB33004DC8CC /* BasketViewEntityTests.swift in Sources */,
 				0CC0345A29B8CB19004DC8CC /* PromotionViewEntityTests.swift in Sources */,
-				0CC0346229B8CBB2004DC8CC /* ProductsListViewModelTests.swift in Sources */,
+				0CC0346229B8CBB2004DC8CC /* ProductsListViewModelStateTests.swift in Sources */,
 				0CC0345E29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift in Sources */,
+				0C87BB9129BB554B005DFB8E /* MockGetProductsWithPromotions.swift in Sources */,
 				0CC0346329B8CC6E004DC8CC /* MockProduct.swift in Sources */,
 				0CC0346A29B8CFA0004DC8CC /* MockBasketProductViewEntity.swift in Sources */,
 				0CC0346E29B8D05E004DC8CC /* MockPromotionViewEntity.swift in Sources */,
+				0C87BB9329BB55EA005DFB8E /* MockPromotionsRepository.swift in Sources */,
 				0CC0346429B8CC71004DC8CC /* MockPromotion.swift in Sources */,
 				0CC0346829B8CF86004DC8CC /* MockBasketViewEntity.swift in Sources */,
 			);
