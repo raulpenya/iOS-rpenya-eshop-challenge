@@ -14,6 +14,8 @@ struct ProductCells: View {
         switch item.view {
         case .productsList:
             ProductListCellView(item: item).listRowSeparator(.hidden)
+        case .shoppingBasket:
+            BasketItemCellView(item: item).listRowSeparator(.hidden)
         }
     }
 }

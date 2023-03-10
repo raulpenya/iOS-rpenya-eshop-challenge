@@ -9,6 +9,7 @@ import SwiftUI
 
 enum ProductsListItemView {
     case productsList
+    case shoppingBasket
 }
 
 enum ProductsListItemAction {
@@ -37,6 +38,10 @@ struct ProductsListItem: ListItem {
     
     func getPrice() -> String {
         return basketProduct.product.getPriceString()
+    }
+    
+    func getDiscountAmount() -> String {
+        return basketProduct.getDiscountAmountSting()
     }
     
     func getUnits() -> String {
