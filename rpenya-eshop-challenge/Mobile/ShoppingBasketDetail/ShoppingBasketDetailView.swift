@@ -8,13 +8,31 @@
 import SwiftUI
 
 struct ShoppingBasketDetailView: View {
+    @ObservedObject var viewModel: ShoppingBasketDetailViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                switch viewModel.state {
+                case .idle:
+                    Color.clear.onAppear(perform: viewModel.loadData)
+                case .loading:
+                    ProgressView()
+                case .failed(let error):
+                    Text(error.text)
+                case .loaded(let listItems, let buttonItem):
+                    PlainListView(listItems: listItems)
+                    CompleteButtonView(item: buttonItem)
+                }
+            }
+            .navigationTitle("Shopping basket")
+        }
     }
 }
 
 struct ShoppingBasketDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ShoppingBasketDetailView()
+        let basket = ProductsListModelPreviewProvider.getBasket()
+        ShoppingBasketDetailAssemblerInjection().resolve(basket: basket)
     }
 }

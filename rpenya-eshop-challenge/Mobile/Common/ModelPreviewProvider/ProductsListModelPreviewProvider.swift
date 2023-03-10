@@ -36,6 +36,10 @@ struct ProductsListModelPreviewProvider {
         }
     }
     
+    static func getBasket() -> BasketViewEntity {
+        return BasketViewEntity(products: [getBasketProduct1(), getBasketProduct2()], currency: "€")
+    }
+    
     static func getBasketProduct1() -> BasketProductViewEntity {
         return BasketProductViewEntity(product: getProduct(), units: 2)
     }
