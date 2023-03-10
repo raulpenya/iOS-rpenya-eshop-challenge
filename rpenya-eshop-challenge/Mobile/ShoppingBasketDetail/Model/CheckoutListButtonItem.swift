@@ -11,4 +11,8 @@ struct CheckoutListButtonItem: ButtonItem {
     var title: String
     var isDisabled: Bool
     var action: ((ButtonItem) -> Void)
+    
+    func getTitle() -> AttributedString {
+        return getAttributedString(with: title)
+    }
 }

@@ -19,9 +19,7 @@ struct ProductsListButtonItem: ButtonItem {
             if var rawPrice = priceWithoutDiscount, rawPrice != price {
                 rawPrice = "\n(" + rawPrice + ")"
                 let string = title + rawPrice + " " + price
-                var attributedString = AttributedString(string)
-                attributedString.font = .title2.bold()
-                attributedString.foregroundColor = .white
+                var attributedString = getAttributedString(with: string)
                 if let range = attributedString.range(of: rawPrice) {
                     attributedString[range].strikethroughStyle = .single
                     attributedString[range].font = .headline.bold()
@@ -29,16 +27,10 @@ struct ProductsListButtonItem: ButtonItem {
                 return attributedString
             } else {
                 let string = title + "\n" + price
-                var attributedString = AttributedString(string)
-                attributedString.font = .title2.bold()
-                attributedString.foregroundColor = .white
-                return attributedString
+                return getAttributedString(with: string)
             }
         } else {
-            var attributedString = AttributedString(title)
-            attributedString.font = .title.bold()
-            attributedString.foregroundColor = .white
-            return attributedString
+            return getAttributedString(with: title)
         }
     }
 }
