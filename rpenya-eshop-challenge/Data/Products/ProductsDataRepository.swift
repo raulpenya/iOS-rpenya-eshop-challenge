@@ -9,11 +9,15 @@ import Foundation
 import Domain
 import Combine
 
-struct ProductsDataRepository: ProductsRepository {
+public struct ProductsDataRepository: ProductsRepository {
     
     let dataSource: ProductsDataSource
     
-    func getAllProducts() -> AnyPublisher<Domain.Products, Error> {
+    public init(dataSource: ProductsDataSource) {
+        self.dataSource = dataSource
+    }
+    
+    public func getAllProducts() -> AnyPublisher<Domain.Products, Error> {
         return dataSource.getAllProducts()
     }
 }

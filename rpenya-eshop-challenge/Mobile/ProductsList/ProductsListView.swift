@@ -6,12 +6,27 @@
 //
 
 import SwiftUI
+import Domain
 
 struct ProductsListView: View {
     @ObservedObject var viewModel: ProductsListViewModel
     
     var body: some View {
-        Text("ProductsListView")
+        NavigationView {
+            VStack {
+                switch viewModel.state {
+                case .idle:
+                    Color.clear.onAppear(perform: viewModel.loadData)
+                case .loading:
+                    ProgressView()
+                case .failed(let error):
+                    Text(error.text)
+                case .loaded(let listItems, let buttonItem):
+                    PlainListView(listItems: listItems).refreshable(action: viewModel.refreshData)
+                    CompleteButtonView(item: buttonItem)
+                }
+            }.navigationTitle("eShop")
+        }
     }
 }
 

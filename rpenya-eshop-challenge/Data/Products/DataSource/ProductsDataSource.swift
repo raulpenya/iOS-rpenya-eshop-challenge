@@ -9,6 +9,6 @@ import Foundation
 import Domain
 import Combine
 
-protocol ProductsDataSource {
+public protocol ProductsDataSource {
     func getAllProducts() -> AnyPublisher<Domain.Products, Error>
 }
