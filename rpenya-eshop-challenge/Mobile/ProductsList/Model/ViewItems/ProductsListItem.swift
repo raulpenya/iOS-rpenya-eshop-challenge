@@ -17,10 +17,10 @@ enum ProductsListItemAction {
     case remove
 }
 
-struct ProductsListItem: ListItem {
+struct ProductsListItem: ProductListItem, Equatable {
     var id = UUID()
-    let basketProduct: BasketProductViewEntity
-    let view: ProductsListItemView
+    var basketProduct: BasketProductViewEntity
+    var view: ProductsListItemView
     let action: ((ProductsListItem, ProductsListItemAction) -> Void)?
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
@@ -40,20 +40,12 @@ struct ProductsListItem: ListItem {
         return basketProduct.product.getPriceString()
     }
     
-    func getDiscountAmount() -> String {
-        return basketProduct.getDiscountAmountSting()
-    }
-    
-    func getAmount() -> String {
-        return basketProduct.getAmountWithDiscountString()
-    }
-    
     func getUnits() -> String {
         return String(basketProduct.units)
     }
 }
 
-extension ProductsListItem {
+extension ListItem {
     func transformToAnyItem() -> AnyItem {
         return  AnyItem(item: self)
     }

@@ -20,16 +20,12 @@ class ShoppingBasketDetailViewModel: ObservableObject {
         updateView(with: currentBasket)
     }
     
-    func productsListItemButtonPressed(item: ProductsListItem, action: ProductsListItemAction) {
-        
-    }
-    
     func checkoutButtonPressed(item: ButtonItem) {
         
     }
     
     func updateView(with basket: BasketViewEntity) {
-        let listItems = basket.transformToProductsList(view: .shoppingBasket, action: productsListItemButtonPressed)
+        let listItems = basket.transformToShoppingBasketList(view: .shoppingBasket)
         let buttonItem = basket.transformToProductListButtonItem(action: checkoutButtonPressed)
         state = .loaded(listItems, buttonItem)
     }

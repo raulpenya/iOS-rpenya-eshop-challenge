@@ -21,6 +21,10 @@ extension BasketViewEntity { //transform methods
     func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {
         return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isEmpty(), action: action, price: getBasketPriceWithDiscountString(), priceWithoutDiscount: getBasketPriceWithoutDiscountString())
     }
+    
+    func transformToShoppingBasketList(view: ProductsListItemView = .shoppingBasket) -> ListItems {
+        return ShoppingBasketListItems(items: products.compactMap { $0.transformToShoppingBasketListItem(view: view).transformToAnyItem() })
+    }
 }
 
 extension BasketViewEntity { //operation methods

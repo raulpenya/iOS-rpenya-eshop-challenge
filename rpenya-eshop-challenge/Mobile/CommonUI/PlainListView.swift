@@ -12,8 +12,10 @@ struct PlainListView: View {
     
     var body: some View {
         List (listItems.items) { anyItem in
-            if let item = anyItem.item as? ProductsListItem {
+            if let item = anyItem.item as? ProductListItem {
                 ProductCells(item: item)
+            } else {
+                Text("PlainListView :: unknown item")
             }
         }.listStyle(.plain)
     }
