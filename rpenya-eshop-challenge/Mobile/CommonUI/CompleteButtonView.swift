@@ -21,6 +21,7 @@ struct CompleteButtonView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 12.0)
                         .fill(item.isDisabled ? Color(.systemGreen).opacity(0.2) : Color(.systemGreen))
+                        .shadow(color: .black.opacity(0.3), radius: 5)
                 }.disabled(item.isDisabled)
         }.padding(.all, 20).frame(maxWidth: .infinity, alignment: .center).background(Color.white)
     }

@@ -12,9 +12,9 @@ struct ProductCells: View {
     var body: some View {
         switch item.view {
         case .productsList:
-            ProductListCellView(item: item).listRowSeparator(.hidden)
+            ProductListCellView(item: item)
         case .shoppingBasket:
-            BasketItemCellView(item: item).listRowSeparator(.hidden)
+            BasketItemCellView(item: item)
         }
     }
 }
