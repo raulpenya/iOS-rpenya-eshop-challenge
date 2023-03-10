@@ -19,15 +19,7 @@ extension BasketViewEntity { //transform methods
     }
     
     func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {
-        var title = NSLocalizedString("proceed_checkout", comment: "")
-        if let price = getBasketPriceWithDiscountString() {
-            if let rawPrice = getBasketPriceWithoutDiscountString(), rawPrice != price {
-                title = title + "\n" + "(" + rawPrice + ")" + price
-            } else {
-                title = title + "\n" + price
-            }
-        }
-        return ProductsListButtonItem(title: title, isDisabled: isEmpty(), action: action)
+        return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isEmpty(), action: action, price: getBasketPriceWithDiscountString(), priceWithoutDiscount: getBasketPriceWithoutDiscountString())
     }
 }
 

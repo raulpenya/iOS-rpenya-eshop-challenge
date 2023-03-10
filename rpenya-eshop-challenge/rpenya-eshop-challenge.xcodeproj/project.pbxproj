@@ -101,6 +101,7 @@
 		0C6488F129B78BCA00D3DF6F /* ProductListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F029B78BCA00D3DF6F /* ProductListCellView.swift */; };
 		0C6488F529B79A3F00D3DF6F /* CompleteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F429B79A3F00D3DF6F /* CompleteButtonView.swift */; };
 		0C6488F729B7BAC300D3DF6F /* TextViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6488F629B7BAC300D3DF6F /* TextViewModifier.swift */; };
+		0C66E85629BB869E0004EB6D /* CheckoutListButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C66E85529BB869E0004EB6D /* CheckoutListButtonItem.swift */; };
 		0C87BB9129BB554B005DFB8E /* MockGetProductsWithPromotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */; };
 		0C87BB9229BB55E8005DFB8E /* MockProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59DFFE29B75C2E000BFD07 /* MockProductsRepository.swift */; };
 		0C87BB9329BB55EA005DFB8E /* MockPromotionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59E00029B75C3E000BFD07 /* MockPromotionsRepository.swift */; };
@@ -317,6 +318,7 @@
 		0C6488F029B78BCA00D3DF6F /* ProductListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCellView.swift; sourceTree = "<group>"; };
 		0C6488F429B79A3F00D3DF6F /* CompleteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteButtonView.swift; sourceTree = "<group>"; };
 		0C6488F629B7BAC300D3DF6F /* TextViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModifier.swift; sourceTree = "<group>"; };
+		0C66E85529BB869E0004EB6D /* CheckoutListButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutListButtonItem.swift; sourceTree = "<group>"; };
 		0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetProductsWithPromotions.swift; sourceTree = "<group>"; };
 		0C87BB9429BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelFlowTests.swift; sourceTree = "<group>"; };
 		0C92CD8529BA01F900C51F4A /* PlainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainListView.swift; sourceTree = "<group>"; };
@@ -839,6 +841,7 @@
 			isa = PBXGroup;
 			children = (
 				0C3F286329B3C258004C359C /* ShoppingBasketViewEntity.swift */,
+				0C66E85529BB869E0004EB6D /* CheckoutListButtonItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1240,6 +1243,7 @@
 				0C3F286229B3C243004C359C /* ShoppingBasketDetailAssembler.swift in Sources */,
 				0C3F285C29B3C1FF004C359C /* ProductsListRouter.swift in Sources */,
 				0CC0344629B8A46B004DC8CC /* BasketProductViewEntity.swift in Sources */,
+				0C66E85629BB869E0004EB6D /* CheckoutListButtonItem.swift in Sources */,
 				0C3F27AE29B3B56C004C359C /* rpenya_eshop_challengeApp.swift in Sources */,
 				0C3F287229B3C3E4004C359C /* ErrorDescription.swift in Sources */,
 				0CC0345029B8B27B004DC8CC /* ProductsListModelPreviewProvider.swift in Sources */,

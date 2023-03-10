@@ -16,7 +16,11 @@ struct CompleteButtonView: View {
             Button {
                 item.action(item)
             } label: {
-                Text(item.title).modifier(CompleteButtonTextModifier())
+                if let item = item as? ProductsListButtonItem {
+                    Text(item.getTitle()).modifier(CompleteButtonTextModifier())
+                } else {
+                    Text(item.title).modifier(CompleteButtonTextModifier())
+                }
             }.frame(height: 70).frame(minWidth: 0, maxWidth: .infinity)
                 .background {
                     RoundedRectangle(cornerRadius: 12.0)
