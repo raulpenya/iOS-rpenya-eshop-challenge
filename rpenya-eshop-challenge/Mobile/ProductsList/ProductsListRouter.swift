@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-//class MissionResultRouter: Router {
-//    typealias T = MissionEditorView
-//    typealias Q = MissionEditorDependecies
-//
-//    func destination(_ dependencies: MissionEditorDependecies) -> MissionEditorView {
-//        return MissionEditorAssemblerInjection().resolve()
-//    }
-//}
-//
-//class MissionEditorDependecies: Dependecies {
-//    public init() {}
-//}
+class ProductsListRouter: Router {
+    typealias T = ShoppingBasketDetailView
+    typealias Q = ShoppingBasketDetailDependencies
+    
+    func destination(_ dependencies: ShoppingBasketDetailDependencies) -> ShoppingBasketDetailView {
+        return ShoppingBasketDetailAssemblerInjection().resolve()
+    }
+}
+
+class ShoppingBasketDetailDependencies: Dependecies {
+    public init() {}
+}

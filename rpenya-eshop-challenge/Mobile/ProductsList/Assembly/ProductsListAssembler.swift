@@ -15,12 +15,12 @@ protocol ProductsListAssembler {
 
 extension ProductsListAssembler {
     func resolve() -> ProductsListView {
-        return ProductsListView(viewModel: resolve())
+        return ProductsListView(viewModel: resolve(), router: resolve())
     }
     
-//    func resolve() -> MissionResultRouter {
-//        return MissionResultRouter()
-//    }
+    func resolve() -> ProductsListRouter {
+        return ProductsListRouter()
+    }
     
     func resolve() -> ProductsListViewModel {
         return ProductsListViewModel(getProductsWithPromotionsUseCase: resolve())

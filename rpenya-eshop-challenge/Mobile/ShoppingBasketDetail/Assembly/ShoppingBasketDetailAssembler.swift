@@ -1,20 +1,22 @@
 //
-//  BasketDetailAssembler.swift
+//  ShoppingBasketDetailAssembler.swift
 //  rpenya-eshop-challenge
 //
 //  Created by raulbot on 4/3/23.
 //
 
-import SwiftUI
+import Foundation
+import Domain
+import Data
 
-struct BasketDetailAssembler: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+protocol ShoppingBasketDetailAssembler {
+    func resolve() -> ShoppingBasketDetailView
+}
+
+extension ShoppingBasketDetailAssembler {
+    func resolve() -> ShoppingBasketDetailView {
+        return ShoppingBasketDetailView()
     }
 }
 
-struct BasketDetailAssembler_Previews: PreviewProvider {
-    static var previews: some View {
-        BasketDetailAssembler()
-    }
-}
+class ShoppingBasketDetailAssemblerInjection: ShoppingBasketDetailAssembler {}
