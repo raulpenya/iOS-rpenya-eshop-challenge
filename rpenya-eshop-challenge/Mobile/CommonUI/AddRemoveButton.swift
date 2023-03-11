@@ -17,6 +17,7 @@ struct AddRemoveButton: View {
         }.buttonStyle(BorderlessButtonStyle()).frame(width: 50, height: 50).background {
             RoundedRectangle(cornerRadius: 12.0)
                 .fill(Colors.addRemoveButtonBackgroundColor)
+                .shadow(color: Colors.shadowColor, radius: 5)
         }
     }
 }
