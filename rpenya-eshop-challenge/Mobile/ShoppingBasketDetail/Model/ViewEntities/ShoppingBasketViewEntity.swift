@@ -20,6 +20,6 @@ extension ShoppingBasketViewEntity {
     }
     
     func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {
-        return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: false, action: action, price: price.toPriceString(with: currency), priceWithoutDiscount: priceWithoutDiscount.toPriceString(with: currency))
+        return ProductsListButtonItem(title: NSLocalizedString("payment", comment: ""), isDisabled: false, action: action, price: price.toPriceString(with: currency), priceWithoutDiscount: priceWithoutDiscount.toPriceString(with: currency))
     }
 }

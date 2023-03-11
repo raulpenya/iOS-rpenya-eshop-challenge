@@ -26,16 +26,16 @@ struct ShoppingBasketDetailView: View {
                     CompleteButtonView(item: buttonItem)
                 }
             }
-            .navigationTitle("Shopping basket")
+            .navigationTitle(NSLocalizedString("shopping_basket", comment: ""))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Cancel", action: dismiss.callAsFunction)
+                    Button(NSLocalizedString("cancel", comment: ""), action: dismiss.callAsFunction)
                 }
             }.alert(isPresented: $viewModel.dismissShoppingBasketDetail) {
-                Alert(title: Text("Alert:"),
-                    message: Text("press OK to execute default action..."),
+                Alert(title: Text(NSLocalizedString("purchase_completed_title", comment: "")),
+                    message: Text(NSLocalizedString("purchase_completed_message", comment: "")),
                     dismissButton: Alert.Button.default(
-                        Text("Press ok here"), action: {
+                        Text(NSLocalizedString("accept", comment: "")), action: {
                             viewModel.dismissAlertButtonPressed()
                             dismiss()
                         }

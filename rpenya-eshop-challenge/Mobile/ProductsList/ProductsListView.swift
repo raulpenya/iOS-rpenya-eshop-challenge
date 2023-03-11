@@ -27,7 +27,7 @@ struct ProductsListView: View {
                     CompleteButtonView(item: buttonItem)
                 }
             }
-            .navigationTitle("eShop")
+            .navigationTitle(NSLocalizedString("eshop", comment: ""))
             .sheet(isPresented: $viewModel.presentShoppingBasketDetail) {
                 if let dependencies = viewModel.transformToShoppingBasketDetailDependencies() {
                     router.destination(dependencies)
