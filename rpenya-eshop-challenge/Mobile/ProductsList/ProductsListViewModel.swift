@@ -33,7 +33,6 @@ class ProductsListViewModel: ObservableObject {
     let getProductsWithPromotionsUseCase: GetProductsWithPromotions
     var cancellableSet: Set<AnyCancellable> = []
     var currentBasket: BasketViewEntity?
-    var errorDescription: ErrorDescription?
     
     init(getProductsWithPromotionsUseCase: GetProductsWithPromotions) {
         self.getProductsWithPromotionsUseCase = getProductsWithPromotionsUseCase
@@ -87,7 +86,6 @@ class ProductsListViewModel: ObservableObject {
     
     func receiveError(_ error: Error) {
         let error = error.transformToErrorDescription()
-        errorDescription = error
         state = .failed(error)
     }
     
