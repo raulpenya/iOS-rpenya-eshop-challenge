@@ -27,6 +27,10 @@ class ShoppingBasketDetailViewModel: ObservableObject {
         updateView(with: currentShoppingBasket)
     }
     
+    @Sendable func refreshData() {
+        updateView(with: currentShoppingBasket)
+    }
+    
     func checkoutButtonPressed(item: ButtonItem) {
         dismissShoppingBasketDetail = true
     }

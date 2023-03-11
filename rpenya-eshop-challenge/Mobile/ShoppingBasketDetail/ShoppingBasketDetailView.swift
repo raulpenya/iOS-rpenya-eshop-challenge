@@ -20,7 +20,7 @@ struct ShoppingBasketDetailView: View {
                 case .loading:
                     ProgressView()
                 case .failed(let error):
-                    Text(error.text)
+                    ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems, let buttonItem):
                     PlainListView(listItems: listItems)
                     CompleteButtonView(item: buttonItem)

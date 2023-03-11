@@ -12,14 +12,22 @@ struct ErrorView: View {
     let action: (() -> Void)
     
     var body: some View {
-        VStack {
-            Text(NSLocalizedString("errorview_title", comment: "")).modifier(TitleTextModifier()).padding(.top, 16)
-            Text(NSLocalizedString("errorview_message", comment: "")).modifier(UnitsTextModifier())
-            Text(errorMessage).multilineTextAlignment(.center)
+        VStack(spacing: 0) {
+            Text(NSLocalizedString("errorview_title", comment: ""))
+                .modifier(TitleTextModifier())
+                .padding(.top, 16)
+            Text(NSLocalizedString("errorview_message", comment: ""))
+                .modifier(UnitsTextModifier())
+                .padding(.top, 8)
+            Text(errorMessage)
+                .multilineTextAlignment(.center)
                 .frame(width: 300)
+                .padding(.bottom, 16)
             Line().stroke(style: StrokeStyle(lineWidth: 1, dash: [1])) .frame(height: 1)
             Button(action: action) {
-                Text(NSLocalizedString("refresh", comment: "")).font(.system(.title2, weight: .semibold))
+                Text(NSLocalizedString("refresh", comment: ""))
+                    .font(.system(.title2, weight: .semibold))
+                    .frame(maxWidth: .infinity, maxHeight: 40)
             }.padding([.top, .bottom], 10)
         }.frame(width: 320).background {
             RoundedRectangle(cornerRadius: 12.0)
@@ -31,7 +39,7 @@ struct ErrorView: View {
 
 struct ErrorAlert_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(errorMessage: "fdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafh") {
+        ErrorView(errorMessage: "fdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafh") {
             print("refresh")
         }
     }
