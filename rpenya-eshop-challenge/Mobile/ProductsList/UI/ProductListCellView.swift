@@ -22,26 +22,16 @@ struct ProductListCellView: View {
                 VStack {
                     Text(item.getPrice()).modifier(PriceTextModifier()).padding(.bottom, 6)
                     HStack {
-                        Button {
+                        AddRemoveButton(title: "-") {
                             if let action = item.action {
                                 action(item, .remove)
                             }
-                        } label: {
-                            Text("-").modifier(AddRemoveButtonTextModifier())
-                        }.buttonStyle(BorderlessButtonStyle()).frame(width: 50, height: 50).background {
-                            RoundedRectangle(cornerRadius: 12.0)
-                                .fill(Colors.addRemoveButtonBackgroundColor)
                         }
                         Text(item.getUnits()).modifier(UnitsTextModifier())
-                        Button {
+                        AddRemoveButton(title: "+") {
                             if let action = item.action {
                                 action(item, .add)
                             }
-                        } label: {
-                            Text("+").modifier(AddRemoveButtonTextModifier())
-                        }.buttonStyle(BorderlessButtonStyle()).frame(width: 50, height: 50).background {
-                            RoundedRectangle(cornerRadius: 12.0)
-                                .fill(Colors.addRemoveButtonBackgroundColor)
                         }
                     }.frame(maxWidth: .infinity, alignment: .trailing)
                 }.frame(width: 150).padding([.top, .bottom, .trailing], 16).padding(.leading, 0)
