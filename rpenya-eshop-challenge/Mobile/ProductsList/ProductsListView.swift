@@ -29,8 +29,8 @@ struct ProductsListView: View {
             }
             .navigationTitle("eShop")
             .sheet(isPresented: $viewModel.presentShoppingBasketDetail) {
-                if let basket = viewModel.currentBasket, let shoppingBasket = basket.transformToShoppingBasket() {
-                    router.destination(ShoppingBasketDetailDependencies(shoppingBasket: shoppingBasket))
+                if let dependencies = viewModel.transformToShoppingBasketDetailDependencies() {
+                    router.destination(dependencies)
                 }
             }
         }

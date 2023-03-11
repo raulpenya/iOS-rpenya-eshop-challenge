@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ShoppingBasketDetailView: View {
     @ObservedObject var viewModel: ShoppingBasketDetailViewModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         NavigationView {
@@ -26,6 +27,21 @@ struct ShoppingBasketDetailView: View {
                 }
             }
             .navigationTitle("Shopping basket")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Cancel", action: dismiss.callAsFunction)
+                }
+            }.alert(isPresented: $viewModel.dismissShoppingBasketDetail) {
+                Alert(title: Text("Alert:"),
+                    message: Text("press OK to execute default action..."),
+                    dismissButton: Alert.Button.default(
+                        Text("Press ok here"), action: {
+                            viewModel.dismissAlertButtonPressed()
+                            dismiss()
+                        }
+                    )
+                )
+            }
         }
     }
 }
@@ -33,6 +49,6 @@ struct ShoppingBasketDetailView: View {
 struct ShoppingBasketDetailView_Previews: PreviewProvider {
     static var previews: some View {
         let shoppingBasket = ShippingBasketModelPreviewProvider.getShoppingBasket()
-        ShoppingBasketDetailAssemblerInjection().resolve(shoppingBasket: shoppingBasket)
+        ShoppingBasketDetailAssemblerInjection().resolve(shoppingBasket: shoppingBasket, delegate: ProductsListAssemblerInjection().resolve().viewModel)
     }
 }

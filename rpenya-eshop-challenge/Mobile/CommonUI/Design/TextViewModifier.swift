@@ -30,6 +30,7 @@ struct PriceTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title, weight: .bold))
             .foregroundColor(Colors.textColor)
+            .lineLimit(1)
             .minimumScaleFactor(0.01)
     }
 }

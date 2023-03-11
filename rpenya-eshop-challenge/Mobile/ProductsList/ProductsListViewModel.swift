@@ -30,7 +30,6 @@ enum State: Equatable {
 class ProductsListViewModel: ObservableObject {
     @Published private(set) var state = State.idle
     @Published var presentShoppingBasketDetail: Bool = false
-    @Published var showShoppingBasketDetail: Bool = false
     let getProductsWithPromotionsUseCase: GetProductsWithPromotions
     var cancellableSet: Set<AnyCancellable> = []
     var currentBasket: BasketViewEntity?
@@ -97,5 +96,18 @@ class ProductsListViewModel: ObservableObject {
         let listItems = basket.transformToProductsList(action: productsListItemButtonPressed)
         let buttonItem = basket.transformToProductListButtonItem(action: checkoutButtonPressed)
         state = .loaded(listItems, buttonItem)
+    }
+}
+
+extension ProductsListViewModel {
+    func transformToShoppingBasketDetailDependencies() -> ShoppingBasketDetailDependencies? {
+        guard let basket = currentBasket, let shoppingBasket = basket.transformToShoppingBasket() else { return nil }
+        return ShoppingBasketDetailDependencies(shoppingBasket: shoppingBasket, delegate: self)
+    }
+}
+
+extension ProductsListViewModel: ShoppingBasketDetailDelegate {
+    func orderDidComplete() {
+        refreshData()
     }
 }
