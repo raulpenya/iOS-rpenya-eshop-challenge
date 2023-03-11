@@ -42,7 +42,8 @@ struct ShoppingBasketListItem: ProductListItem, Equatable {
         return promotion.name
     }
     
-    func getDiscountAmount() -> String {
+    func getDiscountAmount() -> String? {
+        guard basketProduct.getDiscountAmount() < 0 else { return nil }
         return basketProduct.getDiscountAmountSting()
     }
 }
