@@ -13,13 +13,13 @@ struct ErrorView: View {
     
     var body: some View {
         VStack {
-            Text("Oops!").modifier(TitleTextModifier()).padding(.top, 16)
-            Text("an error ocurred:").modifier(UnitsTextModifier())
+            Text(NSLocalizedString("errorview_title", comment: "")).modifier(TitleTextModifier()).padding(.top, 16)
+            Text(NSLocalizedString("errorview_message", comment: "")).modifier(UnitsTextModifier())
             Text(errorMessage).multilineTextAlignment(.center)
                 .frame(width: 300)
             Line().stroke(style: StrokeStyle(lineWidth: 1, dash: [1])) .frame(height: 1)
             Button(action: action) {
-                Text("Refresh").font(.system(.title2, weight: .semibold))
+                Text(NSLocalizedString("refresh", comment: "")).font(.system(.title2, weight: .semibold))
             }.padding([.top, .bottom], 10)
         }.frame(width: 320).background {
             RoundedRectangle(cornerRadius: 12.0)
