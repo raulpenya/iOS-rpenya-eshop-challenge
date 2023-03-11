@@ -15,7 +15,7 @@ struct PlainListView: View {
             if let item = anyItem.item as? ProductListItem {
                 ProductCells(item: item).listRowSeparator(.hidden).background {
                     RoundedRectangle(cornerRadius: 12.0)
-                        .shadow(color: .black.opacity(0.3), radius: 5)
+                        .shadow(color: Colors.shadowColor, radius: 5)
                 }
             } else {
                 Text("PlainListView :: unknown item")

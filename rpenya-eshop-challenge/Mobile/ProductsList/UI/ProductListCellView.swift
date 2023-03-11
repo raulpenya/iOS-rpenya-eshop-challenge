@@ -30,7 +30,7 @@ struct ProductListCellView: View {
                             Text("-").modifier(AddRemoveButtonTextModifier())
                         }.buttonStyle(BorderlessButtonStyle()).frame(width: 50, height: 50).background {
                             RoundedRectangle(cornerRadius: 12.0)
-                                .fill(Color(.lightGray))
+                                .fill(Colors.addRemoveButtonBackgroundColor)
                         }
                         Text(item.getUnits()).modifier(UnitsTextModifier())
                         Button {
@@ -41,14 +41,14 @@ struct ProductListCellView: View {
                             Text("+").modifier(AddRemoveButtonTextModifier())
                         }.buttonStyle(BorderlessButtonStyle()).frame(width: 50, height: 50).background {
                             RoundedRectangle(cornerRadius: 12.0)
-                                .fill(Color(.lightGray))
+                                .fill(Colors.addRemoveButtonBackgroundColor)
                         }
                     }.frame(maxWidth: .infinity, alignment: .trailing)
                 }.frame(width: 150).padding([.top, .bottom, .trailing], 16).padding(.leading, 0)
             }.frame(maxWidth: .infinity, maxHeight: 130)
                 .background {
                     RoundedRectangle(cornerRadius: 12.0)
-                        .fill(Color(.systemYellow))
+                        .fill(Colors.cellsBackgroundColor)
                 }
         }
     }

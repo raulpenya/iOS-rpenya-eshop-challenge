@@ -20,8 +20,8 @@ struct CompleteButtonView: View {
             }.frame(height: 70).frame(minWidth: 0, maxWidth: .infinity)
                 .background {
                     RoundedRectangle(cornerRadius: 12.0)
-                        .fill(item.isDisabled ? Color(.systemGreen).opacity(0.2) : Color(.systemGreen))
-                        .shadow(color: .black.opacity(0.3), radius: 5)
+                        .fill(item.isDisabled ? Colors.completeButtonDisabledBackgroundColor : Colors.completeButtonBackgroundColor)
+                        .shadow(color: Colors.shadowColor, radius: 5)
                 }.disabled(item.isDisabled)
         }.padding(.all, 20).frame(maxWidth: .infinity, alignment: .center).background(Color.white)
     }

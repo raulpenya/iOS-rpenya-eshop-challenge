@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title, weight: .semibold))
+        content.font(.system(.title, weight: .semibold)).foregroundColor(Colors.textColor)
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
@@ -18,7 +18,7 @@ struct TitleTextModifier: ViewModifier {
 
 struct SubtitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.subheadline, weight: .regular))
+        content.font(.system(.subheadline, weight: .regular)).foregroundColor(Colors.textColor)
             .frame(maxWidth: .infinity, alignment: .topLeading)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
@@ -27,7 +27,7 @@ struct SubtitleTextModifier: ViewModifier {
 
 struct PriceTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title, weight: .bold))
+        content.font(.system(.title, weight: .bold)).foregroundColor(Colors.textColor)
             .frame(maxWidth: .infinity, alignment: .trailing)
             .minimumScaleFactor(0.01)
     }
@@ -35,7 +35,7 @@ struct PriceTextModifier: ViewModifier {
 
 struct UnitsTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title3, weight: .semibold))
+        content.font(.system(.title3, weight: .semibold)).foregroundColor(Colors.textColor)
             .frame(width: 30, height: 30)
             .minimumScaleFactor(0.01)
     }
@@ -44,7 +44,7 @@ struct UnitsTextModifier: ViewModifier {
 struct AddRemoveButtonTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.title)
-            .foregroundColor(.white)
+            .foregroundColor(Colors.addRemoveButtonTextColor)
             .bold()
             .minimumScaleFactor(0.01)
     }
@@ -53,7 +53,7 @@ struct AddRemoveButtonTextModifier: ViewModifier {
 struct CompleteButtonTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.title)
-            .foregroundColor(.white)
+            .foregroundColor(Colors.completeButtonTextColor)
             .bold()
             .lineLimit(2)
             .minimumScaleFactor(0.01)
