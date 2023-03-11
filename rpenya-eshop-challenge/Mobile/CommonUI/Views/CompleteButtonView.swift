@@ -25,7 +25,6 @@ struct CompleteButtonView: View {
                 }.disabled(item.isDisabled)
         }.padding(.all, 20)
             .frame(maxWidth: .infinity, alignment: .center)
-            .background(Color.white)
     }
 }
 
