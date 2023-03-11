@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title, weight: .semibold)).foregroundColor(Colors.textColor)
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        content.font(.system(.title, weight: .semibold))
+            .foregroundColor(Colors.textColor)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
@@ -18,7 +18,8 @@ struct TitleTextModifier: ViewModifier {
 
 struct SubtitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.subheadline, weight: .regular)).foregroundColor(Colors.textColor)
+        content.font(.system(.subheadline, weight: .regular))
+            .foregroundColor(Colors.textColor)
             .frame(maxWidth: .infinity, alignment: .topLeading)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
@@ -27,16 +28,16 @@ struct SubtitleTextModifier: ViewModifier {
 
 struct PriceTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title, weight: .bold)).foregroundColor(Colors.textColor)
-            .frame(maxWidth: .infinity, alignment: .trailing)
+        content.font(.system(.title, weight: .bold))
+            .foregroundColor(Colors.textColor)
             .minimumScaleFactor(0.01)
     }
 }
 
 struct UnitsTextModifier: ViewModifier {
     func body(content: Content) -> some View {
-        content.font(.system(.title3, weight: .semibold)).foregroundColor(Colors.textColor)
-            .frame(width: 30, height: 30)
+        content.font(.system(.title3, weight: .semibold))
+            .foregroundColor(Colors.textColor)
             .minimumScaleFactor(0.01)
     }
 }

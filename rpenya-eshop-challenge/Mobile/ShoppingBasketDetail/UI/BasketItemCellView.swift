@@ -14,26 +14,21 @@ struct BasketItemCellView: View {
         if let item = item as? ShoppingBasketListItem {
             VStack(spacing: 0) {
                 HStack {
-                    Text(item.getTitle()).font(.system(.title, weight: .semibold))
+                    Text(item.getTitle()).modifier(TitleTextModifier())
                         .frame(maxWidth: .infinity, alignment: .topLeading)
-                        .lineLimit(2)
                         .padding([.top, .leading, .bottom], 10.0)
-                        .minimumScaleFactor(0.01)
-                    Text(item.getPrice()).font(.system(.title3, weight: .semibold))
-                        .minimumScaleFactor(0.01)
-                    Text("x").font(.system(.title3, weight: .semibold))
-                        .minimumScaleFactor(0.01)
-                    Text(item.getUnits()).font(.system(.title3, weight: .semibold))
-                        .minimumScaleFactor(0.01)
-                    Text(item.getAmount()).padding([.top, .bottom, .trailing], 10.0).font(.system(.title, weight: .bold))
+                    Text(item.getPrice()+"x"+item.getUnits()).modifier(UnitsTextModifier())
+                    Text(item.getAmount()).modifier(PriceTextModifier())
+                        .padding([.top, .bottom, .trailing], 10.0)
                         .frame(alignment: .trailing)
-                        .minimumScaleFactor(0.01)
                 }
                 .frame(maxWidth: .infinity)
                 if let subtitle = item.getSubtitle() {
                     HStack {
-                        Text(subtitle).modifier(SubtitleTextModifier()).padding([.top, .leading, .bottom], 10.0)
-                        Text(item.getDiscountAmount()).font(.system(.title3, weight: .semibold)).padding([.top, .bottom, .trailing], 10.0)
+                        Text(subtitle).modifier(SubtitleTextModifier())
+                            .padding([.top, .leading, .bottom], 10.0)
+                        Text(item.getDiscountAmount()).modifier(UnitsTextModifier())
+                            .padding([.top, .bottom, .trailing], 10.0)
                     }
                 }
             }.background {

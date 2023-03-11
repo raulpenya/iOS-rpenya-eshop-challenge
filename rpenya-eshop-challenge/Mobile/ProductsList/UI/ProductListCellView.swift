@@ -14,20 +14,25 @@ struct ProductListCellView: View {
         if let item = item as? ProductsListItem {
             HStack {
                 VStack {
-                    Text(item.getTitle()).modifier(TitleTextModifier()).padding(.bottom, 6)
+                    Text(item.getTitle()).modifier(TitleTextModifier())
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                        .padding(.bottom, 6)
                     if let subtitle = item.getSubtitle() {
                         Text(subtitle).modifier(SubtitleTextModifier())
                     }
-                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading).padding([.top, .leading, .bottom], 16).padding(.trailing, 0)
+                }.frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                    .padding([.top, .leading, .bottom], 16).padding(.trailing, 0)
                 VStack {
-                    Text(item.getPrice()).modifier(PriceTextModifier()).padding(.bottom, 6)
+                    Text(item.getPrice()).modifier(PriceTextModifier())
+                        .padding(.bottom, 6)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                     HStack {
                         AddRemoveButton(title: "-") {
                             if let action = item.action {
                                 action(item, .remove)
                             }
                         }
-                        Text(item.getUnits()).modifier(UnitsTextModifier())
+                        Text(item.getUnits()).modifier(UnitsTextModifier()).frame(width: 30, height: 30)
                         AddRemoveButton(title: "+") {
                             if let action = item.action {
                                 action(item, .add)

@@ -23,7 +23,9 @@ struct CompleteButtonView: View {
                         .fill(item.isDisabled ? Colors.completeButtonDisabledBackgroundColor : Colors.completeButtonBackgroundColor)
                         .shadow(color: Colors.shadowColor, radius: 5)
                 }.disabled(item.isDisabled)
-        }.padding(.all, 20).frame(maxWidth: .infinity, alignment: .center).background(Color.white)
+        }.padding(.all, 20)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .background(Color.white)
     }
 }
 
