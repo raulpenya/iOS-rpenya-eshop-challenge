@@ -120,6 +120,7 @@
 		0CA2ACDE29BCD8D500C1D101 /* AddRemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2ACDD29BCD8D500C1D101 /* AddRemoveButton.swift */; };
 		0CA2ACE229BCE6A600C1D101 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2ACE129BCE6A600C1D101 /* Line.swift */; };
 		0CA2ACE529BCF1FE00C1D101 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2ACE429BCF1FE00C1D101 /* Localizable.strings */; };
+		0CA2ACEA29BCF95200C1D101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */; };
 		0CC0344229B8A42C004DC8CC /* PromotionViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0344129B8A42C004DC8CC /* PromotionViewEntity.swift */; };
 		0CC0344629B8A46B004DC8CC /* BasketProductViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0344529B8A46B004DC8CC /* BasketProductViewEntity.swift */; };
 		0CC0344D29B8A682004DC8CC /* ProductsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0344C29B8A682004DC8CC /* ProductsListItem.swift */; };
@@ -345,6 +346,8 @@
 		0CA2ACDD29BCD8D500C1D101 /* AddRemoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveButton.swift; sourceTree = "<group>"; };
 		0CA2ACE129BCE6A600C1D101 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		0CA2ACE429BCF1FE00C1D101 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0CA2ACE829BCF8AA00C1D101 /* rpenya-eshop-challenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "rpenya-eshop-challenge-Info.plist"; sourceTree = "<group>"; };
+		0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CC0344129B8A42C004DC8CC /* PromotionViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewEntity.swift; sourceTree = "<group>"; };
 		0CC0344529B8A46B004DC8CC /* BasketProductViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductViewEntity.swift; sourceTree = "<group>"; };
 		0CC0344C29B8A682004DC8CC /* ProductsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListItem.swift; sourceTree = "<group>"; };
@@ -528,6 +531,7 @@
 		0C3F27A129B3B56C004C359C = {
 			isa = PBXGroup;
 			children = (
+				0CA2ACE829BCF8AA00C1D101 /* rpenya-eshop-challenge-Info.plist */,
 				0C3F27DD29B3B6B1004C359C /* Data */,
 				0C3F280029B3B6CB004C359C /* Domain */,
 				0C3F27AC29B3B56C004C359C /* Mobile */,
@@ -1002,6 +1006,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA2ACE429BCF1FE00C1D101 /* Localizable.strings */,
+				0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1268,6 +1273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C3F27B529B3B56E004C359C /* Preview Assets.xcassets in Resources */,
+				0CA2ACEA29BCF95200C1D101 /* LaunchScreen.storyboard in Resources */,
 				0CA2ACE529BCF1FE00C1D101 /* Localizable.strings in Resources */,
 				0C3F27B229B3B56E004C359C /* Assets.xcassets in Resources */,
 			);
@@ -1665,9 +1671,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "rpenya-eshop-challenge-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1694,9 +1701,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "rpenya-eshop-challenge-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
