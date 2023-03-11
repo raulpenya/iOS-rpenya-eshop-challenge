@@ -9,24 +9,24 @@ import Foundation
 
 class ShoppingBasketDetailViewModel: ObservableObject {
     @Published private(set) var state = State.idle
-    let currentBasket: BasketViewEntity
+    let currentShoppingBasket: ShoppingBasketViewEntity
     
-    init(state: State = State.idle, currentBasket: BasketViewEntity) {
+    init(state: State = State.idle, currentShoppingBasket: ShoppingBasketViewEntity) {
         self.state = state
-        self.currentBasket = currentBasket
+        self.currentShoppingBasket = currentShoppingBasket
     }
     
     func loadData() {
-        updateView(with: currentBasket)
+        updateView(with: currentShoppingBasket)
     }
     
     func checkoutButtonPressed(item: ButtonItem) {
         
     }
     
-    func updateView(with basket: BasketViewEntity) {
-        let listItems = basket.transformToShoppingBasketList(view: .shoppingBasket)
-        let buttonItem = basket.transformToProductListButtonItem(action: checkoutButtonPressed)
+    func updateView(with shoppingBasket: ShoppingBasketViewEntity) {
+        let listItems = shoppingBasket.transformToShoppingBasketList(view: .shoppingBasket)
+        let buttonItem = shoppingBasket.transformToProductListButtonItem(action: checkoutButtonPressed)
         state = .loaded(listItems, buttonItem)
     }
 }

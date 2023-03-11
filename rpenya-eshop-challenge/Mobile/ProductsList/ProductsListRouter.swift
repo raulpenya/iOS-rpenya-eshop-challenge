@@ -12,10 +12,10 @@ class ProductsListRouter: Router {
     typealias Q = ShoppingBasketDetailDependencies
     
     func destination(_ dependencies: ShoppingBasketDetailDependencies) -> ShoppingBasketDetailView {
-        return ShoppingBasketDetailAssemblerInjection().resolve(basket: dependencies.basket)
+        return ShoppingBasketDetailAssemblerInjection().resolve(shoppingBasket: dependencies.shoppingBasket)
     }
 }
 
 struct ShoppingBasketDetailDependencies: Dependecies {
-    let basket: BasketViewEntity
+    let shoppingBasket: ShoppingBasketViewEntity
 }

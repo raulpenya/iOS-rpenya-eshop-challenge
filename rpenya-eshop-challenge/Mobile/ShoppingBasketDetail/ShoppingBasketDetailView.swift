@@ -32,7 +32,7 @@ struct ShoppingBasketDetailView: View {
 
 struct ShoppingBasketDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let basket = ProductsListModelPreviewProvider.getBasket()
-        ShoppingBasketDetailAssemblerInjection().resolve(basket: basket)
+        let shoppingBasket = ShippingBasketModelPreviewProvider.getShoppingBasket()
+        ShoppingBasketDetailAssemblerInjection().resolve(shoppingBasket: shoppingBasket)
     }
 }

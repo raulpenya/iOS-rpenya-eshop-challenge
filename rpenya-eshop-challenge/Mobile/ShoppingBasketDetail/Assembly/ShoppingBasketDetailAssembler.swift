@@ -10,16 +10,16 @@ import Domain
 import Data
 
 protocol ShoppingBasketDetailAssembler {
-    func resolve(basket: BasketViewEntity) -> ShoppingBasketDetailView
+    func resolve(shoppingBasket: ShoppingBasketViewEntity) -> ShoppingBasketDetailView
 }
 
 extension ShoppingBasketDetailAssembler {
-    func resolve(basket: BasketViewEntity) -> ShoppingBasketDetailView {
-        return ShoppingBasketDetailView(viewModel: resolve(basket: basket))
+    func resolve(shoppingBasket: ShoppingBasketViewEntity) -> ShoppingBasketDetailView {
+        return ShoppingBasketDetailView(viewModel: resolve(shoppingBasket: shoppingBasket))
     }
     
-    func resolve(basket: BasketViewEntity) -> ShoppingBasketDetailViewModel {
-        return ShoppingBasketDetailViewModel(currentBasket: basket)
+    func resolve(shoppingBasket: ShoppingBasketViewEntity) -> ShoppingBasketDetailViewModel {
+        return ShoppingBasketDetailViewModel(currentShoppingBasket: shoppingBasket)
     }
 }
 
