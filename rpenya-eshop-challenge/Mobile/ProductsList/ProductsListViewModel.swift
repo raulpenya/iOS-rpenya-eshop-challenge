@@ -29,6 +29,8 @@ enum State: Equatable {
 
 class ProductsListViewModel: ObservableObject {
     @Published private(set) var state = State.idle
+    @Published var presentShoppingBasketDetail: Bool = false
+    @Published var showShoppingBasketDetail: Bool = false
     let getProductsWithPromotionsUseCase: GetProductsWithPromotions
     var cancellableSet: Set<AnyCancellable> = []
     var currentBasket: BasketViewEntity?
@@ -59,7 +61,9 @@ class ProductsListViewModel: ObservableObject {
     }
     
     func checkoutButtonPressed(item: ButtonItem) {
-        print(item.title)
+        if currentBasket?.isEmpty() == false {
+            presentShoppingBasketDetail = true
+        }
     }
     
     func getProductsWithPromotions() {

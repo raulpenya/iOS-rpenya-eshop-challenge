@@ -15,8 +15,8 @@ final class BasketProductViewEntityTests: XCTestCase {
         //When
         let item = basketProduct.transformToProductsListItem(view: .productsList, action: action)
         //Then
-        XCTAssertEqual(item.basketProduct.product, basketProduct.product)
-        XCTAssertEqual(item.view, .productsList)
+        XCTAssertEqual((item as! ProductsListItem).basketProduct.product, basketProduct.product)
+        XCTAssertEqual((item as! ProductsListItem).view, .productsList)
     }
 
     func test_transformToBasketProduct() {

@@ -10,7 +10,7 @@ import SwiftUI
 struct TitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title, weight: .semibold))
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            .foregroundColor(Colors.textColor)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
     }
@@ -19,6 +19,7 @@ struct TitleTextModifier: ViewModifier {
 struct SubtitleTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.subheadline, weight: .regular))
+            .foregroundColor(Colors.textColor)
             .frame(maxWidth: .infinity, alignment: .topLeading)
             .lineLimit(2)
             .minimumScaleFactor(0.01)
@@ -28,7 +29,7 @@ struct SubtitleTextModifier: ViewModifier {
 struct PriceTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title, weight: .bold))
-            .frame(maxWidth: .infinity, alignment: .trailing)
+            .foregroundColor(Colors.textColor)
             .minimumScaleFactor(0.01)
     }
 }
@@ -36,7 +37,7 @@ struct PriceTextModifier: ViewModifier {
 struct UnitsTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.system(.title3, weight: .semibold))
-            .frame(width: 30, height: 30)
+            .foregroundColor(Colors.textColor)
             .minimumScaleFactor(0.01)
     }
 }
@@ -44,7 +45,7 @@ struct UnitsTextModifier: ViewModifier {
 struct AddRemoveButtonTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.title)
-            .foregroundColor(.white)
+            .foregroundColor(Colors.addRemoveButtonTextColor)
             .bold()
             .minimumScaleFactor(0.01)
     }
@@ -53,7 +54,7 @@ struct AddRemoveButtonTextModifier: ViewModifier {
 struct CompleteButtonTextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content.font(.title)
-            .foregroundColor(.white)
+            .foregroundColor(Colors.completeButtonTextColor)
             .bold()
             .lineLimit(2)
             .minimumScaleFactor(0.01)

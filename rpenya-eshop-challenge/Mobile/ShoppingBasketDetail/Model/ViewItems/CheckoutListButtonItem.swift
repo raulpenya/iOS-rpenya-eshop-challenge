@@ -9,7 +9,7 @@ import Foundation
 
 struct CheckoutListButtonItem: ButtonItem {
     var title: String
-    var isDisabled: Bool
+    var isDisabled: Bool = false
     var action: ((ButtonItem) -> Void)
     
     func getTitle() -> AttributedString {

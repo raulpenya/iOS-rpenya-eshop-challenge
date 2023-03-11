@@ -45,7 +45,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
         mockModel.currentBasket = basket
         let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: action)
         //When
-        mockModel.productsListItemButtonPressed(item: item, action: .add)
+        mockModel.productsListItemButtonPressed(item: item as! ProductsListItem, action: .add)
         //Then
         XCTAssertTrue(mockModel.updateViewCalled)
     }
@@ -57,7 +57,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
         mockModel.currentBasket = basket
         let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: action)
         //When
-        mockModel.productsListItemButtonPressed(item: item, action: .remove)
+        mockModel.productsListItemButtonPressed(item: item as! ProductsListItem, action: .remove)
         //Then
         XCTAssertTrue(mockModel.updateViewCalled)
     }

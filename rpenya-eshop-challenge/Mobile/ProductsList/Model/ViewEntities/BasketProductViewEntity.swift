@@ -26,8 +26,12 @@ struct BasketProductViewEntity: Equatable {
 }
 
 extension BasketProductViewEntity { //transform methods
-    func transformToProductsListItem(view: ProductsListItemView = .productsList, action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ProductsListItem {
+    func transformToProductsListItem(view: ProductsListItemView = .productsList, action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ListItem {
         return ProductsListItem(basketProduct: self, view: view, action: action)
+    }
+    
+    func transformToShoppingBasketListItem(view: ProductsListItemView = .shoppingBasket) -> ListItem {
+        return ShoppingBasketListItem(basketProduct: self, view: view)
     }
 }
 
@@ -41,6 +45,14 @@ extension BasketProductViewEntity { //operation methods
             if newBasketProduct.units > BasketProductViewEntity.min_units { newBasketProduct.units -= 1 }
         }
         return newBasketProduct
+    }
+    
+    func getDiscountAmountSting() -> String {
+        return getDiscountAmount().toPriceString()
+    }
+    
+    func getAmountWithDiscountString() -> String {
+        return getAmountWithDiscount().toPriceString()
     }
     
     func getDiscountAmount() -> Double {

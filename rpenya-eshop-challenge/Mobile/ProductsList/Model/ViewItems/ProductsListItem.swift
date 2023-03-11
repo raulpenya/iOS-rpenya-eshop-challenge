@@ -9,6 +9,7 @@ import SwiftUI
 
 enum ProductsListItemView {
     case productsList
+    case shoppingBasket
 }
 
 enum ProductsListItemAction {
@@ -16,10 +17,10 @@ enum ProductsListItemAction {
     case remove
 }
 
-struct ProductsListItem: ListItem {
+struct ProductsListItem: ProductListItem, Equatable {
     var id = UUID()
-    let basketProduct: BasketProductViewEntity
-    let view: ProductsListItemView
+    var basketProduct: BasketProductViewEntity
+    var view: ProductsListItemView
     let action: ((ProductsListItem, ProductsListItemAction) -> Void)?
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
@@ -44,7 +45,7 @@ struct ProductsListItem: ListItem {
     }
 }
 
-extension ProductsListItem {
+extension ListItem {
     func transformToAnyItem() -> AnyItem {
         return  AnyItem(item: self)
     }

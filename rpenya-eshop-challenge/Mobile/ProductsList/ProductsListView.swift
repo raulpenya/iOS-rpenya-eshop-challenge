@@ -10,6 +10,7 @@ import Domain
 
 struct ProductsListView: View {
     @ObservedObject var viewModel: ProductsListViewModel
+    let router: ProductsListRouter
     
     var body: some View {
         NavigationView {
@@ -25,7 +26,13 @@ struct ProductsListView: View {
                     PlainListView(listItems: listItems).refreshable(action: viewModel.refreshData)
                     CompleteButtonView(item: buttonItem)
                 }
-            }.navigationTitle("eShop")
+            }
+            .navigationTitle("eShop")
+            .sheet(isPresented: $viewModel.presentShoppingBasketDetail) {
+                if let basket = viewModel.currentBasket, let shoppingBasket = basket.transformToShoppingBasket() {
+                    router.destination(ShoppingBasketDetailDependencies(shoppingBasket: shoppingBasket))
+                }
+            }
         }
     }
 }

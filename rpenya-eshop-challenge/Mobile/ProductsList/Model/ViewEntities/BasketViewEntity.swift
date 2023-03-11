@@ -14,12 +14,17 @@ struct BasketViewEntity {
 }
 
 extension BasketViewEntity { //transform methods
-    func transformToProductsList(action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ListItems {
-        return ProductsListItems(items: products.compactMap { $0.transformToProductsListItem(action: action).transformToAnyItem() })
+    func transformToProductsList(view: ProductsListItemView = .productsList, action: ((ProductsListItem, ProductsListItemAction) -> Void)?) -> ListItems {
+        return ProductsListItems(items: products.compactMap { $0.transformToProductsListItem(view: view, action: action).transformToAnyItem() })
     }
     
     func transformToProductListButtonItem(action: @escaping ((ButtonItem) -> Void)) -> ButtonItem {
         return ProductsListButtonItem(title: NSLocalizedString("proceed_checkout", comment: ""), isDisabled: isEmpty(), action: action, price: getBasketPriceWithDiscountString(), priceWithoutDiscount: getBasketPriceWithoutDiscountString())
+    }
+    
+    func transformToShoppingBasket() -> ShoppingBasketViewEntity? {
+        guard !isEmpty() else { return nil }
+        return ShoppingBasketViewEntity(products: products.filter { $0.units > 0 }, currency: currency, price: getBasketPriceWithDiscount(), priceWithoutDiscount: getBasketPriceWithoutDiscount())
     }
 }
 
@@ -41,17 +46,25 @@ extension BasketViewEntity { //operation methods
     }
     
     func getBasketPriceWithDiscountString() -> String? {
-        let price = products.reduce(0) { partialResult, product in
-            return partialResult+product.getAmountWithDiscount()
-        }
-        return price > 0 ? String(format: "%.2f", price)+currency : nil
+        let price = getBasketPriceWithDiscount()
+        return price > 0 ? price.toPriceString(with: currency): nil
     }
     
     func getBasketPriceWithoutDiscountString() -> String? {
-        let price = products.reduce(0) { partialResult, product in
+        let price = getBasketPriceWithoutDiscount()
+        return price > 0 ? price.toPriceString(with: currency) : nil
+    }
+    
+    func getBasketPriceWithDiscount() -> Double {
+        return products.reduce(0) { partialResult, product in
+            return partialResult+product.getAmountWithDiscount()
+        }
+    }
+    
+    func getBasketPriceWithoutDiscount() -> Double {
+        return products.reduce(0) { partialResult, product in
             return partialResult+product.getAmountWithoutDiscount()
         }
-        return price > 0 ? String(format: "%.2f", price)+currency : nil
     }
 }
 
