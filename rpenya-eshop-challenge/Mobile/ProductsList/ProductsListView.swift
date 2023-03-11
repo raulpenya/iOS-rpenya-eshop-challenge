@@ -21,7 +21,7 @@ struct ProductsListView: View {
                 case .loading:
                     ProgressView()
                 case .failed(let error):
-                    Text(error.text)
+                    ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems, let buttonItem):
                     PlainListView(listItems: listItems).refreshable(action: viewModel.refreshData)
                     CompleteButtonView(item: buttonItem)
