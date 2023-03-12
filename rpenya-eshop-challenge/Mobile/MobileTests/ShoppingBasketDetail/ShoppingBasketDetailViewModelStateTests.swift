@@ -6,30 +6,32 @@
 //
 
 import XCTest
+@testable import rpenya_eshop_challenge
 
 final class ShoppingBasketDetailViewModelStateTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_init_state() {
+        //Given
+        let model = ShoppingBasketDetailViewModel(currentShoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: MockShoppingBasketDetailDelegate())
+        //When
+        let state = model.state
+        //Then
+        XCTAssertEqual(state, .idle)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_updateView_state() {
+        //Given
+        let shoppingBasket = MockShoppingBasketViewEntity.givenShoppingBasket()
+        let model = ShoppingBasketDetailViewModel(currentShoppingBasket: shoppingBasket, delegate: MockShoppingBasketDetailDelegate())
+        //When
+        model.updateView(with: shoppingBasket)
+        //Then
+        XCTAssertEqual(model.state, .loaded(shoppingBasket.transformToShoppingBasketList(), shoppingBasket.transformToProductListButtonItem(action: model.checkoutButtonPressed)))
     }
+}
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+class MockShoppingBasketDetailDelegate: ShoppingBasketDetailDelegate {
+    var orderDidCompleteCalled = false
+    func orderDidComplete() {
+        orderDidCompleteCalled = true
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

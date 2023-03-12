@@ -26,7 +26,7 @@ final class ProductsListViewModelStateTests: XCTestCase {
         //When
         model.updateView(with: basket)
         //Then
-        XCTAssertEqual(model.state, .loaded(basket.transformToProductsList(action: action), basket.transformToProductListButtonItem(action: buttonAction)))
+        XCTAssertEqual(model.state, .loaded(basket.transformToProductsList(action: model.productsListItemButtonPressed), basket.transformToProductListButtonItem(action: model.checkoutButtonPressed)))
     }
     
     func test_receiveError_state() {
@@ -47,7 +47,4 @@ final class ProductsListViewModelStateTests: XCTestCase {
         //Then
         XCTAssertEqual(model.state, .loading)
     }
-    
-    func action(item: ProductsListItem, action: ProductsListItemAction) { }
-    func buttonAction(item: ButtonItem) { }
 }
