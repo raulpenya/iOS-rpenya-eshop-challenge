@@ -6,9 +6,16 @@
 //
 
 import XCTest
+@testable import rpenya_eshop_challenge
 
 final class ProductsListRouterTests: XCTestCase {
     func test_destination() {
-        //
+        //Given
+        let router = ProductsListRouter()
+        let dependencies = ShoppingBasketDetailDependencies(shoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: MockProductsListViewModel.model)
+        //When
+        let destination = router.destination(dependencies)
+        //Then
+        XCTAssertTrue(destination is ShoppingBasketDetailView)
     }
 }
