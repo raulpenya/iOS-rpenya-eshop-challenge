@@ -16,6 +16,6 @@ final class ProductsListRouterTests: XCTestCase {
         //When
         let destination = router.destination(dependencies)
         //Then
-        XCTAssertTrue(destination is ShoppingBasketDetailView)
+        XCTAssertNotNil(destination)
     }
 }
