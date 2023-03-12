@@ -43,7 +43,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
         let basket = MockBasketViewEntity.givenBasket()
         let mockModel = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
         mockModel.currentBasket = basket
-        let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: action)
+        let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: mockModel.productsListItemButtonPressed)
         //When
         mockModel.productsListItemButtonPressed(item: item as! ProductsListItem, action: .add)
         //Then
@@ -55,25 +55,10 @@ final class ProductsListViewModelFlowTests: XCTestCase {
         let basket = MockBasketViewEntity.givenBasket()
         let mockModel = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
         mockModel.currentBasket = basket
-        let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: action)
+        let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: mockModel.productsListItemButtonPressed)
         //When
         mockModel.productsListItemButtonPressed(item: item as! ProductsListItem, action: .remove)
         //Then
         XCTAssertTrue(mockModel.updateViewCalled)
     }
-    
-    class MockProductsListViewModel: ProductsListViewModel {
-        var getProductsWithPromotionsCalled = false
-        var updateViewCalled = false
-        
-        override func getProductsWithPromotions() {
-            getProductsWithPromotionsCalled = true
-        }
-        
-        override func updateView(with basket: BasketViewEntity) {
-            updateViewCalled = true
-        }
-    }
-    
-    func action(item: ProductsListItem, action: ProductsListItemAction) { }
 }
