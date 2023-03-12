@@ -27,6 +27,15 @@ final class ShoppingBasketDetailViewModelFlowTests: XCTestCase {
         XCTAssertTrue(mockModel.updateViewCalled)
     }
     
+    func test_dismissAlertButtonPressed_flow() {
+        //Given
+        let mockModel = MockShoppingBasketDetailViewModel.model
+        //When
+        mockModel.checkoutButtonPressed(item: mockModel.currentShoppingBasket.transformToProductListButtonItem(action: mockModel.checkoutButtonPressed))
+        //Then
+        XCTAssertTrue(mockModel.dismissShoppingBasketDetail)
+    }
+    
     func test_delegate_flow() {
         //Given
         let delegate = MockShoppingBasketDetailDelegate()

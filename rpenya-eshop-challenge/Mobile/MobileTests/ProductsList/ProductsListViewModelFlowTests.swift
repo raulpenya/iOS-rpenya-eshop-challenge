@@ -61,4 +61,25 @@ final class ProductsListViewModelFlowTests: XCTestCase {
         //Then
         XCTAssertTrue(mockModel.updateViewCalled)
     }
+    
+    func test_checkoutButtonPressed_success_flow() {
+        //Given
+        let basket = MockBasketViewEntity.givenBasket()
+        let mockModel = MockProductsListViewModel.model
+        mockModel.currentBasket = basket
+        //When
+        mockModel.checkoutButtonPressed(item: basket.transformToProductListButtonItem(action: mockModel.checkoutButtonPressed))
+        //Then
+        XCTAssertTrue(mockModel.presentShoppingBasketDetail)
+    }
+    
+    func test_checkoutButtonPressed_unsuccess_flow() {
+        //Given
+        let mockModel = MockProductsListViewModel.model
+        mockModel.currentBasket = BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct1(units: 0), MockBasketProductViewEntity.givenBasketProduct2(units: 0)], currency: MockBasketViewEntity.currency)
+        //When
+        mockModel.checkoutButtonPressed(item: mockModel.currentBasket!.transformToProductListButtonItem(action: mockModel.checkoutButtonPressed))
+        //Then
+        XCTAssertFalse(mockModel.presentShoppingBasketDetail)
+    }
 }
