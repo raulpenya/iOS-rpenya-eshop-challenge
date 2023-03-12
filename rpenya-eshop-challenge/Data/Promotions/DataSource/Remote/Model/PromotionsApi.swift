@@ -31,13 +31,6 @@ enum PromotionsApi: Api {
         }
     }
     
-    var bodyParams: Any {
-        switch self {
-        case .getAllPromotions:
-            return [:]
-        }
-    }
-    
     var useCache: Bool {
         switch self {
         case .getAllPromotions:

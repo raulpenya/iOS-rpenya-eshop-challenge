@@ -23,8 +23,9 @@ struct ProductsListView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems, let buttonItem):
-                    PlainListView(listItems: listItems).refreshable(action: viewModel.refreshData)
+                    PlainListView(listItems: listItems).refreshable(action: viewModel.refreshData).accessibilityIdentifier("products_list")
                     CompleteButtonView(item: buttonItem)
+                        .accessibilityIdentifier("product_list_complete_button")
                 }
             }
             .navigationTitle(NSLocalizedString("eshop", comment: ""))

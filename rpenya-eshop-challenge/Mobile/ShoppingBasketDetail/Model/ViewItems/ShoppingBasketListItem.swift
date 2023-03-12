@@ -15,10 +15,10 @@ protocol ProductListItem: ListItem {
 struct ShoppingBasketListItem: ProductListItem, Equatable {
     var id = UUID()
     var basketProduct: BasketProductViewEntity
-    var view: ProductsListItemView
+    var view: ProductsListItemView = .shoppingBasket
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.basketProduct == rhs.basketProduct
+        return lhs.basketProduct == rhs.basketProduct && lhs.view == rhs.view
     }
     
     func getTitle() -> String {

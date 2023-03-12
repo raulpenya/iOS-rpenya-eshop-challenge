@@ -25,12 +25,11 @@ struct CompleteButtonView: View {
                 }.disabled(item.isDisabled)
         }.padding(.all, 20)
             .frame(maxWidth: .infinity, alignment: .center)
-            .background(Color.white)
     }
 }
 
 struct CompleteButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteButtonView(item: ButtonItemModelPreviewProvider.givenButtonItem())
+        CompleteButtonView(item: ButtonItemModelPreviewProvider.getButtonItem())
     }
 }

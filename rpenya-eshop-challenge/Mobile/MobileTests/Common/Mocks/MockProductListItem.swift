@@ -10,10 +10,10 @@ import Foundation
 
 struct MockProductsListItem {
     static func givenProductsListItem1() -> ProductsListItem {
-        return ProductsListItem(basketProduct: MockBasketProductViewEntity.givenBasketProduct1(), view: .productsList, action: nil)
+        return ProductsListItem(basketProduct: MockBasketProductViewEntity.givenBasketProduct1(), view: .productsList) { _,_ in }
     }
     
     static func givenProductsListItem2() -> ProductsListItem {
-        return ProductsListItem(basketProduct: MockBasketProductViewEntity.givenBasketProduct2(), view: .productsList, action: nil)
+        return ProductsListItem(basketProduct: MockBasketProductViewEntity.givenBasketProduct2(), view: .productsList) { _,_ in }
     }
 }

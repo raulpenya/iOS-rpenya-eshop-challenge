@@ -17,3 +17,9 @@ struct AnyItem: Identifiable {
 }
 
 protocol ListItem { }
+
+extension ListItem {
+    func transformToAnyItem() -> AnyItem {
+        return  AnyItem(item: self)
+    }
+}
