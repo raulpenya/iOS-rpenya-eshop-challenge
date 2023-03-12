@@ -22,7 +22,7 @@ struct ShoppingBasketDetailView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems, let buttonItem):
-                    PlainListView(listItems: listItems)
+                    PlainListView(listItems: listItems).accessibilityIdentifier("shopping_basket_list")
                     CompleteButtonView(item: buttonItem)
                 }
             }

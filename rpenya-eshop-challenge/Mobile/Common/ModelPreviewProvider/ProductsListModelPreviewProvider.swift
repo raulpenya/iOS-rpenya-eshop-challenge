@@ -5,6 +5,8 @@
 //  Created by raulbot on 8/3/23.
 //
 
+#if DEBUG
+
 import Foundation
 
 struct ProductsListModelPreviewProvider {
@@ -60,3 +62,5 @@ struct ProductsListModelPreviewProvider {
         return PromotionViewEntity(productCode: "TSHIRT", name: "Pay 1 get 2", type: .percentage, unitsNeeded: 2, discount: 0.5)
     }
 }
+
+#endif

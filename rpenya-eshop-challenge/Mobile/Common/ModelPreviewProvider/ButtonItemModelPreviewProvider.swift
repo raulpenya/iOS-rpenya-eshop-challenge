@@ -5,6 +5,8 @@
 //  Created by raulbot on 8/3/23.
 //
 
+#if DEBUG
+
 import Foundation
 
 struct ButtonItemModelPreviewProvider {
@@ -14,3 +16,5 @@ struct ButtonItemModelPreviewProvider {
         }, price: "200€", priceWithoutDiscount: "250€")
     }
 }
+
+#endif

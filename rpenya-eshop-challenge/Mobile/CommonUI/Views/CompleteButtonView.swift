@@ -25,6 +25,7 @@ struct CompleteButtonView: View {
                 }.disabled(item.isDisabled)
         }.padding(.all, 20)
             .frame(maxWidth: .infinity, alignment: .center)
+            .accessibilityIdentifier("complete_button")
     }
 }
 
