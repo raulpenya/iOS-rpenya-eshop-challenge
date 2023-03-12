@@ -12,7 +12,7 @@ final class ProductsListItemTests: XCTestCase {
     func test_getters() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1()
-        let item = ProductsListItem(basketProduct: basketProduct, view: .productsList, action: nil)
+        let item = ProductsListItem(basketProduct: basketProduct, view: .productsList) { _,_ in }
         //When
         let title = item.getTitle()
         let subtitle = item.getSubtitle()
@@ -27,8 +27,8 @@ final class ProductsListItemTests: XCTestCase {
     
     func test_equatable_true() {
         //Given
-        let item1 = MockProductsListItem.givenProductsListItem1()
-        let item2 = MockProductsListItem.givenProductsListItem1()
+        let item1 = MockShoppingBasketListItem.givenShoppingBasketListItem1()
+        let item2 = MockShoppingBasketListItem.givenShoppingBasketListItem1()
         //When
         let result = item1 == item2
         //Then
@@ -37,8 +37,8 @@ final class ProductsListItemTests: XCTestCase {
     
     func test_equatable_false() {
         //Given
-        let item1 = MockProductsListItem.givenProductsListItem1()
-        let item2 = MockProductsListItem.givenProductsListItem2()
+        let item1 = MockShoppingBasketListItem.givenShoppingBasketListItem1()
+        let item2 = MockShoppingBasketListItem.givenShoppingBasketListItem2()
         //When
         let result = item1 == item2
         //Then

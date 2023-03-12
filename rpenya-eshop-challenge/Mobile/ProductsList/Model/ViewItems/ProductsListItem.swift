@@ -20,8 +20,8 @@ enum ProductsListItemAction {
 struct ProductsListItem: ProductListItem, Equatable {
     var id = UUID()
     var basketProduct: BasketProductViewEntity
-    var view: ProductsListItemView
-    let action: ((ProductsListItem, ProductsListItemAction) -> Void)?
+    var view: ProductsListItemView = .productsList
+    let action: ((ProductsListItem, ProductsListItemAction) -> Void)
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.basketProduct == rhs.basketProduct && lhs.view == rhs.view

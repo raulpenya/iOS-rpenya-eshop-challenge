@@ -28,15 +28,11 @@ struct ProductListCellView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                     HStack {
                         AddRemoveButton(title: "-") {
-                            if let action = item.action {
-                                action(item, .remove)
-                            }
+                            item.action(item, .remove)
                         }
                         Text(item.getUnits()).modifier(UnitsTextModifier()).frame(width: 30, height: 30)
                         AddRemoveButton(title: "+") {
-                            if let action = item.action {
-                                action(item, .add)
-                            }
+                            item.action(item, .add)
                         }
                     }.frame(maxWidth: .infinity, alignment: .trailing)
                 }.frame(width: 150).padding([.top, .bottom, .trailing], 16).padding(.leading, 0)
