@@ -18,7 +18,9 @@ class MockShoppingBasketDetailDelegate: ShoppingBasketDetailDelegate {
 class MockShoppingBasketDetailViewModel: ShoppingBasketDetailViewModel {
     var updateViewCalled = false
     
-    static let model = MockShoppingBasketDetailViewModel(currentShoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: MockShoppingBasketDetailDelegate())
+    static func getModel() -> MockShoppingBasketDetailViewModel {
+        return MockShoppingBasketDetailViewModel(currentShoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: MockShoppingBasketDetailDelegate())
+    }
     
     override func updateView(with shoppingBasket: ShoppingBasketViewEntity) {
         updateViewCalled = true

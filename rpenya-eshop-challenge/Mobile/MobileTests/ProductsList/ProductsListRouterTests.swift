@@ -12,7 +12,7 @@ final class ProductsListRouterTests: XCTestCase {
     func test_destination() {
         //Given
         let router = ProductsListRouter()
-        let dependencies = ShoppingBasketDetailDependencies(shoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: MockProductsListViewModel.model)
+        let dependencies = ShoppingBasketDetailDependencies(shoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: MockProductsListViewModel.getModel())
         //When
         let destination = router.destination(dependencies)
         //Then

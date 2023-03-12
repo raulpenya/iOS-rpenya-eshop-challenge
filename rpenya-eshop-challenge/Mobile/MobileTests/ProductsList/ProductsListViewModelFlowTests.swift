@@ -12,7 +12,7 @@ import Domain
 final class ProductsListViewModelFlowTests: XCTestCase {
     func test_loadData_flow() {
         //Given
-        let mockModel = MockProductsListViewModel.model
+        let mockModel = MockProductsListViewModel.getModel()
         //When
         mockModel.loadData()
         //Then
@@ -21,7 +21,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     
     func test_refreshData_flow() {
         //Given
-        let mockModel = MockProductsListViewModel.model
+        let mockModel = MockProductsListViewModel.getModel()
         //When
         mockModel.refreshData()
         //Then
@@ -30,7 +30,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     
     func test_receiveResult_flow() {
         //Given
-        let mockModel = MockProductsListViewModel.model
+        let mockModel = MockProductsListViewModel.getModel()
         let products = MockProducts.givenProducts(duplicates: false)
         //When
         mockModel.receiveResult(products)
@@ -41,7 +41,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     func test_productsListItemButtonPressed_add_flow() {
         //Given
         let basket = MockBasketViewEntity.givenBasket()
-        let mockModel = MockProductsListViewModel.model
+        let mockModel = MockProductsListViewModel.getModel()
         mockModel.currentBasket = basket
         let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: mockModel.productsListItemButtonPressed)
         //When
@@ -53,7 +53,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     func test_productsListItemButtonPressed_remove_flow() {
         //Given
         let basket = MockBasketViewEntity.givenBasket()
-        let mockModel = MockProductsListViewModel.model
+        let mockModel = MockProductsListViewModel.getModel()
         mockModel.currentBasket = basket
         let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: mockModel.productsListItemButtonPressed)
         //When
@@ -65,7 +65,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     func test_checkoutButtonPressed_success_flow() {
         //Given
         let basket = MockBasketViewEntity.givenBasket()
-        let mockModel = MockProductsListViewModel.model
+        let mockModel = MockProductsListViewModel.getModel()
         mockModel.currentBasket = basket
         //When
         mockModel.checkoutButtonPressed(item: basket.transformToProductListButtonItem(action: mockModel.checkoutButtonPressed))
@@ -75,10 +75,11 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     
     func test_checkoutButtonPressed_unsuccess_flow() {
         //Given
-        let mockModel = MockProductsListViewModel.model
-        mockModel.currentBasket = BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct1(units: 0), MockBasketProductViewEntity.givenBasketProduct2(units: 0)], currency: MockBasketViewEntity.currency)
+        let basket = BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct1(units: 0), MockBasketProductViewEntity.givenBasketProduct2(units: 0)], currency: MockBasketViewEntity.currency)
+        let mockModel = MockProductsListViewModel.getModel()
+        mockModel.currentBasket = basket
         //When
-        mockModel.checkoutButtonPressed(item: mockModel.currentBasket!.transformToProductListButtonItem(action: mockModel.checkoutButtonPressed))
+        mockModel.checkoutButtonPressed(item: basket.transformToProductListButtonItem(action: mockModel.checkoutButtonPressed))
         //Then
         XCTAssertFalse(mockModel.presentShoppingBasketDetail)
     }

@@ -11,7 +11,7 @@ import XCTest
 final class ShoppingBasketDetailViewModelFlowTests: XCTestCase {
     func test_loadData_flow() {
         //Given
-        let mockModel = MockShoppingBasketDetailViewModel.model
+        let mockModel = MockShoppingBasketDetailViewModel.getModel()
         //When
         mockModel.loadData()
         //Then
@@ -20,7 +20,7 @@ final class ShoppingBasketDetailViewModelFlowTests: XCTestCase {
     
     func test_refreshData_flow() {
         //Given
-        let mockModel = MockShoppingBasketDetailViewModel.model
+        let mockModel = MockShoppingBasketDetailViewModel.getModel()
         //When
         mockModel.refreshData()
         //Then
@@ -29,7 +29,7 @@ final class ShoppingBasketDetailViewModelFlowTests: XCTestCase {
     
     func test_dismissAlertButtonPressed_flow() {
         //Given
-        let mockModel = MockShoppingBasketDetailViewModel.model
+        let mockModel = MockShoppingBasketDetailViewModel.getModel()
         //When
         mockModel.checkoutButtonPressed(item: mockModel.currentShoppingBasket.transformToProductListButtonItem(action: mockModel.checkoutButtonPressed))
         //Then
@@ -48,7 +48,7 @@ final class ShoppingBasketDetailViewModelFlowTests: XCTestCase {
     
     func test_delegate_end_to_end_flow() {
         //Given
-        let delegate = MockProductsListViewModel.model
+        let delegate = MockProductsListViewModel.getModel()
         let mockModel = MockShoppingBasketDetailViewModel(currentShoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: delegate)
         //When
         mockModel.dismissAlertButtonPressed()
