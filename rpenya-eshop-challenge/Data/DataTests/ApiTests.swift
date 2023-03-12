@@ -51,7 +51,7 @@ final class ApiTests: XCTestCase {
         XCTAssertNil(apiError)
         XCTAssertNotNil(urlRequest)
         XCTAssertNotNil(urlRequest?.url?.absoluteString.isEmpty)
-        XCTAssertNotNil(urlRequest?.httpBody)
+        XCTAssertNil(urlRequest?.httpBody)
         XCTAssertEqual(urlRequest?.allHTTPHeaderFields?.count, 2)
         XCTAssertEqual(urlRequest?.cachePolicy, .useProtocolCachePolicy)
         XCTAssertEqual(urlRequest?.httpMethod, HTTPMethod.post.rawValue)

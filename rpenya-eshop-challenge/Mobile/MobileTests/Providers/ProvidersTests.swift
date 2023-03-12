@@ -9,7 +9,7 @@ import XCTest
 @testable import rpenya_eshop_challenge
 
 final class ProvidersTests: XCTestCase {
-    // DUMMY test for PreviewProvider
+    // DUMMY test for PreviewProviders
     func test_productsListModelPreviewProvider() {
         XCTAssertNotNil(ProductsListModelPreviewProvider.getProductsListItem())
         XCTAssertNotNil(ProductsListModelPreviewProvider.anyItem1())

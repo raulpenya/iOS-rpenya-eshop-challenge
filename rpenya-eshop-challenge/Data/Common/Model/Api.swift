@@ -11,7 +11,6 @@ protocol Api {
     var method: HTTPMethod { get }
     var url: String { get }
     var headerParams: [String: Any] { get }
-    var bodyParams: Any { get }
     var useCache: Bool { get }
     func asURLRequest() throws -> URLRequest
 }
@@ -29,9 +28,6 @@ extension Api {
         
         headerParams.forEach { param in
             urlRequest.setValue("\(param.value)", forHTTPHeaderField: param.key)
-        }
-        if method == HTTPMethod.post {
-            urlRequest.httpBody = try JSONSerialization.data(withJSONObject: bodyParams, options: .prettyPrinted)
         }
         return urlRequest
     }

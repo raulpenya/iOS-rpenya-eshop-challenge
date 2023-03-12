@@ -31,13 +31,6 @@ enum ProductsApi: Api {
         }
     }
     
-    var bodyParams: Any {
-        switch self {
-        case .getAllProducts:
-            return [:]
-        }
-    }
-    
     var useCache: Bool {
         switch self {
         case .getAllProducts:

@@ -39,7 +39,7 @@ struct ErrorView: View {
 
 struct ErrorAlert_Previews: PreviewProvider {
     static var previews: some View {
-        ErrorView(errorMessage: "fdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafhfdsafhidsfldsahfdlsaf fdksaf dslasfhdsajkfhdsajkfdsafh") {
+        ErrorView(errorMessage: "fdsafhidsfldsahfdlsaf fdksaf") {
             print("refresh")
         }
     }
