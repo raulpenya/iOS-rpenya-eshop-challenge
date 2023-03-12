@@ -12,6 +12,8 @@ class MockProductsListViewModel: ProductsListViewModel {
     var getProductsWithPromotionsCalled = false
     var updateViewCalled = false
     
+    static let model = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
+    
     override func getProductsWithPromotions() {
         getProductsWithPromotionsCalled = true
     }

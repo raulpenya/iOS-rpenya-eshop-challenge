@@ -12,7 +12,7 @@ import Domain
 final class ProductsListViewModelFlowTests: XCTestCase {
     func test_loadData_flow() {
         //Given
-        let mockModel = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
+        let mockModel = MockProductsListViewModel.model
         //When
         mockModel.loadData()
         //Then
@@ -21,7 +21,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     
     func test_refreshData_flow() {
         //Given
-        let mockModel = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
+        let mockModel = MockProductsListViewModel.model
         //When
         mockModel.refreshData()
         //Then
@@ -30,7 +30,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     
     func test_receiveResult_flow() {
         //Given
-        let mockModel = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
+        let mockModel = MockProductsListViewModel.model
         let products = MockProducts.givenProducts(duplicates: false)
         //When
         mockModel.receiveResult(products)
@@ -41,7 +41,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     func test_productsListItemButtonPressed_add_flow() {
         //Given
         let basket = MockBasketViewEntity.givenBasket()
-        let mockModel = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
+        let mockModel = MockProductsListViewModel.model
         mockModel.currentBasket = basket
         let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: mockModel.productsListItemButtonPressed)
         //When
@@ -53,7 +53,7 @@ final class ProductsListViewModelFlowTests: XCTestCase {
     func test_productsListItemButtonPressed_remove_flow() {
         //Given
         let basket = MockBasketViewEntity.givenBasket()
-        let mockModel = MockProductsListViewModel(getProductsWithPromotionsUseCase: MockGetProductsWithPromotions.getUseCase())
+        let mockModel = MockProductsListViewModel.model
         mockModel.currentBasket = basket
         let item = MockBasketProductViewEntity.givenBasketProduct1().transformToProductsListItem(action: mockModel.productsListItemButtonPressed)
         //When
