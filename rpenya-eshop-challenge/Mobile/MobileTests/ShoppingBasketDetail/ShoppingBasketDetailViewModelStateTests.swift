@@ -28,10 +28,3 @@ final class ShoppingBasketDetailViewModelStateTests: XCTestCase {
         XCTAssertEqual(model.state, .loaded(shoppingBasket.transformToShoppingBasketList(), shoppingBasket.transformToProductListButtonItem(action: model.checkoutButtonPressed)))
     }
 }
-
-class MockShoppingBasketDetailDelegate: ShoppingBasketDetailDelegate {
-    var orderDidCompleteCalled = false
-    func orderDidComplete() {
-        orderDidCompleteCalled = true
-    }
-}
