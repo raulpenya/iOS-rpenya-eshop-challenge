@@ -36,4 +36,14 @@ final class ShoppingBasketDetailViewModelFlowTests: XCTestCase {
         //Then
         XCTAssertTrue(delegate.orderDidCompleteCalled)
     }
+    
+    func test_delegate_end_to_end_flow() {
+        //Given
+        let delegate = MockProductsListViewModel.model
+        let mockModel = MockShoppingBasketDetailViewModel(currentShoppingBasket: MockShoppingBasketViewEntity.givenShoppingBasket(), delegate: delegate)
+        //When
+        mockModel.dismissAlertButtonPressed()
+        //Then
+        XCTAssertTrue(delegate.getProductsWithPromotionsCalled)
+    }
 }
