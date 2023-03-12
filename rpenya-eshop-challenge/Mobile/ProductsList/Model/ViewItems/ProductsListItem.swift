@@ -24,7 +24,7 @@ struct ProductsListItem: ProductListItem, Equatable {
     let action: ((ProductsListItem, ProductsListItemAction) -> Void)?
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.basketProduct == rhs.basketProduct
+        return lhs.basketProduct == rhs.basketProduct && lhs.view == rhs.view
     }
     
     func getTitle() -> String {
@@ -42,11 +42,5 @@ struct ProductsListItem: ProductListItem, Equatable {
     
     func getUnits() -> String {
         return String(basketProduct.units)
-    }
-}
-
-extension ListItem {
-    func transformToAnyItem() -> AnyItem {
-        return  AnyItem(item: self)
     }
 }

@@ -18,7 +18,7 @@ struct ShoppingBasketListItem: ProductListItem, Equatable {
     var view: ProductsListItemView
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.basketProduct == rhs.basketProduct
+        return lhs.basketProduct == rhs.basketProduct && lhs.view == rhs.view
     }
     
     func getTitle() -> String {
