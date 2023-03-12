@@ -522,12 +522,12 @@
 		0C2DB08E29B528CB004395FB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0C2DB08F29B528D1004395FB /* Mock */,
+				0C2DB08F29B528D1004395FB /* Mocks */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		0C2DB08F29B528D1004395FB /* Mock */ = {
+		0C2DB08F29B528D1004395FB /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				0C2DB09029B528E2004395FB /* MockProduct.swift */,
@@ -535,7 +535,7 @@
 				0C59DFFE29B75C2E000BFD07 /* MockProductsRepository.swift */,
 				0C59E00029B75C3E000BFD07 /* MockPromotionsRepository.swift */,
 			);
-			path = Mock;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		0C3F27A129B3B56C004C359C = {
@@ -1028,12 +1028,12 @@
 		0CC0346529B8CEF5004DC8CC /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0CC0346629B8CEFC004DC8CC /* Model */,
+				0CC0346629B8CEFC004DC8CC /* Mocks */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		0CC0346629B8CEFC004DC8CC /* Model */ = {
+		0CC0346629B8CEFC004DC8CC /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
 				0CC0346B29B8D04A004DC8CC /* MockProductViewEntity.swift */,
@@ -1043,7 +1043,7 @@
 				0CEED6E729B9005300170FBA /* MockProductListItem.swift */,
 				0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */,
 			);
-			path = Model;
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		0CE4EDE229B3D2D9005114A9 /* Model */ = {
