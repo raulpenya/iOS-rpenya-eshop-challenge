@@ -47,6 +47,26 @@ final class BasketViewEntityTests: XCTestCase {
         XCTAssertEqual(basket.products.count, products.products.count)
     }
     
+    func test_transformToShoppingBasket_success() {
+        //Given
+        let basket = MockBasketViewEntity.givenBasket()
+        //When
+        let shoppingBasket = basket.transformToShoppingBasket()
+        //Then
+        XCTAssertNotNil(shoppingBasket)
+        XCTAssertEqual(shoppingBasket?.products.count, basket.products.count)
+        XCTAssertEqual(shoppingBasket?.currency, basket.currency)
+    }
+    
+    func test_transformToShoppingBasket_unsuccess() {
+        //Given
+        let basket = BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct1(units: 0)], currency: "€")
+        //When
+        let shoppingBasket = basket.transformToShoppingBasket()
+        //Then
+        XCTAssertNil(shoppingBasket)
+    }
+    
     func test_isEmpty_true() {
         //Given
         let basketProduct = MockBasketProductViewEntity.givenBasketProduct1(units: 0)
