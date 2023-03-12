@@ -6,30 +6,28 @@
 //
 
 import XCTest
+@testable import rpenya_eshop_challenge
 
 final class ShoppingBasketViewEntityTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_transformToShoppingBasketList() {
+        //Given
+        let shoppingBasket = MockShoppingBasketViewEntity.givenShoppingBasket()
+        //When
+        let shoppingBasketList = shoppingBasket.transformToShoppingBasketList()
+        //Then
+        XCTAssertEqual(shoppingBasket.products.count, shoppingBasketList.items.count)
+        XCTAssertEqual(shoppingBasket.products[0].product, (shoppingBasketList.items[0].item as! ShoppingBasketListItem).basketProduct.product)
+        XCTAssertEqual(shoppingBasket.products[0].units, (shoppingBasketList.items[0].item as! ShoppingBasketListItem).basketProduct.units)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_transformToProductListButtonItem() {
+        //Given
+        let shoppingBasket = MockShoppingBasketViewEntity.givenShoppingBasket()
+        //When
+        let buttonItem = shoppingBasket.transformToProductListButtonItem(action: buttonAction)
+        //Then
+        XCTAssertFalse(buttonItem.isDisabled)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
+    func buttonAction(item: ButtonItem) { }
 }

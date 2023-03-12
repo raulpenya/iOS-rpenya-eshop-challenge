@@ -11,6 +11,6 @@ import Foundation
 struct MockBasketViewEntity {
     static let currency = "€"
     static func givenBasket() -> BasketViewEntity {
-        return BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct1(),MockBasketProductViewEntity.givenBasketProduct2()], currency: currency)
+        return BasketViewEntity(products: [MockBasketProductViewEntity.givenBasketProduct1(), MockBasketProductViewEntity.givenBasketProduct2()], currency: currency)
     }
 }
