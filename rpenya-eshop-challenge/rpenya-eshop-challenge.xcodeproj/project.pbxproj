@@ -109,6 +109,7 @@
 		0C84D2D129BE239C007FBB63 /* MockShoppingBasketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2D029BE239C007FBB63 /* MockShoppingBasketDetailViewModel.swift */; };
 		0C84D2D329BE26C0007FBB63 /* ProductsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2D229BE26C0007FBB63 /* ProductsListViewModelTests.swift */; };
 		0C84D2D529BE2C44007FBB63 /* ListItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2D429BE2C44007FBB63 /* ListItemTests.swift */; };
+		0C84D2D729BE2DA2007FBB63 /* MockShoppingBasketListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2D629BE2DA2007FBB63 /* MockShoppingBasketListItem.swift */; };
 		0C87BB9129BB554B005DFB8E /* MockGetProductsWithPromotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */; };
 		0C87BB9229BB55E8005DFB8E /* MockProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59DFFE29B75C2E000BFD07 /* MockProductsRepository.swift */; };
 		0C87BB9329BB55EA005DFB8E /* MockPromotionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59E00029B75C3E000BFD07 /* MockPromotionsRepository.swift */; };
@@ -347,6 +348,7 @@
 		0C84D2D029BE239C007FBB63 /* MockShoppingBasketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingBasketDetailViewModel.swift; sourceTree = "<group>"; };
 		0C84D2D229BE26C0007FBB63 /* ProductsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelTests.swift; sourceTree = "<group>"; };
 		0C84D2D429BE2C44007FBB63 /* ListItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemTests.swift; sourceTree = "<group>"; };
+		0C84D2D629BE2DA2007FBB63 /* MockShoppingBasketListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingBasketListItem.swift; sourceTree = "<group>"; };
 		0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetProductsWithPromotions.swift; sourceTree = "<group>"; };
 		0C87BB9429BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelFlowTests.swift; sourceTree = "<group>"; };
 		0C92CD8529BA01F900C51F4A /* PlainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainListView.swift; sourceTree = "<group>"; };
@@ -1056,6 +1058,7 @@
 				0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */,
 				0C84D2CE29BE232A007FBB63 /* MockProductsListViewModel.swift */,
 				0C84D2D029BE239C007FBB63 /* MockShoppingBasketDetailViewModel.swift */,
+				0C84D2D629BE2DA2007FBB63 /* MockShoppingBasketListItem.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -1432,6 +1435,7 @@
 				0CC0345A29B8CB19004DC8CC /* PromotionViewEntityTests.swift in Sources */,
 				0C66E85A29BB988A0004EB6D /* ProductsListButtonItemTests.swift in Sources */,
 				0CC0346229B8CBB2004DC8CC /* ProductsListViewModelStateTests.swift in Sources */,
+				0C84D2D729BE2DA2007FBB63 /* MockShoppingBasketListItem.swift in Sources */,
 				0CFF980729BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift in Sources */,
 				0CFF980B29BD0D9D005A9FD7 /* ProductsListRouterTests.swift in Sources */,
 				0CC0345E29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift in Sources */,

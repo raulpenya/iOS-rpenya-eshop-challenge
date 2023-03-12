@@ -6,30 +6,59 @@
 //
 
 import XCTest
+@testable import rpenya_eshop_challenge
 
 final class ShoppingBasketListItemTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func test_getters() {
+        //Given
+        let basketProduct = MockBasketProductViewEntity.givenBasketProduct1()
+        let item = ShoppingBasketListItem(basketProduct: basketProduct, view: .shoppingBasket)
+        //When
+        let title = item.getTitle()
+        let subtitle = item.getSubtitle()
+        let units = item.getUnits()
+        let price = item.getPrice()
+        let amount = item.getAmount()
+        let discountAmount = item.getDiscountAmount()
+        //Then
+        XCTAssertEqual(title, item.basketProduct.product.name)
+        XCTAssertEqual(subtitle, item.basketProduct.product.promotion?.name)
+        XCTAssertEqual(units, String(item.basketProduct.units))
+        XCTAssertEqual(price, "20.00€/u")
+        XCTAssertEqual(amount, basketProduct.getAmountWithDiscountString())
+        XCTAssertEqual(discountAmount, basketProduct.getDiscountAmountSting())
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func test_getters_nodiscount() {
+        //Given
+        let basketProduct =
+        BasketProductViewEntity(product: MockProductViewEntity.givenProduct1(promotion: nil), units: 3)
+        let item = ShoppingBasketListItem(basketProduct: basketProduct, view: .shoppingBasket)
+        //When
+        let subtitle = item.getSubtitle()
+        let discountAmount = item.getDiscountAmount()
+        //Then
+        XCTAssertNil(subtitle)
+        XCTAssertNil(discountAmount)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func test_equatable_true() {
+        //Given
+        let item1 = MockProductsListItem.givenProductsListItem1()
+        let item2 = MockProductsListItem.givenProductsListItem1()
+        //When
+        let result = item1 == item2
+        //Then
+        XCTAssertTrue(result)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_equatable_false() {
+        //Given
+        let item1 = MockProductsListItem.givenProductsListItem1()
+        let item2 = MockProductsListItem.givenProductsListItem2()
+        //When
+        let result = item1 == item2
+        //Then
+        XCTAssertFalse(result)
     }
-
 }
