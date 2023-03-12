@@ -20,6 +20,20 @@
                ReferencedContainer = "container:rpenya-eshop-challenge.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "0C3F27C329B3B56E004C359C"
+               BuildableName = "rpenya-eshop-challengeUITests.xctest"
+               BlueprintName = "rpenya-eshop-challengeUITests"
+               ReferencedContainer = "container:rpenya-eshop-challenge.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

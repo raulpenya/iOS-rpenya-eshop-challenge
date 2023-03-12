@@ -13,6 +13,7 @@ final class ShoppingBasketDetailUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
     }
     
@@ -34,6 +35,7 @@ final class ShoppingBasketDetailUITests: XCTestCase {
         let predicateshoppingBasket = NSPredicate(format: "identifier == 'shopping_basket_list'")
         let shoppingBasketList = app.collectionViews.containing(predicateshoppingBasket).element(boundBy: 0)
         XCTAssertTrue(shoppingBasketList.waitForExistence(timeout: 2))
+        snapshot("ShoppingBasket_initialLoad")
     }
     
     func test_cancelButton() {
@@ -52,6 +54,7 @@ final class ShoppingBasketDetailUITests: XCTestCase {
         let button = app.buttons.containing(predicateButton).element(boundBy: 0)
         button.tap()
         let alert = app.otherElements.children(matching: .alert).element(boundBy: 0)
+        snapshot("ShoppingBasket_completedAlert")
         alert.buttons.element(boundBy: 0).tap()
         let predicateShoppingbasket = NSPredicate(format: "identifier == 'shopping_basket_list'")
         let shoppingBasketList = app.collectionViews.containing(predicateShoppingbasket).element(boundBy: 0)
