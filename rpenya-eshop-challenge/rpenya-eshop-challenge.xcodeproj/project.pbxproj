@@ -107,6 +107,7 @@
 		0C84D2CD29BE1D48007FBB63 /* MockShoppingBasketViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2CC29BE1D48007FBB63 /* MockShoppingBasketViewEntity.swift */; };
 		0C84D2CF29BE232A007FBB63 /* MockProductsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2CE29BE232A007FBB63 /* MockProductsListViewModel.swift */; };
 		0C84D2D129BE239C007FBB63 /* MockShoppingBasketDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2D029BE239C007FBB63 /* MockShoppingBasketDetailViewModel.swift */; };
+		0C84D2D329BE26C0007FBB63 /* ProductsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C84D2D229BE26C0007FBB63 /* ProductsListViewModelTests.swift */; };
 		0C87BB9129BB554B005DFB8E /* MockGetProductsWithPromotions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */; };
 		0C87BB9229BB55E8005DFB8E /* MockProductsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59DFFE29B75C2E000BFD07 /* MockProductsRepository.swift */; };
 		0C87BB9329BB55EA005DFB8E /* MockPromotionsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C59E00029B75C3E000BFD07 /* MockPromotionsRepository.swift */; };
@@ -343,6 +344,7 @@
 		0C84D2CC29BE1D48007FBB63 /* MockShoppingBasketViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingBasketViewEntity.swift; sourceTree = "<group>"; };
 		0C84D2CE29BE232A007FBB63 /* MockProductsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsListViewModel.swift; sourceTree = "<group>"; };
 		0C84D2D029BE239C007FBB63 /* MockShoppingBasketDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockShoppingBasketDetailViewModel.swift; sourceTree = "<group>"; };
+		0C84D2D229BE26C0007FBB63 /* ProductsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelTests.swift; sourceTree = "<group>"; };
 		0C87BB9029BB554A005DFB8E /* MockGetProductsWithPromotions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetProductsWithPromotions.swift; sourceTree = "<group>"; };
 		0C87BB9429BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListViewModelFlowTests.swift; sourceTree = "<group>"; };
 		0C92CD8529BA01F900C51F4A /* PlainListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainListView.swift; sourceTree = "<group>"; };
@@ -1074,8 +1076,10 @@
 				0CC0345D29B8CB5D004DC8CC /* BasketProductViewEntityTests.swift */,
 				0CC0345F29B8CB74004DC8CC /* ProductsListItemTests.swift */,
 				0C66E85929BB988A0004EB6D /* ProductsListButtonItemTests.swift */,
+				0C84D2D229BE26C0007FBB63 /* ProductsListViewModelTests.swift */,
 				0CC0346129B8CBB2004DC8CC /* ProductsListViewModelStateTests.swift */,
 				0C87BB9429BB5FE2005DFB8E /* ProductsListViewModelFlowTests.swift */,
+				0CFF980A29BD0D9D005A9FD7 /* ProductsListRouterTests.swift */,
 			);
 			path = ProductsList;
 			sourceTree = "<group>";
@@ -1086,7 +1090,6 @@
 				0CFF980629BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift */,
 				0CFF980829BD0D71005A9FD7 /* ShoppingBasketDetailViewModelStateTests.swift */,
 				0CFF980C29BD0DAF005A9FD7 /* ShoppingBasketDetailViewModelFlowTests.swift */,
-				0CFF980A29BD0D9D005A9FD7 /* ProductsListRouterTests.swift */,
 				0CFF980E29BD0DD2005A9FD7 /* ShoppingBasketListItemTests.swift */,
 			);
 			path = ShoppingBasketDetail;
@@ -1433,6 +1436,7 @@
 				0CC0346329B8CC6E004DC8CC /* MockProduct.swift in Sources */,
 				0CC0346A29B8CFA0004DC8CC /* MockBasketProductViewEntity.swift in Sources */,
 				0CC0346E29B8D05E004DC8CC /* MockPromotionViewEntity.swift in Sources */,
+				0C84D2D329BE26C0007FBB63 /* ProductsListViewModelTests.swift in Sources */,
 				0C87BB9329BB55EA005DFB8E /* MockPromotionsRepository.swift in Sources */,
 				0C84D2CD29BE1D48007FBB63 /* MockShoppingBasketViewEntity.swift in Sources */,
 				0CC0346429B8CC71004DC8CC /* MockPromotion.swift in Sources */,
