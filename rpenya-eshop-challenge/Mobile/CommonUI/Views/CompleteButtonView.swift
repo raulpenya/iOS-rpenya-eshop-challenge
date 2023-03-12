@@ -30,6 +30,6 @@ struct CompleteButtonView: View {
 
 struct CompleteButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        CompleteButtonView(item: ButtonItemModelPreviewProvider.givenButtonItem())
+        CompleteButtonView(item: ButtonItemModelPreviewProvider.getButtonItem())
     }
 }

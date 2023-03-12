@@ -48,7 +48,7 @@ struct ShoppingBasketDetailView: View {
 
 struct ShoppingBasketDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let shoppingBasket = ShippingBasketModelPreviewProvider.getShoppingBasket()
+        let shoppingBasket = ShoppingBasketModelPreviewProvider.getShoppingBasket()
         ShoppingBasketDetailAssemblerInjection().resolve(shoppingBasket: shoppingBasket, delegate: ProductsListAssemblerInjection().resolve().viewModel)
     }
 }

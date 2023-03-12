@@ -10,7 +10,7 @@
 import Foundation
 
 struct ButtonItemModelPreviewProvider {
-    static func givenButtonItem() -> ButtonItem {
+    static func getButtonItem() -> ButtonItem {
         return ProductsListButtonItem(title: "_PreviewProvider_", isDisabled: true, action: { _ in
             print("ProductListButtonItem :: action")
         }, price: "200€", priceWithoutDiscount: "250€")
