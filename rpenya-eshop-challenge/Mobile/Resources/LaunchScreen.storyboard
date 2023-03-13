@@ -67,6 +67,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launchscreen-logo" width="580" height="254"/>
+        <image name="Launchscreen-logo" width="230" height="202"/>
     </resources>
 </document>
