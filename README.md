@@ -26,13 +26,15 @@ I've also created a module called "Tracker".
 ## Architecture scheme:
 ![rpenya-eshop-challenge](https://user-images.githubusercontent.com/28446011/224689432-744d7c3e-8f95-4598-bcab-406a0e38e077.png)
 
-## Layout
-
+![CleanArchitecture+MVVM](https://user-images.githubusercontent.com/28446011/224698151-d5e3e50c-c808-4e06-bf3d-f4b735d1cb77.png)
 
 ## Data source
-For this challenge they provided me an endpoint with [products](https://gist.githubusercontent.com/palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json), but also they required a list of promotions for diferent products, so I created an endpoint for [promotions](https://gist.githubusercontent.com/raulpenya/bd43e4cabd6afbb95ca965eb684fce4a/raw/e5ff063e927943af3485666caa60ce87673cff78/Promotions.json).
+For this challenge, they provided me an endpoint with [products](https://gist.githubusercontent.com/palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json), but also they required a list of promotions for diferent products, so I created an endpoint for [promotions](https://gist.githubusercontent.com/raulpenya/bd43e4cabd6afbb95ca965eb684fce4a/raw/e5ff063e927943af3485666caa60ce87673cff78/Promotions.json).
 This endpoint returns a json with this structure:
 <img width="506" alt="Screen Shot 2023-03-13 at 12 31 57" src="https://user-images.githubusercontent.com/28446011/224690085-44286cd3-3692-4762-adb9-1eacf0cefc1a.png">
+
+## Layout
+![Untitled](https://user-images.githubusercontent.com/28446011/224695078-c2d1bfc0-34b3-49bd-a11f-5407bb960582.png)
 
 ## Testing coverage
 <img width="938" alt="Screen Shot 2023-03-13 at 12 17 28" src="https://user-images.githubusercontent.com/28446011/224689566-c8c9874a-26c3-471c-b40f-54df1f6515b4.png">
