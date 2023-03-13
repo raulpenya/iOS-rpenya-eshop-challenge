@@ -30,7 +30,7 @@ struct ProductListCellView: View {
                         AddRemoveButton(title: "-") {
                             item.action(item, .remove)
                         }
-                        Text(item.getUnits()).modifier(UnitsTextModifier()).frame(width: 30, height: 30).accessibilityIdentifier("unit_text")
+                        Text(item.getUnits()).modifier(UnitsTextModifier()).frame(width: 30, height: 30).accessibilityIdentifier(AccessibilityIdentifierConstants.unitText)
                         AddRemoveButton(title: "+") {
                             item.action(item, .add)
                         }
