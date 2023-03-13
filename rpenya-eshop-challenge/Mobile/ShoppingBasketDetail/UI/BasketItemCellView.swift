@@ -17,8 +17,8 @@ struct BasketItemCellView: View {
                     Text(item.getTitle()).modifier(TitleTextModifier())
                         .frame(maxWidth: .infinity, alignment: .topLeading)
                         .padding([.top, .leading, .bottom], 10.0)
-                    Text(item.getPrice()+" x"+item.getUnits()).modifier(UnitsTextModifier())
-                    Text(item.getAmount()).modifier(PriceTextModifier())
+                    Text(" x"+item.getUnits()).modifier(UnitsTextModifier())
+                    Text(item.getPrice()).modifier(Title2TextModifier())
                         .padding([.top, .bottom, .trailing], 10.0)
                         .frame(alignment: .trailing)
                 }
@@ -31,6 +31,12 @@ struct BasketItemCellView: View {
                         Text(amount).modifier(UnitsTextModifier())
                             .padding([.top, .bottom, .trailing], 10.0)
                     }
+                }
+                Line().stroke(style: StrokeStyle(lineWidth: 1, dash: [5])) .frame(height: 1)
+                HStack {
+                    Text(item.getAmount()).modifier(PriceTextModifier())
+                        .padding([.top, .bottom, .trailing], 10.0)
+                        .frame(maxWidth: .infinity, alignment: .trailing)
                 }
             }.background {
                 RoundedRectangle(cornerRadius: 12.0)

@@ -48,11 +48,11 @@ extension BasketProductViewEntity { //operation methods
     }
     
     func getDiscountAmountSting() -> String {
-        return getDiscountAmount().toPriceString()
+        return getDiscountAmount().toPriceString(with: product.currency)
     }
     
     func getAmountWithDiscountString() -> String {
-        return getAmountWithDiscount().toPriceString()
+        return getAmountWithDiscount().toPriceString(with: product.currency)
     }
     
     func getDiscountAmount() -> Double {
