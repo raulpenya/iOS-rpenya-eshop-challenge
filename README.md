@@ -18,11 +18,6 @@ The layers that compose this project are:
     - Business logic shouldn’t know where the data comes from.
     - Data layer has its own data entities different than domain entities. 
 
-I've also created a module called "Tracker". 
-- Tracker module:
-    - This module is only accessible from the data layer and it's who calculates the final position of the drone.
-    - The Tracker module is another source of data for the app (as it could be an API or other external libraries). I've taken this decision to decouple and totally isolate this logic from the rest of the app, because this way you can modify its code and logic without impact to the rest of the app and also share this logic with other future apps.
-
 ## Architecture scheme:
 ![rpenya-eshop-challenge](https://user-images.githubusercontent.com/28446011/224689432-744d7c3e-8f95-4598-bcab-406a0e38e077.png)
 
@@ -44,3 +39,6 @@ This project contains unit tests, UI test and snapshots using fastlane (https://
 - Add product detail.
 - Persist orders & display orders history.
 - Repeat order functionality. 
+
+## More info:
+https://docs.google.com/presentation/d/1YiPGbN94w1YN-J6NCCAIdLbH-QBjHNgIRP-odniStUc/edit?usp=sharing
