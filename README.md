@@ -26,13 +26,19 @@ I've also created a module called "Tracker".
 ## Architecture scheme:
 ![rpenya-eshop-challenge](https://user-images.githubusercontent.com/28446011/224689432-744d7c3e-8f95-4598-bcab-406a0e38e077.png)
 
+## Layout
+
+
 ## Data source
 For this challenge they provided me an endpoint with [products](https://gist.githubusercontent.com/palcalde/6c19259bd32dd6aafa327fa557859c2f/raw/ba51779474a150ee4367cda4f4ffacdcca479887/Products.json), but also they required a list of promotions for diferent products, so I created an endpoint for [promotions](https://gist.githubusercontent.com/raulpenya/bd43e4cabd6afbb95ca965eb684fce4a/raw/e5ff063e927943af3485666caa60ce87673cff78/Promotions.json).
 This endpoint returns a json with this structure:
+<img width="506" alt="Screen Shot 2023-03-13 at 12 31 57" src="https://user-images.githubusercontent.com/28446011/224690085-44286cd3-3692-4762-adb9-1eacf0cefc1a.png">
 
-
-## Testing coverage:
+## Testing coverage
 <img width="938" alt="Screen Shot 2023-03-13 at 12 17 28" src="https://user-images.githubusercontent.com/28446011/224689566-c8c9874a-26c3-471c-b40f-54df1f6515b4.png">
+This project contains unit tests, UI test and snapshots using fastlane (https://docs.fastlane.tools/actions/snapshot/).
 
-
-
+## Next steps:
+- Add product detail.
+- Persist orders & display orders history.
+- Repeat order functionality. 
