@@ -153,6 +153,7 @@
 		0CEED6E829B9005300170FBA /* MockProductListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEED6E729B9005300170FBA /* MockProductListItem.swift */; };
 		0CEED6EA29B90CA700170FBA /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEED6E929B90CA700170FBA /* ButtonItem.swift */; };
 		0CEED6EC29B90D7500170FBA /* ButtonItemModelPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEED6EB29B90D7500170FBA /* ButtonItemModelPreviewProvider.swift */; };
+		0CF4318E29BF50A000448CCD /* AccessibilityIdentifierConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4318D29BF50A000448CCD /* AccessibilityIdentifierConstants.swift */; };
 		0CFF980729BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF980629BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift */; };
 		0CFF980929BD0D71005A9FD7 /* ShoppingBasketDetailViewModelStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF980829BD0D71005A9FD7 /* ShoppingBasketDetailViewModelStateTests.swift */; };
 		0CFF980B29BD0D9D005A9FD7 /* ProductsListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF980A29BD0D9D005A9FD7 /* ProductsListRouterTests.swift */; };
@@ -393,6 +394,7 @@
 		0CEED6E729B9005300170FBA /* MockProductListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductListItem.swift; sourceTree = "<group>"; };
 		0CEED6E929B90CA700170FBA /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
 		0CEED6EB29B90D7500170FBA /* ButtonItemModelPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItemModelPreviewProvider.swift; sourceTree = "<group>"; };
+		0CF4318D29BF50A000448CCD /* AccessibilityIdentifierConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierConstants.swift; sourceTree = "<group>"; };
 		0CFF980629BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewEntityTests.swift; sourceTree = "<group>"; };
 		0CFF980829BD0D71005A9FD7 /* ShoppingBasketDetailViewModelStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketDetailViewModelStateTests.swift; sourceTree = "<group>"; };
 		0CFF980A29BD0D9D005A9FD7 /* ProductsListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListRouterTests.swift; sourceTree = "<group>"; };
@@ -828,6 +830,7 @@
 				0CC0344E29B8B24B004DC8CC /* ModelPreviewProvider */,
 				0C3F287029B3C3C9004C359C /* Model */,
 				0C3F286D29B3C3B4004C359C /* Router.swift */,
+				0CF4318D29BF50A000448CCD /* AccessibilityIdentifierConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1402,6 +1405,7 @@
 				0C3F285629B3C1B9004C359C /* ProductsListAssembler.swift in Sources */,
 				0C6488F729B7BAC300D3DF6F /* TextViewModifier.swift in Sources */,
 				0CC0345229B8B3F6004DC8CC /* ProductsListItems.swift in Sources */,
+				0CF4318E29BF50A000448CCD /* AccessibilityIdentifierConstants.swift in Sources */,
 				0CA2ACD329BCC8D900C1D101 /* ShoppingBasketViewEntity.swift in Sources */,
 				0C92CD9129BA0AA500C51F4A /* ProductsListButtonItem.swift in Sources */,
 				0C3F286229B3C243004C359C /* ShoppingBasketDetailAssembler.swift in Sources */,
@@ -1779,9 +1783,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-eshop-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1809,9 +1816,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-eshop-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
