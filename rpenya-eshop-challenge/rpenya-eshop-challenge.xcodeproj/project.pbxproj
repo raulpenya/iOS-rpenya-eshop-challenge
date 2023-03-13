@@ -281,7 +281,7 @@
 		0C2DB08829B527CD004395FB /* MockProductsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsDataSource.swift; sourceTree = "<group>"; };
 		0C2DB08C29B52880004395FB /* MockProductRemoteEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductRemoteEntities.swift; sourceTree = "<group>"; };
 		0C2DB09029B528E2004395FB /* MockProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProduct.swift; sourceTree = "<group>"; };
-		0C3F27AA29B3B56C004C359C /* rpenya-eshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_eshop_challengeApp.swift; sourceTree = "<group>"; };
 		0C3F27B129B3B56E004C359C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3F27B429B3B56E004C359C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -573,7 +573,7 @@
 		0C3F27AB29B3B56C004C359C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C3F27AA29B3B56C004C359C /* rpenya-eshop.app */,
+				0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */,
 				0C3F27BA29B3B56E004C359C /* rpenya-eshop-challengeTests.xctest */,
 				0C3F27C429B3B56E004C359C /* rpenya-eshop-challengeUITests.xctest */,
 				0C3F27DC29B3B6B1004C359C /* Data.framework */,
@@ -1161,7 +1161,7 @@
 			);
 			name = "rpenya-eshop-challenge";
 			productName = "rpenya-eshop-challenge";
-			productReference = 0C3F27AA29B3B56C004C359C /* rpenya-eshop.app */;
+			productReference = 0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0C3F27B929B3B56E004C359C /* rpenya-eshop-challengeTests */ = {
@@ -1771,6 +1771,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "rpenya-eshop-challenge-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "rpenya-eshop";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -1781,7 +1782,7 @@
 				);
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-eshop-challenge";
-				PRODUCT_NAME = "rpenya-eshop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1803,6 +1804,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "rpenya-eshop-challenge-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "rpenya-eshop";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -1813,7 +1815,7 @@
 				);
 				MARKETING_VERSION = 1.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-eshop-challenge";
-				PRODUCT_NAME = "rpenya-eshop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
