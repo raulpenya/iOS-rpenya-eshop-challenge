@@ -22,14 +22,14 @@ struct ShoppingBasketDetailView: View {
                 case .failed(let error):
                     ErrorView(errorMessage: error.text, action: viewModel.refreshData)
                 case .loaded(let listItems, let buttonItem):
-                    PlainListView(listItems: listItems).accessibilityIdentifier("shopping_basket_list")
-                    CompleteButtonView(item: buttonItem).accessibilityIdentifier("shopping_basket_complete_button")
+                    PlainListView(listItems: listItems).accessibilityIdentifier(AccessibilityIdentifierConstants.shoppingBasketList)
+                    CompleteButtonView(item: buttonItem).accessibilityIdentifier(AccessibilityIdentifierConstants.shoppingBasketCompleteButton)
                 }
             }
             .navigationTitle(NSLocalizedString("shopping_basket", comment: ""))
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(NSLocalizedString("cancel", comment: ""), action: dismiss.callAsFunction).accessibilityIdentifier("cancel_button")
+                    Button(NSLocalizedString("cancel", comment: ""), action: dismiss.callAsFunction).accessibilityIdentifier(AccessibilityIdentifierConstants.cancelButton)
                 }
             }.alert(isPresented: $viewModel.dismissShoppingBasketDetail) {
                 Alert(title: Text(NSLocalizedString("purchase_completed_title", comment: "")),

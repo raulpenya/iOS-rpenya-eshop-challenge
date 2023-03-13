@@ -153,6 +153,7 @@
 		0CEED6E829B9005300170FBA /* MockProductListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEED6E729B9005300170FBA /* MockProductListItem.swift */; };
 		0CEED6EA29B90CA700170FBA /* ButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEED6E929B90CA700170FBA /* ButtonItem.swift */; };
 		0CEED6EC29B90D7500170FBA /* ButtonItemModelPreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEED6EB29B90D7500170FBA /* ButtonItemModelPreviewProvider.swift */; };
+		0CF4318E29BF50A000448CCD /* AccessibilityIdentifierConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF4318D29BF50A000448CCD /* AccessibilityIdentifierConstants.swift */; };
 		0CFF980729BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF980629BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift */; };
 		0CFF980929BD0D71005A9FD7 /* ShoppingBasketDetailViewModelStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF980829BD0D71005A9FD7 /* ShoppingBasketDetailViewModelStateTests.swift */; };
 		0CFF980B29BD0D9D005A9FD7 /* ProductsListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFF980A29BD0D9D005A9FD7 /* ProductsListRouterTests.swift */; };
@@ -280,7 +281,7 @@
 		0C2DB08829B527CD004395FB /* MockProductsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductsDataSource.swift; sourceTree = "<group>"; };
 		0C2DB08C29B52880004395FB /* MockProductRemoteEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductRemoteEntities.swift; sourceTree = "<group>"; };
 		0C2DB09029B528E2004395FB /* MockProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProduct.swift; sourceTree = "<group>"; };
-		0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C3F27AA29B3B56C004C359C /* rpenya-eshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rpenya-eshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C3F27AD29B3B56C004C359C /* rpenya_eshop_challengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rpenya_eshop_challengeApp.swift; sourceTree = "<group>"; };
 		0C3F27B129B3B56E004C359C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C3F27B429B3B56E004C359C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -369,7 +370,6 @@
 		0CA2ACDB29BCD3E900C1D101 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0CA2ACDD29BCD8D500C1D101 /* AddRemoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveButton.swift; sourceTree = "<group>"; };
 		0CA2ACE129BCE6A600C1D101 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
-		0CA2ACE829BCF8AA00C1D101 /* rpenya-eshop-challenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "rpenya-eshop-challenge-Info.plist"; sourceTree = "<group>"; };
 		0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CA2ACEB29BCFED100C1D101 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		0CA88D6729BF2FAA002D8129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -393,6 +393,7 @@
 		0CEED6E729B9005300170FBA /* MockProductListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductListItem.swift; sourceTree = "<group>"; };
 		0CEED6E929B90CA700170FBA /* ButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItem.swift; sourceTree = "<group>"; };
 		0CEED6EB29B90D7500170FBA /* ButtonItemModelPreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonItemModelPreviewProvider.swift; sourceTree = "<group>"; };
+		0CF4318D29BF50A000448CCD /* AccessibilityIdentifierConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierConstants.swift; sourceTree = "<group>"; };
 		0CFF980629BD0D37005A9FD7 /* ShoppingBasketViewEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketViewEntityTests.swift; sourceTree = "<group>"; };
 		0CFF980829BD0D71005A9FD7 /* ShoppingBasketDetailViewModelStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBasketDetailViewModelStateTests.swift; sourceTree = "<group>"; };
 		0CFF980A29BD0D9D005A9FD7 /* ProductsListRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListRouterTests.swift; sourceTree = "<group>"; };
@@ -572,7 +573,7 @@
 		0C3F27AB29B3B56C004C359C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */,
+				0C3F27AA29B3B56C004C359C /* rpenya-eshop.app */,
 				0C3F27BA29B3B56E004C359C /* rpenya-eshop-challengeTests.xctest */,
 				0C3F27C429B3B56E004C359C /* rpenya-eshop-challengeUITests.xctest */,
 				0C3F27DC29B3B6B1004C359C /* Data.framework */,
@@ -828,6 +829,7 @@
 				0CC0344E29B8B24B004DC8CC /* ModelPreviewProvider */,
 				0C3F287029B3C3C9004C359C /* Model */,
 				0C3F286D29B3C3B4004C359C /* Router.swift */,
+				0CF4318D29BF50A000448CCD /* AccessibilityIdentifierConstants.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1043,7 +1045,6 @@
 			children = (
 				0CA88D6829BF2FAA002D8129 /* Localizable.strings */,
 				0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */,
-				0CA2ACE829BCF8AA00C1D101 /* rpenya-eshop-challenge-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1160,7 +1161,7 @@
 			);
 			name = "rpenya-eshop-challenge";
 			productName = "rpenya-eshop-challenge";
-			productReference = 0C3F27AA29B3B56C004C359C /* rpenya-eshop-challenge.app */;
+			productReference = 0C3F27AA29B3B56C004C359C /* rpenya-eshop.app */;
 			productType = "com.apple.product-type.application";
 		};
 		0C3F27B929B3B56E004C359C /* rpenya-eshop-challengeTests */ = {
@@ -1402,6 +1403,7 @@
 				0C3F285629B3C1B9004C359C /* ProductsListAssembler.swift in Sources */,
 				0C6488F729B7BAC300D3DF6F /* TextViewModifier.swift in Sources */,
 				0CC0345229B8B3F6004DC8CC /* ProductsListItems.swift in Sources */,
+				0CF4318E29BF50A000448CCD /* AccessibilityIdentifierConstants.swift in Sources */,
 				0CA2ACD329BCC8D900C1D101 /* ShoppingBasketViewEntity.swift in Sources */,
 				0C92CD9129BA0AA500C51F4A /* ProductsListButtonItem.swift in Sources */,
 				0C3F286229B3C243004C359C /* ShoppingBasketDetailAssembler.swift in Sources */,
@@ -1691,6 +1693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1745,6 +1748,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1770,18 +1774,20 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-eshop-challenge";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "rpenya-eshop";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1800,18 +1806,20 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "rpa.rpenya-eshop-challenge";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "rpenya-eshop";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
