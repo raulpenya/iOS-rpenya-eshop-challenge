@@ -13,6 +13,7 @@ final class ProductsListUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
     }
     
@@ -31,6 +32,7 @@ final class ProductsListUITests: XCTestCase {
         let predicate = NSPredicate(format: "identifier == 'products_list'")
         let list = app.collectionViews.containing(predicate).element(boundBy: 0)
         XCTAssertTrue(list.waitForExistence(timeout: 5))
+        snapshot("ProductList_initialLoad")
         XCTAssertEqual(list.children(matching: .cell).count, 3)
     }
     
@@ -72,6 +74,7 @@ final class ProductsListUITests: XCTestCase {
         let button = app.buttons.containing(predicateButton).element(boundBy: 0)
         let buttonAdd = app.collectionViews.children(matching: .cell).element(boundBy: 0).buttons["+"]
         buttonAdd.tap()
+        snapshot("ProductList_productsAdded")
         button.tap()
         let predicate3 = NSPredicate(format: "identifier == 'shopping_basket_list'")
         let shoppingBasketList = app.collectionViews.containing(predicate3).element(boundBy: 0)
