@@ -128,9 +128,9 @@
 		0CA2ACDC29BCD3E900C1D101 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2ACDB29BCD3E900C1D101 /* Colors.swift */; };
 		0CA2ACDE29BCD8D500C1D101 /* AddRemoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2ACDD29BCD8D500C1D101 /* AddRemoveButton.swift */; };
 		0CA2ACE229BCE6A600C1D101 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2ACE129BCE6A600C1D101 /* Line.swift */; };
-		0CA2ACE529BCF1FE00C1D101 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2ACE429BCF1FE00C1D101 /* Localizable.strings */; };
 		0CA2ACEA29BCF95200C1D101 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */; };
 		0CA2ACEC29BCFED100C1D101 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA2ACEB29BCFED100C1D101 /* ErrorView.swift */; };
+		0CA88D6629BF2FAA002D8129 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CA88D6829BF2FAA002D8129 /* Localizable.strings */; };
 		0CC0344229B8A42C004DC8CC /* PromotionViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0344129B8A42C004DC8CC /* PromotionViewEntity.swift */; };
 		0CC0344629B8A46B004DC8CC /* BasketProductViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0344529B8A46B004DC8CC /* BasketProductViewEntity.swift */; };
 		0CC0344D29B8A682004DC8CC /* ProductsListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC0344C29B8A682004DC8CC /* ProductsListItem.swift */; };
@@ -369,10 +369,10 @@
 		0CA2ACDB29BCD3E900C1D101 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		0CA2ACDD29BCD8D500C1D101 /* AddRemoveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRemoveButton.swift; sourceTree = "<group>"; };
 		0CA2ACE129BCE6A600C1D101 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
-		0CA2ACE429BCF1FE00C1D101 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		0CA2ACE829BCF8AA00C1D101 /* rpenya-eshop-challenge-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "rpenya-eshop-challenge-Info.plist"; sourceTree = "<group>"; };
 		0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CA2ACEB29BCFED100C1D101 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		0CA88D6729BF2FAA002D8129 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CC0344129B8A42C004DC8CC /* PromotionViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionViewEntity.swift; sourceTree = "<group>"; };
 		0CC0344529B8A46B004DC8CC /* BasketProductViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketProductViewEntity.swift; sourceTree = "<group>"; };
 		0CC0344C29B8A682004DC8CC /* ProductsListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsListItem.swift; sourceTree = "<group>"; };
@@ -1042,7 +1042,7 @@
 		0CA2ACE329BCF1E300C1D101 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0CA2ACE429BCF1FE00C1D101 /* Localizable.strings */,
+				0CA88D6829BF2FAA002D8129 /* Localizable.strings */,
 				0CA2ACE929BCF95200C1D101 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -1343,7 +1343,7 @@
 			files = (
 				0C3F27B529B3B56E004C359C /* Preview Assets.xcassets in Resources */,
 				0CA2ACEA29BCF95200C1D101 /* LaunchScreen.storyboard in Resources */,
-				0CA2ACE529BCF1FE00C1D101 /* Localizable.strings in Resources */,
+				0CA88D6629BF2FAA002D8129 /* Localizable.strings in Resources */,
 				0C3F27B229B3B56E004C359C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1628,6 +1628,17 @@
 			targetProxy = 0C3F281F29B3B750004C359C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CA88D6829BF2FAA002D8129 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CA88D6729BF2FAA002D8129 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		0C3F27CC29B3B56E004C359C /* Debug */ = {
