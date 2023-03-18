@@ -1,6 +1,14 @@
 # rpenya-eshop-challenge
 eShop iOS app built for a challenge
 
+## Project specs:
+- Xcode 14.1
+- Deployment target: iOS 16.2
+- 100% Swift & SwiftUI
+- iOS SDKs: Combine
+- No third party dependencies
+
+## Architecture
 This project is built under SOLID principles, clean architecture, modular architecture and MVVM in the presentation layer. It uses SwiftUI for presentation and Combine framework to communicate between the different layers.
 
 The layers that compose this project are:
